@@ -1,0 +1,1112 @@
+﻿Transmitter information copyright Arqiva, BBC, Crown Castle UK, ITC, NG Wireless, NTL, Ofcom and SDN 1998-2012,
+with special thanks and respects to Gareth Phillips. Public domain information only.
+
+New:          Beddgelert Link, Bexhill UHF, Biggin Hill Link, Budleigh Salterton, Burnham on Crouch, Clacton,
+              Dundee Menzieshill, Glenridding Link, Great Yarmouth, Lowestoft, Rouncefall, Skelmersdale, Storeton Wales
+
+U.K. "analogue to digital switch-over" has been planned on a region-by-region basis in the following order
+  (main stations listed only; all relays will also be affected):
+
+Wales         Q4:2004 Ferryside (completed)
+              Q3:2009 Carmel, Preseli (completed)
+              Q4:2009 Llanddona, Moel-y-Parc (completed)
+              Q1:2010 Blaen-Plwyf, Long Mountain, Wenvoe (completed)
+Border        Q4:2007 Whitehaven (completed)
+              Q4:2008 Selkirk (completed)
+              Q3:2009 Caldbeck, Douglas, Kendal (completed)
+West Country  Q2:2009 Beacon Hill, Stockland Hill (completed)
+              Q3:2009 Caradon Hill, Huntshaw Cross, Redruth (completed)
+Granada       Q4:2009 Winter Hill (completed)
+West          Q1:2010 Mendip (completed)
+STV North     Q2:2010 Bressay, Keelylang Hill, Rumster Forest (completed)
+              Q3:2010 Clettraval, Eitshal, Skriaig, Angus, Durris, Knockmore (completed)
+Channel       Q3:2010 Fremont Point (completed)
+STV Central   Q4:2010 Rosemarkie, Torosay (completed)
+              Q2:2011 Darvel, Rosneath (completed)
+              Q3:2011 Craigkelly, Black Hill (completed)
+Anglia        Q2:2011 Sandy Heath (completed)
+              Q3:2011 Sudbury (completed)
+              Q4:2011 Tacolneston (completed)
+Central       Q2:2011 Bromsgrove, Lark Stoke, Nottingham, Ridge Hill, The Wrekin (completed)
+              Q3:2011 Fenton, Oxford, Sutton Coldfield, Waltham (completed)
+Yorkshire     Q3:2011 Belmont, Chesterfield, Emley Moor, Oliver's Mount, Sheffield (completed)
+Carlton/LWT   Q2:2012 Crystal Palace (completed)
+Meridian      Q1:2012 Hannington, Midhurst, Rowridge, Whitehawk Hill (completed)
+              Q2:2012 Bluebell Hill, Dover, Hastings, Heathfield, Margate, Tunbridge Wells
+Tyne Tees     Q3:2012 Bilsdale, Chatton, Pontop Pike
+Ulster        Q4:2012 Brougher Mountain, Divis, Limavady
+
+Believed to be correct at present, although many details are likely to change and some information is not yet available. Some aerial
+  heights are based on the previous analogue installation. High-definition services are included on BBC B as switchover in each
+  region is completeud.
+
+Some channel allocations will change and some transmitter powers will be further increased during the switchover period (cf. "Notes"
+  below). In particlar, channels 61 and 62 are to be withdrawn during 2013: multiplexes using them are likely to be moved to 49 and
+  50 and those on 49 and 50 are likely to be moved to 39 and 40. There are also a few discrepancies in the public domain information
+  at present, which we are seeking to resolve.
+
+Tx   Transmitter identifier and name (+ denotes a main station; - denotes a networking relay station)
+Ch   UHF
+ERPW Effective radiated power (watts)
+mAOD Aerial height above Ordnance Survey datum (metres)
+Gp   Aerial group:
+       A  21-37 Red
+       B  35-53 Yellow
+       CD 48-68 Green
+       E  35-68 Brown
+       K  21-48 Grey
+       W  21-68 Black
+P    Polarisation:
+       H  Horizontal
+       V  Vertical
+OS   Ordnance Survey grid reference
+ODm  Site height above datum (metres)
+*    Notes - please see the (*) section below.
+
+                         Operator:     BBC A     Digital 3&4      SDN         BBC B       Arqiva A     Arqiva B
+  Pre-switchover: Modulation (2k):   16 QAM 3/4   64 QAM 2/3   64 QAM 2/3   16 QAM 3/4   16 QAM 3/4   16 QAM 3/4
+ Post-switchover: Modulation (8k):   64 QAM 2/3   64 QAM 2/3   64 QAM 2/3                64 QAM 2/3   64 QAM 2/3
+                            (32k):                                         256 QAM 2/3
+                        Multiplex:  1-(PSB1)---- 2-(PSB2)---- A-(COM1)---- B-(PSB3)---- C-(COM2)---- D-(COM3)----
+Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Gp P OS       ODm
+-----------------------------------------------------------------------------------------------------------------------------------
+123.00 - Angus                      60  20k 547  53  20k 547  54  20k 547  57  10k 547  58  10k 547  61  10k 547  CD H NO394407 313
+123.12   Auchtermuchty              49   20 130  42   20 130               45   20 130                            B  V NO214094  93
+123.22   Balmullo                   49    2  90  42    2  90               45    2  90                            B  V NO426214  69
+123.19   Balnaguard                 49    2 193  45    2 193               42    2 193                            B  V NN956511 176
+123.07   Blair Atholl               43    8 427  46    8 427               50    8 427                            B  V NN894658 385
+123.17   Carie                      24   20 254  27   20 254               21   20 254                            A  V NN615572 239
+123.02   Crieff                     23   50 267  29   50 267               26   50 267                            A  V NN814199 217
+123.03   Cupar                      41    4  79  47    4  79               44    4  79                            B  V NO377139  29
+         Dundee Menzieshill         21    5 135  29    5 135               26    5 135                            A  V NO368311 111
+147.04   Dunkeld                    41   16 291  47   16 291               44   16 291                            B  V NO046415 212
+147.12   Dunkeld Town               23    2  85  29    2  85               26    2  85                            A  V NO022430  70
+123.21   Grandtully                 61    2 128  54    2 128               58    2 128                            CD V NN917527 122
+123.06   Kenmore                    23   24 468  29   24 468               26   24 468                            A  V NN774472 418
+123.10   Killin HP                  49    4 439  42    4 439               45    4 439                            B  H NN602314 418
+123.10   Killin VP                  49   23 446  42   23 446               45   23 446                            B  V NN602314 418
+123.20   Lindores                   43    6 173  50    6 173               46    6 173                            B  V NO250158 173
+123.24   Lochearnhead               61    2 150  54    2 150               58    2 150                            CD V NN594227 144
+123.15   Methven                    25    2 142  28    2 142               22    2 142                            A  V NO016265 111
+123.01   Perth                      49  200 172  42  200 172               45  200 172                            B  V NO108212 129
+123.05   Pitlochry                  25   25 439  28   25 439               22   25 439                            A  V NN923564 387
+123.23   St Fillans                 47   13 215  41   13 215               44   13 215                            B  V NN663248 199
+123.14   Strathallan                49    6 286  42    6 286               45    6 286                            B  V NN860059 262
+123.08   Tay Bridge                 41  100 148  47  100 148               44  100 148                            B  V NO430284  96
+123.27   Tummel Bridge              49   20 338  42   20 338               45   20 338                            B  V NN771600 320
+136.00 + Beacon Hill                60  20k 285  53  20k 285  42  10k 285  57  20k 285  45  10k 285  51  10k 285  E  H SX857619 188
+136.04   Ashburton                  24    2 183  27    2 183               21    2 183                            A  V SX758687 157
+136.22   Bovey Tracey               52    2 114  48    2 114               56    2 114                            CD V SX818787  83
+136.14   Brixham                    43  3.6  66  50  3.6  66               46  3.6  66                            B  V SX921562  49
+136.09   Buckfastleigh              41    2 114  47    2 114               44    2 114                            B  V SX742664  82
+         Budleigh Salterton         60   1k 122  53   1k 122               57   1k 122                            CD V SY043825  99
+136.21   Chudleigh                  41    2 147  47    2 147               44    2 147                            B  V SX876789 128
+136.24   Clennon Valley             52    2  73  48    2  73               56    2  73                            CD V SX885596  46
+136.07   Coombe                     24    2  99  27    2  99               21    2  99                            A  V SX928736  78
+136.03   Dartmouth                  41    2 107  47    2 107               44    2 107                            B  V SX875511  78
+136.19   Edginswell                 52    2  93  48    2  93               56    2  93                            CD V SX886658  77
+         Halwell                    47    2 180  41    2 180               44    2 180                            B  V SX781528 166
+136.12   Harbertonford              52    2  80  48    2  80               56    2  80                            CD H SX781559  71
+136.18   Hele                       43    2 105  50    2 105               46    2 105                            B  H SX912657  83
+136.28   Kingskerswell              62    2  91  59    2  91               55    2  91                            CD V SX872682  55
+136.27   Liverton                   62  2.5 172  59  2.5 172               55  2.5 172                            CD V SX811734 146
+         Newton Abbot HP            43  .66  71  50  .66  71               46  .66  71                            B  H SX851713  45
+136.08   Newton Abbot VP            43    2  71  50    2  71               46    2  71                            B  V SX851713  45
+136.16   Occombe Valley             24   20 114  27   20 114               21   20 114                            A  V SX886625  61
+136.15   Sidmouth                   52    6 130  48    6 130               56    6 130                            CD V SY136879  96
+         South Brent HP             43   .3 220  50   .3 220               46   .3 220                            B  H SX690608 201
+136.13   South Brent VP             43    2 220  50    2 220               46    2 220                            B  V SX690608 201
+136.05   Teignmouth                 52   40 104  48   40 104               56   40 104                            CD V SX936735  64
+136.17   Torquay Town               41   40 106  47   40 106               44   40 106                            B  V SX915637  63
+136.11   Totnes                     24    2 110  27    2 110               21    2 110                            A  V SX805594 101
+120.00 + Belmont                    22 150k 495  25 150k 492  30  50k 464  28 150k 464  53 100k 492  60 100k 492  W  H TF218836 125
+120.07   Grimsby                    45    2  19  42    2  20               49    2  22                            B  V TA279090   5
+120.04   Lincoln Central            44    2  51  41    2  53               47    2  51                            B  V SK984711   3
+120.01   Weaverthorpe               55    9 164  59    9 164               62    9 164                            CD V SE972716 132
+116.00 + Bilsdale West Moor         34  4k8 687  21   6k 690  31   6k 676  24   6k 681  27   6k 681  42  1k6 681  K  H SE553962 381
+105.00 + Black Hill                 46 100k 577  43 100k 577  41 100k 577  40 100k 577  44 100k 577  47 100k 577  B  H NS831645 275
+105.04   Abington                   60    2 447  57    2 447               53    2 447                            CD H NS938221 401
+105.03   Biggar                     28  100 368  25  100 368               22  100 368                            A  V NT016325 320
+105.49   Bridge of Allan            26    5 111  23    5 111               29    5 111                            A  V NS792985  78
+105.48   Broughton                  27    2 295  24    2 295               21    2 295                            A  V NT129355 266
+105.07   Callander                  28   20 187  25   20 187               22   20 187                            A  V NN671063 150
+105.08   Cathcart                   60    2 111  57    2 111               53    2 111                            CD V NS565616  38
+105.18   Clachan                    43    2  68  46    2  68               40    2  68                            B  V NR766563  42
+105.68   Cumbernauld Village        49    2 175  58    2 175               54    2 175                            CD V NS754761 155
+105.56   Deanston                   60    2  52  53    2  52               57    2  52                            CD V NN712022  36
+105.36   Dollar                     49    2 147  58    2 147               54    2 147                            CD V NS950984 132
+         Dunoon Forest Road         27    2  58  24    2  58               21    2  58                            A  V NS167771  52
+105.16   Easdale                    40    2  48  46    2  48               43    2  48                            B  V NM754168  36
+105.41   Fintry                     27    4 129  24    4 129               21    4 129                            A  V NS597889 101
+105.14   Gigha Island               41   12  53  44   12  53               47   12  53                            B  V NR643480  26
+105.05   Glasgow West Central       50    6  93  59    6  93               55    6  93                            CD V NS565682  23
+105.52   Glespin                    49    2 236  58    2 236               54    2 236                            CD V NS821286 219
+105.22   Haddington                 49    4  97  58    4  97               54    4  97                            CD V NT538736  61
+105.66   Kelvindale                 52    2  60  56    2  60               48    2  60                            CD V NS555692  45
+105.06   Killearn                   50  100 163  59  100 163               55  100 163                            CD V NS484848 112
+105.01   Kilmacolm                  27    6 158  24    6 158               21    6 158                            A  V NS343691 116
+152.02   Kirkconnel                 49   50 530  58   50 530               54   50 530                            CD V NS745149 470
+105.38   Kirkfieldbank              50    2 172  59    2 172               55    2 172                            CD V NS862443 152
+152.34   Largs                      45    5  52  42    5  52               49    5  52                            B  H NS209594  28
+105.51   Leadhills                  49    2 429  58    2 429               54    2 429                            CD V NS884149 411
+152.12   Millport                   49    2  62  58    2  62               54    2  62                            CD H NS166557  40
+105.13   Netherton Brae             27    2 141  24    2 141               21    2 141                            A  V NS581575  78
+152.20   New Cumnock                43    2 203  46    2 203               50    2 203                            B  V NS612130 189
+105.37   Ravenscraig HP             27    2 114  24    2 114               21    2 114                            A  H NS252755  69
+105.37   Ravenscraig VP             27    2 114  24    2 114               21    2 114                            A  V NS252755  69
+152.15   Rothesay                   28  400 218  25  400 218               22  400 218                            A  V NS125690 158
+152.21   Rothesay Town              50    2  69  59    2  69               55    2  69                            CD V NS082648  57
+105.02   South Knapdale             60  365 530  57  365 530               53  365 530                            CD V NR837748 479
+105.25   Strachur                   23    6 187  26    6 187               29    6 187                            A  V NN094027 155
+105.45   Strathblane                27    2 134  24    2 134               21    2 134                            A  V NS555789 121
+105.96   Strathyre                  27    2 141  24    2 141               21    2 141                            A  V NN559170 125
+105.95   Strathyre Link             46  .13 608  43  .13 608               40  .13 608                            B  V NN581170 568
+105.15   Tarbert                    24    2  84  21    2  84               27    2  84                            A  V NR857680  67
+152.16   Tighnabruaich              45   18 189  49   18 189               42   18 189                            B  V NR993743 105
+105.39   Tillicoultry               60    2  51  57    2  51               53    2  51                            CD V NS925970  29
+105.44   Twechar                    28    2  79  25    2  79               22    2  79                            A  V NS695754  51
+105.67   Uplawmoor                  49    5 251  58    5 251               54    5 251                            CD V NS436563 218
+152.03   West Kilbride              44  200 217  41  200 217               47  200 217                            B  V NS214483 141
+135.00 - Blaen-Plwyf                27  40k 331  24  40k 331  25  10k 331  21  40k 331  22  10k 331  28  10k 331  A  H SN569756 177
+135.02   Aberystwyth                58   40  43  61   40  43               54   40  43                            CD V SN587820  19
+135.19   Afon Dyfi                  22    2 116  25    2 116               28    2 116                            A  V SH844061  96
+135.48   Beddgelert                 62    2 144  59    2 144               55    2 144                            CD V SH582476 127
+         Beddgelert Link            27    2 192  24    2 192               21    2 192                            A  V SH592490 181
+135.23   Bow Street                 44 17.2  54  41 17.2  54               47 17.2  54                            B  V SN624845  38
+135.33   Corris                     45    2 303  49    2 303               42    2 303                            B  V SH759067 269
+135.46   Cwrtnewydd                 44    2 215  41    2 215               47    2 215                            B  V SN486476 201
+135.17   Dolybont                   57   20 127  60   20 127               53   20 127                            CD V SN628889  98
+135.01   Machynlleth                57    4 132  60    4 132               53    4 132                            CD V SH723003 106
+135.03   Penryn-coch                62 14.4 176  59 14.4 176               55 14.4 176                            CD V SN633844 155
+135.21   Trefilan                   57 17.2 278  60 17.2 278               53 17.2 278                            CD V SN562554 245
+135.26   Ynys-Pennal                44    4  26  41    4  26               47    4  26                            B  V SN688983  10
+158.00 + Bluebell Hill              59   3k 244  24   2k 245  27   2k 242  45   3k 245  42   3k 245  39   3k 245  W  H TQ757613 191
+113.00   Dover                      68   2k 328  61   2k 370  60   2k 370  58   2k 370  62   2k 370  55   2k 370  CD H TR274397 135
+113.00   Dover B                    45   2k 356  42   2k 356                            39   1k 356               E  H TR274397 135
+101.04   Tunbridge Wells            55  100 175  61  100 174  42  100 174  45  100 174  39  100 174  59  100 174  E  V TQ607440 122
+134.02 - Bressay                    28   2k 301  25   2k 301  22   2k 301  24   2k 301  27   1k 301  21   1k 301  A  V HU503387 226
+134.06   Baltasound                 46   36 145  43   36 145               50   36 145                            B  V HP635109 107
+134.08   Collafirth Hill            45  800 276  42  800 276               49  800 276                            B  V HU335834 227
+134.07   Fetlar                     47  250 139  44  250 140               41  250 139                            B  V HU588913  94
+134.03   Fitful Head                44   19 300  41   19 300               47   19 300                            B  V HU346135 239
+134.04   Scalloway                  62    6 100  59    6 100               55    6 100                            CD V HU398397  70
+134.05   Swinister                  62  320 163  59  320 163               55  320 163                            CD V HU440727 135
+134.14   Voe                        57    2  61  60    2  61               53    2  61                            CD V HU409634  31
+134.09   Weisdale                   58   12 275  61   12 275               54   12 275                            CD V HU379512 217
+102.06 - Bromsgrove                 26  400 201  23  400 201  41  400 196  30  400 201  44  400 198  47  400 198  K  V SO947730 148
+137.00 + Caldbeck                   25 100k 620  28 100k 620  23  15k 599  30 100k 620  26  15k 599  29  15k 599  A  H NY299425 289*
+137.04   Ainstable                  49   20 235  45   20 235               42   20 235                            B  V NY539466 217
+137.07   Bassenthwaite              49   32 142  45   32 142               42   32 142                            B  V NY206305 125
+137.29   Bleach Green HP            60    2 151  53    2 151               57    2 151                            CD H NX984199 116
+137.62   Bleach Green VP            60  2.5 151  53  2.5 151               57  2.5 151                            CD V NX984199 116
+103.45   Coniston High Man          27   16 306  24   16 306               21   16 306                            A  V SD327966 271
+137.46   Crosby Ravensworth         60    2 227  53    2 227               57    2 227                            CD V NY618152 221
+137.47   Crosthwaite                48    4  94  52    4  94               56    4  94                            CD V SD437900  77
+137.31   Dentdale                   60 10.4 290  53 10.4 290               57 10.4 290                            CD V SD727854 256
+137.25   Eskdale Green              25    2  77  28    2  77               22    2  77                            A  V SD135997  64
+137.49   Glenridding                57    2 175  53    2 175               60    2 175                            CD V NY395172 158
+         Glenridding Link           24    2 204  27    2 204               21    2 204                            A  V NY386184 173
+137.06   Gosforth                   61  100  90  54  100  90               58  100  90                            CD V NY069012  42
+137.45   Grasmere                   55    4 222  62    4 222               59    4 222                            CD V NY339056 193
+137.38   Greystoke                  60  2.3 230  53  2.3 230               57  2.3 230                            CD V NY450299 202
+137.05   Haltwhistle                59  400 240  62  400 240               55  400 240                            CD V NY674627 188
+103.50   Hawkshead                  26 12.2 281  23 12.2 281               29 12.2 281                            A  V SD342959 245
+103.36   Kendal                     60  400 223  53  400 223               57  400 223                            CD V SD540912 176
+103.61   Kendal Fell                46  3.2 158  50  3.2 158               43  3.2 158                            B  H SD509930 138
+137.02   Keswick                    24   24 233  27   24 233               21   24 233                            A  V NY278224 165
+137.39   Kirkby Stephen             60  2.4 208  53  2.4 208               57  2.4 208                            CD V NY777082 185
+137.37   Lorton                     60   10 228  53   10 228               57   10 228                            CD V NY155278 193
+137.33   Lowther Valley             46  5.2 259  50  5.2 259               43  5.2 259                            B  V NY520199 235
+137.50   Millthrop                  52    3 225  48    3 225               56    3 225                            CD V SD658926 201
+137.43   Orton                      43  6.2 272  50  6.2 272               46  6.2 272                            B  V NY618071 240
+137.08   Pooley Bridge              46  2.6 232  50  2.6 232               43  2.6 232                            B  V NY477234 209
+137.42   Ravenstonedale             60  2.2 358  53  2.2 358               57  2.2 358                            CD V NY733048 327
+137.44   St Bees                    61   50  34  54   50  34               58   50  34                            CD V NX967115  11
+137.27   Sedbergh                   46  100 261  50  100 261               43  100 261                            B  V SD607879 220
+137.03   Threlkeld                  60  2.2 256  53  2.2 256               57  2.2 256                            CD V NY313256 228
+137.01   Whitehaven                 43   2k 180  50   2k 180               46   2k 180                            B  V NX992123 127
+103.38   Windermere                 44  100 252  47  100 252               41  100 251                            B  V SD383980 219
+137.28   Workington                 61   10  56  54   10  56               58   10  56                            CD V NY001277  40
+137.00 + Caldbeck Scotland          27  50k 490  24  50k 490               22 100k 509                            A  H NY299425 289
+137.35   Ballantrae                 58    2  89  61    2  89               54    2  89                            CD V NX089827  58
+137.17   Barskeoch Hill             55  400 228  59  400 228               62  400 228                            CD V NX810616 165
+137.21   Cambret Hill               44  2k8 409  41  2k8 409               47  2k8 409                            B  H NX524578 346
+137.23   Creetown                   59  6.4  71  62  6.4  71               55  6.4  71                            CD V NX432559  51
+137.30   Dumfries South             43   20  41  46   20  41               50   20  41                            B  V NX970741  12
+137.26   Glenluce                   57    3 135  60    3 135               53    3 135                            CD V NX203569 102
+137.24   Kirkcudbright              21    2  66  24    2  66               27    2  66                            A  V NX686506  46
+137.15   Langholm                   57    4 308  60    4 308               53    4 308                            CD V NY358831 264
+137.51   Minnigaff                  26    2  66  29    2  66               23    2  66                            A  V NX406661  54
+137.09   Moffat                     45    2 167  42    2 167               49    2 167                            B  V NT078050 154
+137.18   New Galloway               26   20 196  23   20 196               29   20 196                            A  V NX615788 168
+137.34   Pinwherry                  22 11.2 186  25 11.2 186               28 11.2 186                            A  V NX183876 138
+137.20   Portpatrick                58   60 111  61   60 111               54   60 111                            CD V NX007545  72
+137.19   Stranraer                  57   50 238  60   50 238               53   50 238                            CD V NX111632 186
+137.16   Thornhill                  57  100 374  60  100 374               53  100 374                            CD V NX855891 318
+131.00 + Caradon Hill               28 100k 602  25 100k 602  21  50k 580  22 100k 602  24  50k 580  27  50k 580  A  H SX273707 369
+131.30   Aveton Gifford             44    2  55  41    2  55               47    2  55                            B  V SX694474  23
+131.47   Compton                    44    2  70  41    2  70               47    2  70                            B  V SX495564  43
+131.21   Croyde                     44    2 116  41    2 116               47    2 116                            B  V SS446395  80
+131.07   Downderry                  53   60 101  60   60 101               57   60 101                            CD V SX313542  66
+131.38   Fowey                      53    2  71  60    2  71               57    2  71                            CD V SX125507  39
+131.04   Gunnislake                 46  6.4 178  43  6.4 178               50  6.4 178                            B  V SX439719 133
+131.15   Ivybridge                  52   50 192  49   50 192               48   50 192                            B  V SX631538 139
+131.16   Kingsbridge                46   34 141  43   34 141               50   34 141                            B  V SX721431  90
+131.02   Looe                       46   20  89  43   20  89               50   20  89                            B  V SX252534  63
+131.28   Lostwithiel                46    2 104  43    2 104               50    2 104                            B  V SX100588  81
+131.51   Marystow                   45    2 135  49    2 135               42    2 135                            B  V SX435828 122
+131.26   Mevagissey                 46   10  94  43   10  94               50   10  94                            B  H SX011445  76
+131.31   Modbury                    62    2  76  59    2  76               55    2  76                            CD H SX660514  61
+131.11   Newton Ferrers             62    2 107  59    2 107               55    2 107                            CD V SX545475  69
+131.43   North Hessary Tor          62  2.5 578  59  2.5 578               55  2.5 578                            CD V SX578742 509
+131.14   Okehampton                 45   16 255  49   16 255               42   16 255                            B  V SX586968 208
+131.10   Penaligon Down             45   20 161  49   20 161               42   20 161                            B  V SX026683 114
+131.18   Plymouth North Road HP     46  .12  66  43  .12  66               50  .12  66                            B  H SX476552  27
+131.18   Plymouth North Road VP     46  2.4  65  43  2.4  65               50  2.4  65                            B  V SX476552  27
+131.41   Plymouth Weston Mill       42    2  32  45    2  32               49    2  32                            B  V SX454574  11
+131.05   Plympton                   54  400 163  61  400 163  42  400 163  58  400 163  45  400 163  56  400 163  E  V SX530555 114
+131.25   Polperro                   53    2 140  60    2 140               57    2 140                            CD V SX205508 111
+131.40   Port Isaac                 62   50  86  59   50  86               55   50  86                            CD V SW998805  34
+131.37   St Neot                    42    2 144  49    2 144               45    2 144                            B  V SX183676 127
+131.24   Salcombe                   41  3.4  99  44  3.4  99               47  3.4  99                            B  V SX753397  62
+131.19   Slapton                    60  250 150  52  250 150               48  250 150                            CD V SX816416  89
+131.54   Southway                   62    2 120  59    2 120               55    2 120                            CD V SX478599 102
+131.08   Tavistock                  53   20 215  60   20 215               57   20 215                            CD V SX485716 166
+131.50   Widecombe in the Moor      52    2 336  50    2 336               48    2 336                            B  H SX725753 314
+119.00 - Carmel                     60  20k 411  53  20k 411  54  10k 411  57  20k 411  58  10k 411  61  10k 411  CD H SN576153 255
+119.13   Abercraf                   25   25 316  28   25 316               22   25 316                            A  V SN851123 263
+119.21   Brechfa                    27  3.6 296  24  3.6 296               21  3.6 296                            A  V SN504289 297
+119.24   Bronwydd Arms              27    2  96  24    2  96               21    2  96                            A  V SN414237 101
+119.10   Builth Wells               25  5.2 255  22  5.2 255               28  5.2 255                            A  V SO036528 225
+119.25   Cilycwm                    27    2 218  24    2 218               21    2 218                            A  V SN777406 194
+119.05   Cwm Twrch                  24  3.2 159  21  3.2 159               27  3.2 159                            A  V SN760106 149
+119.12   Cwm-gors                   24  5.2 202  27  5.2 202               21  5.2 202                            A  V SN705123 176
+119.14   Erwood                     60    2 234  53    2 234               57    2 234                            CD V SO089428 216
+119.16   Greenhill                  24   30 119  27   30 119               21   30 119                            A  V SM924015  68
+119.04   Llandrindod Wells          49  400 513  42  400 513               45  400 513                            B  V SO018635 431
+119.01   Llanelli                   49   20 143  45   20 143               42   20 143                            B  V SN510023 108
+119.23   Llansawel                  28    2 170  25    2 170               22    2 170                            A  V SN618368 156
+119.09   Llanwrtyd Wells            24    2 268  21    2 268               27    2 268                            A  V SN899454 250
+119.17   Penderyn                   49  2.6 310  42  2.6 310               45  2.6 310                            B  V SN956087 290
+119.08   Rhayader                   23   20 396  29   20 396               26   20 396                            A  V SN985702 346
+119.22   Talley                     49    2 224  42    2 224               45    2 224                            B  V SN639332 207
+119.11   Tenby                      56   20  97  48   20  97               52   20  97                            CD V SS109994  86
+119.03   Ystalyfera                 49    1 370  42    1 370               45    1 370                            B  V SN779078 328
+104.05 - Chesterfield               26  400 231  23  400 231  43  400 236  29  800 230  46  400 231  50  400 231  W  V SK382764 180
+104.70   Brockwell                  45    2 208  42    2 119               49    2 116                            B  V SK373707  92
+104.31   Dronfield                  62    2 189  59    2 189               55    2 189                            CD H SK363791 165
+104.32   Hasland                    57    2 141  60    2 140               53    2 138                            CD V SK406697 103
+147.00 - Craigkelly                 27  20k 311  24  20k 311  42  20k 311  21  10k 311  45  10k 311  39  10k 311  W  H NT233872 180
+147.05   Aberfoyle                  55   18 122  50   18 122               59   18 122                            CD V NS523990  86
+147.07   Canongate HP               55    3  79  50    3  79               59    3  79                            CD H NT263736  57
+147.07   Canongate VP               55    3  69  50    3  69               59    3  69                            CD V NT263736  57
+147.13   Grangemouth                53    2  44  60    2  44               57    2  44                            CD V NS921795  30
+147.09   Kinross                    59   25 170  62   25 170               55   25 170                            CD V NT097996 154
+147.06   Newbattle                  50    2  87  59    2  87               55    2  87                            CD V NT324651  69
+147.01   Penicuik                   54  400 298  61  400 298               58  400 298                            CD V NT252590 249
+147.03   West Linton                29    5 323  23    5 323               26    5 323                            A  V NT164507 275
+101.00 + Crystal Palace             23 200k 321  26 200k 321  25 200k 314  30 200k 324  22 200k 321  28 200k 321  A  H TQ339712 110
+101.38   Alexandra Palace           61   70 186  58   70 186               54   70 186                            CD H TQ296900  91
+101.68   Assendon                   59    2 137  55    2 137               62    2 137                            CD V SU734856 115
+101.42   Biggin Hill                49    2 186  45    2 186               42    2 186                            B  V TQ411587 171
+         Biggin Hill Link           59  0.4 201  55  0.4 201               62  0.4 201                            CD H TQ417591 185
+101.11   Bishop's Stortford         59   14 108  55   14 108               62   14 108                            CD V TL499214  79
+101.31   Cane Hill                  58    5 170  61    5 170               54    5 170                            CD V TQ291588 131
+101.40   Caterham                   59    6 204  55    6 204               62    6 204                            CD V TQ343557 172
+101.18   Chepping Wycombe           41   20 189  44   20 189               47   20 189                            B  V SU877911 142
+101.12   Chesham                    43   20 175  46   20 175               50   20 175                            B  V SP956008 125
+101.23   Chingford                  60    2  67  57    2  67               53    2  67                            CD V TQ380946  29
+101.43   Croydon Old Town           52  6.6  93  56  6.6  93               48  6.6  93                            CD V TQ319647  58
+101.39   Dorking HP                 44    9 149  41    9 149               47    9 149                            B  H TQ169482 116
+101.39   Dorking VP                 44  4.4 149  41  4.4 149               47  4.4 149                            B  V TQ169482 116
+101.41   East Grinstead             43   23 154  55   23 154               62   23 154                            E  V TQ386360 131
+101.55   Edmonton                   60   20  94  57   20  94               53   20  94                            CD H TQ345934  14
+101.80   Farningham                 52   13  79  48   13  79               56   13  79                            CD V TQ547660  61
+101.58   Finchley                   48   13 112  52   13 112               56   13 112                            CD V TQ251908  82
+101.22   Forest Row                 56   24 172  58   24 172               50   24 172                            CD V TQ438362 122
+101.49   Gravesend                  59   43  65  55   43  65               53   43  65                            CD V TQ656715  53
+101.14   Great Missenden            61   17 226  58   17 226               54   17 226                            CD V SP905005 171
+101.74   Greenwich                  41    3  45  44    3  45               47    3  45                            B  V TQ408781  19
+101.01   Guildford                  43   2k 173  46   2k 173  48   2k 193  40   2k 192  52   2k 191  56   2k 191  E  V SU974486 137
+101.64   Hammersmith                59    2  57  55    2  57               62    2  57                            CD V TQ232786   2
+101.66   Hampstead Heath            47    2 115  44    2 115               41    2 115                            B  H TQ272854  70
+101.05   Hemel Hempstead            44   2k 219  41   2k 211  50   2k 215  47   2k 230  59   2k 230  55   2k 230  E  V TL087044 137
+101.24   Hemel Hempstead Town       60    8 154  57    8 154               53    8 154                            CD V TL054065  84
+101.10   Henley-on-Thames           61   20 157  58   20 157               54   20 157                            CD V SU779822 109
+101.02   Hertford                   61  500 106  58  500 106               54  500 106                            CD V TL320137  68
+101.07   High Wycombe               59  100 213  55  100 213               62  100 213                            CD V SU856942 155
+101.21   Hughenden                  43   12 185  46   12 185               50   12 185                            B  V SU856974 147
+101.17   Kenley                     43   28 181  46   28 181               50   28 181                            B  V TQ329592 151
+101.62   Kensal Town                52   25 131  56   25 131               48   25 131                            CD H TQ245820  26
+101.36   Lea Bridge                 62    2  60  55    2  60               59    2  60                            CD V TQ373879  14
+101.30   Marlow Bottom              61   11 121  58   11 121               54   11 121                            CD V SU841885  97
+101.37   Micklefield                57    2 156  60    2 156               53    2 156                            CD V SU897933 139
+101.15   Mickleham                  58   18 131  61   18 131               54   18 131                            CD V TQ163538 103
+101.33   New Addington              59    8 170  55    8 170               62    8 170                            CD V TQ378628 134
+101.54   New Barnet                 59    2 102  55    2 102               62    2 102                            CD V TQ265965  61
+101.59   Old Coulsdon               41    2 175  44    2 175               47    2 175                            B  H TQ314587 149
+101.73   Orpington                  59    3 117  55    3 117               62    3 117                            CD V TQ458652  73
+101.35   Otford                     60  6.2 206  57  6.2 206               53  6.2 206                            CD V TQ533603 164
+101.77   Poplar                     49    4  90  45    4  90               42    4  90                            B  V TQ382812   3
+101.03   Reigate                    60   2k 291  57   2k 291  21   2k 298  53   2k 300  24   2k 300  27   2k 300  W  V TQ256521 232
+101.48   St Albans                  57   22 128  53   22 128               60   22 128                            CD V TL132069 112
+101.47   Skirmett                   41   25  89  44   25  89               47   25  89                            B  V SU777902  74
+101.84   Sutton HP                  59    5  84  55    5  84               62    5  84                            CD H TQ255647  37
+101.85   Sutton VP                  59    5  87  55    5  87               62    5  87                            CD V TQ255647  37
+101.25   Walthamstow North          49    2  63  45    2  63               42    2  63                            B  V TQ378897  29
+101.13   Welwyn                     43   30 124  46   30 124               50   30 124                            B  V TL223161 101
+101.34   West Wycombe               43  5.6 155  46  5.6 155               50  5.6 155                            B  V SU839936 125
+101.50   Wonersh                    44   21 125  41   21 125               47   21 125                            B  V TQ024454  90
+101.09   Wooburn                    56   20 142  48   20 142               52   20 142                            CD V SU916873  96
+101.06   Woolwich                   60  126  51  57  126  51               53  126  51                            CD V TQ460793   4
+101.70   Worlds End                 46    5  62  43    5  62               50    5  62                            B  V TQ264773   2
+152.00 - Darvel                     22  20k 446  25  20k 446  23  10k 446  28  20k 446  26  10k 446  29  10k 446  A  H NS557341 285
+152.24   Ardentinny                 44   14 118  41   14 118               47   14 118                            B  V NS186863 121
+152.25   Arrochar                   27    2 122  24    2 122               21    2 122                            A  V NN288046  91
+152.44   Ayr South                  45    2  72  39    2  72               42    2  72                            B  H NS355188  59
+152.38   Blackwaterfoot             43    8  70  46    8  70               50    8  70                            B  V NR912291  51
+152.09   Bowmore HP                 47   10  83  41   10  83               44   10  83                            B  H NR318590  40
+152.09   Bowmore VP                 47   13  93  41   13  93               44   13  93                            B  V NR318590  40
+152.06   Campbeltown                60   25 124  57   25 124               53   25 124                            CD V NR707192  88
+152.23   Carradale                  44    6  37  41    6  37               47    6  37                            B  V NR817376  19
+152.52   Catrine                    50    2 123  59    2 123               55    2 123                            CD V NS528255 101
+152.22   Claonaig                   50   15  88  59   15  88               55   15  88                            CD V NR876565  71
+152.31   Dunure                     46    2  89  43    2  89               40    2  89                            B  V NS250150  68
+152.05   Girvan                     50   50 229  59   50 229               55   50 229                            CD V NX211981 179
+152.37   High Keil                  44    4  68  47    4  68               41    4  68                            B  V NR680082  53
+152.32   Holmhead                   44    2 142  41    2 142               47    2 142                            B  V NS566199 108
+152.30   Kirkmichael                45    4 155  49    4 155               42    4 155                            B  V NS354068 127
+152.29   Kirkoswald HP              28    7 152  25    7 152               22    7 152                            A  H NS231075 121
+152.29   Kirkoswald VP              28    8 154  25    8 154               22    8 154                            A  V NS231075 121
+152.04   Lethanhill                 60   50 348  57   50 348               53   50 348                            CD V NS438105 298
+152.35   Lochgoilhead               53    2 170  57    2 170               60    2 170                            CD V NS194978 162
+152.35   Lochgoilhead AD            22  .02 323  25  .02 323               28  .02 323                            A  V NS190977 320
+152.17   Lochwinnoch                60   17 149  57   17 149               53   17 149                            CD H NS337582  96
+152.10   Millburn Muir              42   50 211  45   50 211               39   50 211                            B  V NS378796 158
+152.01   Muirkirk                   44   20 313  41   20 313               47   20 313                            B  V NS710267 272
+152.08   Port Ellen                 25   30 120  22   30 120               28   30 120                            A  V NR339452  79
+152.51   Portnahaven                23    2  74  29    2  74               26    2  74                            A  V NR179523  49
+152.39   Sorn                       46    2 178  43    2 178               40    2 178                            B  V NS558260 164
+152.13   Troon                      49    4  40  58    4  40               54    4  40                            CD V NS324314   2
+152.28   Wanlockhead                44    2 450  47    2 450               41    2 450                            B  V NS874126 430
+107.00 + Divis                      29  2k3 505  33  2k3 505  23  2k3 551  26  2k3 551  48   3k 528  34  2k7 528  K  H J 287750 368
+151.00   Brougher Mountain          30  500 370  34  500 370  23  500 365  26  500 365  29  500 373  33  500 373  A  H H 350527 309
+130.00   Limavady                   67  800 393  58  800 393  53  800 379  57  800 379  60  800 379  63  800 379  CD H C 711296 356
+137.10 - Douglas (IoM)              53   1k 192  60   1k 192               57   1k 192                            CD V SC373746 139
+137.11   Beary Peark (IoM)          46  200 337  43  200 337               50  200 337                            B  V SC295832 287
+137.60   Foxdale (IoM)              26    2 180  23    2 180               29    2 180                            A  V SC292778 164
+137.64   Glenmaye (IoM)             60   10 128  57   10 128               53   10 128                            CD V SC232803 111
+137.63   Jurby (IoM)                46   40  62  43   40  62               50   40  62                            B  V SC365991  27
+137.56   Kimmeragh (IoM)            44  100 102  41  100 102               47  100 102                            B  V NX450000  70
+137.14   Laxey (IoM)                46   20 140  43   20 140               50   20 140                            B  V SC437836  93
+137.12   Port St Mary (IoM)         46   2k 124  43   2k 124               50   2k 124                            B  V SC206678  66
+137.67   Ramsey (IoM)               49  100 136  45  100 136               42  100 136                            B  H SC453934 127
+137.32   Union Mills (IoM)          46  2.5 159  43  2.5 159               50  2.5 159                            B  V SC343769 134
+112.00 + Durris                     28 100k 639  25 100k 639  23  50k 639  22 100k 639  26  50k 639  29  50k 639  A  H NO764899 325
+112.04   Balgownie                  46    8 106  43    8 106               50    8 106                            B  V NJ927104  70
+112.08   Banff                      45   56 118  42   56 118               49   56 118                            B  V NJ687617  84
+112.11   Boddam                     45    2 102  42    2 102               49    2 102                            B  V NK126415  70
+112.06   Braemar                    45    3 556  42    3 556               49    3 556                            B  V NO108907 536
+112.10   Brechin                    46    2  56  43    2  56               50    2  56                            B  V NO604590  40
+112.09   Ellon                      45    2  63  49    2  63               42    2  63                            B  V NJ958311  43
+112.02   Gartly Moor                58  440 466  61  440 466               54  440 466                            CD V NJ546326 412
+112.22   Gourdon                    62    2  28  59    2  28               55    2  28                            CD V NO827709  19
+112.13   Lumphanan                  42    2 231  45    2 231               49    2 231                            B  V NJ587049 208
+112.01   Peterhead                  62  100  92  59  100  92               55  100  92                            CD V NK111452  41
+112.03   Rosehearty                 44  400 111  41  400 111               47  400 111                            B  V NJ933663  61
+112.07   Tomintoul                  46    2 488  43    2 488               50    2 488                            B  V NJ163209 459
+112.05   Tullich                    62   14 501  59   14 501               55   14 501                            CD V NO379984 452
+154.00 - Eitshal                    26  20k 368  23  20k 368  25  20k 368  29  10k 368  22  10k 368  28  10k 368  A  H NB305303 198
+154.08   Badachro                   46    7  43  43    7  43               50    7  43                            B  V NG779741  27
+         Kinlochbervie HP           46    3  53  43    3  53               50    3  53                            B  H NC225560  29
+         Kinlochbervie VP           46   16  53  43   16  53               50   16  53                            B  V NC225560  29
+154.19   Lochinver                  46    2  21  43    2  21               50    2  21                            B  V NC092222   2
+154.09   Ness of Lewis              44    6 128  41    6 128               47    6 128                            B  V NB533603  96
+154.18   Poolewe                    44    3  69  47    3  69               41    3  69                            B  V NG860820  33
+154.41   Staffin                    45    9 107  49    9 107               42    9 107                            B  V NG495666  90
+154.10   Ullapool                   45   16 158  49   16 158               42   16 158                            B  V NH142935 137
+128.00 + Fremont Point              44  3k2 192  41  3k2 192               47  3k2 192                            B  H CI908280
+128.03   Alderney                   49  200  62  60  200  62               55  200  62                            CD V CI865798
+128.06   Gorey                      59   10  93  52   10  93               48   10  93                            CD V CI985222
+128.02   Les Touillets              54  1k5 109  56  1k5 109               51  1k5 109                            CD H CI581511
+128.07   St Brelades Bay            59   15  56  52   15  56               62   15  56                            CD H CI852206
+128.01   St Helier                  62   40  71  59   40  71               52   40  71                            CD V CI920195
+128.04   St Peter Port              24   10  76  27   10  76               21   10  76                            A  V CI610503
+128.05   Torteval                   59   20  52  50   20  52               48   20  52                            CD V CI515482
+104.00 + Emley Moor                 47 174k 565  44 174k 565  51 174k 567  41 174k 578  52 174k 565  48 174k 565  B  H SE222128 256
+104.27   Addingham                  43  4.6 189  50  4.6 189               46  4.6 187                            B  V SE075492 148
+104.47   Armitage Bridge            61    2 175  58    2 172               54    2 162                            CD V SE132133 146
+104.43   Batley                     61  2.5 106  58  2.5 106               54  2.5 106                            CD V SE239249  79
+104.15   Beecroft Hill              59  200 197  55  200 197               62  200 197                            CD V SE237350 143
+104.79   Blackburn in Rotherham     60    2  66  57    2  66               53    2  66                            CD V SK389926  61
+104.67   Bradford West              55  2.5 236  59  2.5 231               62  2.5 229                            CD V SE133345 204
+104.18   Calver Peak                49   50 323  45   50 323               42   50 323                            B  V SK232743 274
+104.80   Cleckheaton                59    2 163  55    2 163               62    2 160                            CD V SE184245 144
+104.72   Conisbrough                60    2  83  57    2  83               53    2  87                            CD V SK516980  70
+104.11   Cop Hill                   25  200 361  22  200 362               28  200 360                            A  V SE058138 313
+104.68   Copley                     59    2 137  55    2 138               62    2 124                            CD V SE081223 129
+104.63   Cornholme                  61  8.4 361  58  8.4 360               54  8.4 357                            CD V SD918264 305
+104.61   Cowling                    42  2.6 224  45  2.6 224               49  2.6 220                            B  V SD970432 195
+104.55   Cragg Vale                 61    5 314  58    5 314               54    5 309                            CD V SE003229 263
+104.41   Cullingworth               62  2.6 245  55  2.6 245               59  2.6 247                            CD V SE075381 234
+104.33   Edale                      60    2 335  57    2 335               53    2 335                            CD V SK126843 323
+104.73   Elland                     61    2 176  58    2 176               54    2 185                            CD H SE126212 160
+104.60   Grassington                23   12 328  26   12 328               29   12 330                            A  V SE015639 293
+104.50   Hagg Wood                  59  6.6 197  55  6.6 199               62  6.6 200                            CD V SE149105 165
+104.06   Halifax                    24  100 283  21  100 283               27  100 284                            A  V SE102241 221
+104.14   Headingley                 61  2.4 126  58  2.4 126               54  2.4 125                            CD H SE299361  81
+104.09   Hebden Bridge              25   50 266  22   50 267               28   50 268                            A  V SD988267 244
+104.44   Heyshaw                    60  100 333  57  100 336               53  100 339                            CD V SE170631 301
+104.59   Holmfield                  59  4.4 318  55  4.4 319               62  4.4 316                            CD V SE089294 279
+104.49   Holmfirth                  61  5.2 225  58  5.2 224               54  5.2 223                            CD V SE140086 198
+104.26   Hope                       28  2.4 242  22  2.4 242               25  2.4 242                            A  V SK169829 227
+104.13   Idle                       24   50 270  21   50 265  42   50 263  27   50 260  45   50 265  39   50 265  W  V SE164374 215
+104.07   Keighley                   61   2k 354  58   2k 354  57   2k 362  54   2k 356  53   2k 354  60   2k 354  CD V SE068443 303
+104.52   Keighley Town              23    2 177  26    2 178               29    2 180                            A  V SE065405 158
+104.69   Kettlewell                 42   26 328  49   26 328               45   26 323                            B  V SD987680 284
+104.74   Longwood Edge              59    8 132  55    8 132               62    8 134                            CD H SE112161 122
+104.28   Luddenden                  60   12 295  57   12 295               53   12 295                            CD V SE048248 247
+104.56   Lydgate                    23    2 210  26    2 210               29    2 213                            A  V SD932253 186
+104.76   Millhouse Green            61    2 307  58    2 307               54    2 300                            CD V SE229028 285
+104.58   Oughtibridge               59  7.8 296  55  7.8 296               62  7.8 293                            CD V SK307952 260
+104.17   Oxenhope                   25   40 408  22   40 407               28   40 402                            A  V SE028338 363
+104.46   Primrose Hill              60  5.6 197  57  5.6 197               53  5.6 197                            CD V SE142150 138
+104.10   Ripponden                  61   12 333  58   12 334               54   12 336                            CD V SE043188 288
+104.08   Shatton Edge               58  200 415  54  200 415               61  200 415                            CD V SK194813 372
+104.04   Skipton                    49   2k 212  45   2k 212               42   2k 212                            B  V SD908516 150
+104.42   Skipton Town               24  2.6 191  27  2.6 190               21  2.6 191                            A  V SD998509 164
+104.57   Stocksbridge               61  2.4 322  58  2.4 318               54  2.4 316                            CD V SK275991 284
+104.53   Sutton-in-Craven           23  2.4 288  26  2.4 287               29  2.4 282                            A  V SE004428 270
+104.22   Tideswell Moor             60   50 447  57   50 447               53   50 447                            CD V SK150780 401
+104.65   Todmorden                  49  100 273  45  100 272               42  100 271                            B  V SD957241 221
+104.64   Walsden                    60   10 287  57   10 298               53   10 300                            CD V SD927234 234
+104.66   Walsden South              43    2 236  46    2 246               50    2 247                            B  V SD937215 202
+104.01   Wharfedale                 25  400 262  22  400 262               28  400 262                            A  V SE198485 212
+104.83   Wheatley                   61  3.2 222  58  3.2 217               54  3.2 212                            CD V SE068265 196
+104.48   Wincobank                  59    2  68  55    2  67               62    2  69                            CD V SK388919  46
+126.00 + Hannington                 45  50k 352  42  50k 359  41  25k 362  39  50k 359  44  25k 359  47  25k 359  B  H SU527568 229
+126.10   Aldbourne                  27    2 170  24    2 170  21    2 170                                         A  V SU262752 155
+126.08   Alton                      57    2 168  60    2 168  53    2 166                                         CD V SU722386 148
+126.06   Chisbury                   62    8 179  59    8 179  55    8 179                                         CD V SU274651 140
+126.20   Hemdean HP                 52    8  89  56    8  89  48    8  89                                         CD H SU710762  51
+126.09   Hemdean VP                 52   32  87  56   32  87  48   32  87                                         CD V SU710762  51
+126.04   Hurstbourne Tarrant        28    2 158  25    2 158  22    2 158                                         A  V SU377533 141
+126.13   Lambourn                   61    2 170  58    2 170  54    2 170                                         CD V SU333794 154
+126.02   The Bournes                57  6.9 127  60  6.9 133  53  6.9 126                                         CD V SU842451  95
+126.05   Tidworth                   29  2.6 177  26  2.6 177  23  2.6 177                                         A  V SU228488 139
+139.00 + Heathfield North           34  1k6 256  29  1k6 300  48   1k 298  47   1k 300  54   1k 300  51   1k 300  W  H TQ566220 157
+139.02   Hastings                   31  100 126  27  200 123  21  200 121  24  200 126  63  200 123  60  200 123  W  V TQ806100  76
+138.00 + Huntshaw Cross             62  20k 359  59  20k 359  48  10k 359  55  20k 359  52  10k 359  56  10k 359  CD H SS527220 201
+138.15   Barnstaple                 46    8 117  43    8 117               50    8 117                            B  V SS575330  81
+131.27   Berrynarbor                28    2 149  25    2 149               22    2 149                            A  V SS562468 101
+138.12   Braunton                   45    2 111  49    2 111               42    2 111                            B  H SS494369  86
+131.22   Chambercombe               27   10 100  24   10 100               21   10 100                            A  V SS532475  65
+131.13   Combe Martin               42   70 192  49   70 192               45   70 192                            B  V SS581461 115
+138.04   Great Torrington           45    2  93  50    2  93               42    2  93                            B  V SS487182  80
+131.03   Hartland                   60   60 162  53   60 162               57   60 162                            CD V SS253256 134
+131.12   Ilfracombe                 54   56 251  61   56 251               58   56 251                            CD V SS507464 184
+138.05   Muddiford                  44    2 155  41    2 155               47    2 155                            B  V SS559383 119
+138.11   North Bovey                46  6.8 280  43  6.8 280               50  6.8 280                            B  V SX741845 260
+138.06   Swimbridge                 26    2 185  23    2 185               29    2 185                            A  V SS622295 150
+138.13   Tedburn St Mary            45    4 169  49    4 169               42    4 169                            B  V SX830941 151
+138.07   Westward Ho!               28   32 126  25   32 126               22   32 126                            A  V SS438288  92
+131.09   Woolacombe                 47    2 211  41    2 211               44    2 211                            B  V SS465428 181
+134.00 - Keelylang Hill             46  20k 270  43  20k 270  42  20k 270  50  10k 270  45  10k 270  49  10k 270  B  H HY377102 220
+134.11   Burgar Hill HP             27    1 182  24    1 182               21    1 182                            A  H HY341261 149
+134.11   Burgar Hill VP             27    4 182  24    4 182               21    4 182                            A  V HY341261 149
+134.10   Pierowall                  26   10  46  23   10  46               29   10  46                            A  V HY447497  26
+106.01 - Kilvey Hill                23   2k 244  26   2k 244  25   2k 244  29   2k 244  22   2k 244  28   2k 244  A  V SS671940 193
+106.36   Alltwen                    43    2 158  46    2 158               50    2 158                            B  V SN716039 140
+106.71   Briton Ferry               43    4  90  46    4  90               50    4  90                            B  V SS747956  58
+106.79   Burry Port                 61    2  93  58    2  93               54    2  93                            CD V SN449019  72
+106.16   Cilfrew                    49    3 114  45    3 114               42    3 114                            B  V SS775986  82
+106.70   Craig-Cefn-Parc            43    2 179  46    2 179               50    2 179                            B  V SN682020 163
+106.77   Efail Fach                 49    2 176  45    2 176               52    2 176                            B  V SS786958 163
+119.15   Mynydd Emroch              43   18 205  46   18 205               50   18 205                            B  V SS775901 166
+106.92   Neath Abbey HP             52   10  96  48   10  96               56   10  96                            CD H SS731980  82
+106.93   Neath Abbey VP             52   10  96  48   10  96               56   10  96                            CD V SS731980  82
+106.56   Pontardawe                 61   25 204  58   25 204               54   25 204                            CD V SN732037 155
+153.00 - Knockmore                  26  20k 466  23  20k 466  53  10k 466  29  20k 466  57  10k 466  60  10k 466  W  H NJ321497 355
+153.03   Aviemore                   28    3 457  25    3 457               22    3 457                            A  V NH940125 410
+153.07   Avoch                      58    2  88  54    2  88               61    2  88                            CD V NH702555  72
+153.05   Balblair Wood              62   17 253  59   17 253               55   17 253                            CD V NH593952 215
+153.04   Craigellachie              58   14 227  61   14 227               54   14 227                            CD V NJ262443 180
+153.01   Grantown                   44   70 419  41   70 419               47   70 419                            B  V NJ003267 379
+153.02   Kingussie                  46   20 373  43   20 373               50   20 373                            B  V NN769985 342
+153.06   Lairg                      44    3 167  41    3 167               47    3 167                            B  V NC573056 146
+102.08 - Lark Stoke                 26 1k26 281  23 1k26 281  41 1k26 276  30 1k26 277  44 1k26 276  47 1k26 276  K  V SP187426 260
+118.00 - Llanddona                  57  20k 255  60  20k 255  43  10k 255  53  20k 255  46  10k 255  50  10k 255  E  H SH582810 146
+118.10   Amlwch                     22    7  93  25    7  93               28    7  93                            A  V SH436920  68
+118.06   Arfon                      41   2k 611  44   2k 611               47   2k 611                            B  V SH476493 298
+118.04   Bethesda                   57    5 197  60    5 197               53    5 197                            CD V SH613663 182
+118.25   Bethesda North             28    2 251  25    2 251               22    2 251                            A  V SH627672 219
+118.01   Betws-y-Coed               27  100 354  24  100 354               21  100 354                            A  V SH824582 287
+118.14   Caergybi                   21    2  30  24    2  30               27    2  30                            A  V SH247817   9
+118.24   Caernarfon                 24    5  28  27    5  28               21    5  28                            A  V SH486629  21
+118.11   Cemaes                     45  5.6  56  49  5.6  56               42  5.6  56                            B  V SH373926  39
+118.17   Coed Derw                  43    4  86  50    4  86               46    4  86                            B  V SH794572  66
+118.03   Conway                     47  400 164  41  400 164               44  400 164                            B  V SH781765 104
+118.05   Deiniolen                  22    8 359  25    8 359               28    8 359                            A  V SH576621 308
+118.13   Dolwyddelan                44  2.2 222  41  2.2 222               47  2.2 222                            B  V SH740528 198
+118.08   Ffestiniog                 25  240 358  22  240 358               28  240 358                            A  V SH709391 302
+118.20   Gronant                    26    8  38  29    8  38               23    8  38                            A  V SJ088833  29
+118.07   Llandecwyn                 61   60 301  58   60 301               54   60 301                            CD V SH644371 266
+118.15   Llanengan                  61   10  28  58   10  28               54   10  28                            CD H SH283278  10
+118.16   Maentwrog                  43  3.2  39  50  3.2  39               46  3.2  39                            B  V SH656407  66
+118.12   Mochdre                    26    2  64  23    2  64               29    2  64                            A  V SH829786  58
+118.30   Morfa Nefyn                25   14 151  28   14 151               22   14 151                            A  V SH285358 137
+118.31   Prestatyn                  22    2 105  25    2 105               28    2 105                            A  V SJ073822  94
+118.19   Trefor B                   45   10 185  49   10 185               42   10 185                            B  V SH376455 169
+118.09   Waunfawr                   25  5.2 235  28  5.2 235               22  5.2 235                            A  V SH529600 212
+135.09 - Long Mountain              60  400 455  53  400 455               57  400 455                            CD V SJ265057 402
+135.25   Broneirion                 29    2 268  23    2 268               26    2 268                            A  V SO018884 249
+135.15   Carno                      24    2 315  27    2 315               21    2 315                            A  V SN950961 300
+135.35   Castle Caereinion          46    2 280  43    2 280               50    2 280                            B  V SJ177058 256
+135.14   Kerry                      27  3.4 271  24  3.4 271               21  3.4 271                            A  V SO150908 242
+135.18   Llanbrynmair               25    4 300  28    4 300               22    4 300                            A  V SH892046 281
+135.10   Llandinam                  41   50 498  47   50 498               44   50 498                            B  V SO050877 447
+135.12   Llanfyllin                 28   25 292  25   25 292               22   25 292                            A  V SJ150180 267
+135.29   Llangadfan                 28    2 312  25    2 312               22    2 312                            A  V SJ020091 283
+135.20   Llangurig UHF              23    2 370  29    2 370               26    2 370                            A  V SN900794 353
+135.36   Llangynog                  62    2 206  55    2 206               59    2 206                            CD V SJ051259 169
+135.11   Llanidloes                 25    2 263  28    2 263               22    2 263                            A  V SN947843 236
+135.22   Llanrhaeadr-ym-Mochnant    45 15.4 364  49 15.4 364               42 15.4 364                            B  V SJ174260 327
+135.13   Moel-y-Sant                27   23 300  24   23 300               21   23 300                            A  V SJ151105 256
+135.31   Tregynon                   28    7 251  25    7 251               22    7 251                            A  V SO110963 229
+110.00 + Mendip                     61 100k 591  54 100k 591  48 100k 591  58 100k 591  52 100k 591  56 100k 591  CD H ST564488 302
+110.04   Avening                    41    2 190  47    2 190               44    2 190                            B  V ST881975 159
+110.46   Backwell                   25   19 125  28   19 125               22   19 125                            A  V ST498716  72
+110.02   Bath                       25   50 229  28   50 229               22   50 229                            A  V ST769654 178
+110.53   Blakeney                   24    3  93  27    3  93               21    3  93                            A  V SO664069  49
+110.32   Box                        43    2 149  50    2 149               46    2 149                            B  V ST832688 111
+110.38   Bristol Barton House       26   18  67  23   18  67               29   18  67                            A  H ST611729  17
+110.08   Bristol Ilchester Crescent 41  200  97  44  200  97  42  100  97  47  200  97  45  100  97  49  100  97  B  V ST577700  49
+110.07   Bristol King's Weston Hill 43  200 138  50  200 138  53  200 138  46  200 138  57  200 138  60  200 138  E  V ST547775  96
+110.31   Bristol Montpelier         27   10  71  24   10  71               21   10  71                            A  V ST590745  30
+110.74   Bristol Warmley            45    2 104  42    2 104               49    2 104                            B  V ST654736  88
+110.39   Bruton                     43    2 111  50    2 111               46    2 111                            B  V ST680341  95
+110.41   Burrington                 60   32  64  53   32  64               57   32  64                            CD H ST477605  38
+110.05   Calne                      24   20 136  27   20 136               21   20 136                            A  V ST997699 102
+110.62   Carhampton                 24   20  86  27   20  86               21   20  86                            A  V ST016426  65
+110.29   Cerne Abbas                29   80 283  26   80 283               23   80 283                            A  V ST645013 234
+110.21   Chalford                   24   25 222  27   25 222               21   25 222                            A  V SO882017 181
+110.66   Chalford Vale              43    3 146  46    3 146               50    3 146                            B  V SO886024 126
+110.68   Chilfrome                  43   13 190  50   13 190               46   13 190                            B  H SY579991 177
+110.51   Chiseldon                  27   16 183  24   16 183               21   16 183                            A  V SU190801 166
+110.63   Chitterne                  43    2 141  50    2 141               46    2 141                            B  V ST995441 122
+110.19   Cirencester                23  100 235  29  100 235               26  100 235                            A  V SP004057 182
+110.56   Clearwell                  59    2 241  62    2 241               55    2 241                            CD V SO574084 204
+110.13   Coleford                   45    2 220  49    2 220               42    2 220                            B  V SO569106 197
+110.80   Corsham HP                 50    5 102  46    5 102               43    5 102                            B  H ST869699  84
+110.71   Corsham VP                 50    8 102  46    8 102               43    8 102                            B  V ST869699  84
+110.27   Countisbury                59   42 318  62   42 318               55   42 318                            CD H SS748500 293
+110.61   Crewkerne                  43    2  99  50    2  99               46    2  99                            B  V ST444092  82
+110.01   Crockerton                 43   11 200  46   11 200               50   11 200                            B  V ST877428 162
+110.33   Dursley                    43   11 290  50   11 290               46   11 290                            B  V ST788963 244
+110.10   Easter Compton             53    3  23  60    3  23               57    3  23                            CD V ST566830   7
+110.59   Exford                     41    2 347  47    2 347               44    2 347                            B  V SS847379 328
+110.36   Frome                      26    2  93  23    2  93               29    2  93                            A  V ST778481  65
+110.30   Hutton                     59   40 110  62   40 110               55   40 110                            CD V ST361588  74
+110.40   Kewstoke                   43   16  34  50   16  34               46   16  34                            B  V ST347639  11
+110.60   Kilve                      59    3 118  62    3 118               55    3 118                            CD H ST143425 100
+110.54   Lydbrook                   43    2 194  50    2 194               46    2 194                            B  V SO600163 136
+110.24   Marlborough                25   20 243  28   20 243               22   20 243                            A  V SU209688 189
+110.14   Monksilver                 50   15 269  43   15 269               46   15 269                            B  V ST085362 231
+110.20   Nailsworth                 23    6 150  26    6 150               29    6 150                            A  V ST849990 121
+110.16   Ogbourne St George         43    3 222  50    3 222               46    3 222                            B  V SU205731 195
+110.55   Parkend                    41    2 100  47    2 100               44    2 100                            B  V SO616083  70
+         Pillowell HP               43    2  93  50    2  93               46    2  93                            B  H SO625065  66
+110.76   Pillowell VP               43   .2  92  50   .2  92               46   .2  92                            B  V SO625065  66
+110.26   Porlock                    24    5 196  27    5 196               21    5 196                            A  V SS883462 166
+110.83   Portbury                   24    2  40  27    2  40               21    2  40                            A  V ST501751  29
+110.45   Portishead                 59    7 110  62    7 110               55    7 110                            CD V ST458764  82
+110.72   Redbrook                   42    2 140  45    2 140               49    2 140                            B  V SO538092 109
+110.06   Redcliff Bay               53   10 127  60   10 127               57   10 127                            CD H ST439751  93
+110.22   Roadwater                  23    6 159  26    6 159               29    6 159                            A  H ST026375 143
+110.12   Seagry Court               41   20 154  47   20 154               44   20 154                            B  V SU149881 116
+110.73   Siston                     26    8  85  23    8  85               29    8  85                            A  V ST668744  67
+110.34   Slad                       23    2 238  29    2 238               26    2 238                            A  H SO872055 210
+110.18   Stroud                     50  200 271  43  200 271               46  200 271                            B  V SO836077 221
+110.48   Tintern                    24    2 131  27    2 131               21    2 131                            A  V SO538002 115
+110.42   Ubley                      24   16 168  27   16 168               21   16 168                            A  V ST538594 136
+110.25   Upavon                     23   28 167  29   28 167               26   28 167                            A  V SU145518 116
+110.09   Washford                   59 12.4  85  62 12.4  85               55 12.4  85                            CD V ST058409  45
+110.11   West Lavington             23    2 168  26    2 168               29    2 168                            A  V ST999525 152
+110.03   Westwood                   43   20 130  50   20 130               46   20 130                            B  V ST816597  81
+110.58   Woodcombe                  59   10  95  62   10  95               55   10  95                            CD V SS951458  79
+110.17   Wootton Courtenay          25   22 178  28   22 178               22   22 178                            A  V SS934426 148
+125.00 + Midhurst                   55  20k 300  61  20k 300  62  10k 299  58  20k 300  59  10k 300  50  10k 300  CD H SU912249 191
+125.01   Haslemere                  28   10 220  22   10 220               25   10 220                            A  V SU886331 171
+139.15   Steyning                   59   28  26  50   28  26               62   28  26                            CD V TQ184121  11
+145.00 - Moel-y-Parc                45  20k 573  49  20k 573  51  10k 573  42  20k 573  52  10k 573  48  10k 573  B  H SJ123701 340
+145.08   Bala                       26   40 358  23   40 358               29   40 358                            A  V SH968375 310
+145.19   Betws-yn-Rhos              27  2.5 145  24  2.5 145               21  2.5 145                            A  V SH899756 127
+145.15   Cefn-mawr                  57   50 245  53   50 245               60   50 245                            CD V SJ267409 219
+145.11   Cerrig-y-Drudion           26  6.4 404  23  6.4 404               29  6.4 404                            A  V SH933482 371
+145.09   Corwen                     28   40 286  25   40 286               22   40 286                            A  V SJ080431 261
+145.34   Cyffylliog                 28    2 258  25    2 258               22    2 258                            A  V SJ063580 215
+145.07   Glyn Ceiriog               58    2 343  61    2 343               54    2 343                            CD V SJ203386 320
+145.20   Glyndyfrdwy                62    2 194  59    2 194               55    2 194                            CD V SJ158429 159
+145.17   Llanarmon-yn-Iâl           27    2 364  24    2 364               21    2 364                            A  V SJ194582 347
+145.21   Llandderfel                62    2 319  55    2 319               59    2 319                            CD V SH990358 300
+145.22   Llanddulas                 26    3  38  23    3  38               29    3  38                            A  H SH910784  16
+145.18   Llangernyw                 28    2 240  22    2 240               25    2 240                            A  V SH881660 221
+145.02   Llangollen                 58    2 333  61    2 333               54    2 333                            CD V SJ204421 318
+145.14   Llanuwchllyn               46    6 323  43    6 323               50    6 323                            B  V SH873326 290
+145.24   Pen-y-Banc                 27    2 247  24    2 247               21    2 247                            A  V SJ077497 222
+118.02   Penmaen Rhos               22   28 153  25   28 153               28   28 153                            A  V SH877779 123
+145.10   Pontfadog                  28    2 417  25    2 417               22    2 417                            A  V SJ219356 410
+145.23   Pwll-Glas                  26    2 141  23    2 141               29    2 141                            A  V SJ119541 124
+103.07   Storeton Wales             57  500 109  53  500 109               60  500 109                            CD H SJ314841  66
+145.12   Wrexham Rhos               28   80 257  22   80 257               25   80 257                            A  V SJ300537 206
+111.01 - Nottingham                 27  400 175  24  400 175  51  400 175  21  400 175  52  400 175  48  400 175  W  V SK503435 132
+120.02 - Oliver's Mount             57   2k 188  60   2k 188  54   1k 189  53   2k 188  58   1k 188  61   1k 188  CD V TA040869 151
+120.03   Hunmanby                   48   25 127  42   25 127               49   25 127                            B  V TA092779  91
+117.00 + Oxford                     53 100k 295  60 100k 295  62  50k 295  57 100k 295  59  50k 319  55  50k 319  CD H SP567105 130
+117.05   Ascott-under-Wychwood      27    6 169  24    6 169               21    6 169                            A  V SP287193 144
+117.01   Charlbury                  44   10 127  41   10 127               47   10 127                            B  V SP344197 115
+102.33   Guiting Power              44    5 249  41    5 249               47    5 249                            B  V SP101233 220
+102.19   Icomb Hill                 28   22 289  25   22 289               22   22 289                            A  V SP201228 235
+102.16   Over Norton                48   31 233  56   31 230               52   31 233                            CD V SP309282 206
+109.00 + Pontop Pike                48  10k 450  55  10k 450  59  10k 448  62  10k 447  65  10k 447  53  10k 447  CD H NZ148526 305
+155.00   Chatton                    40   6k 348  50   6k 348  43   6k 349  46   6k 349  47   2k 349  51   2k 349  B  H NU105264 191
+109.03   Fenham                     30   40 170  22   40 170  25   40 171  28   40 171  32   20 172  57   20 172  W  V NZ216648 119
+129.00 - Preseli                    43  20k 563  46  20k 563  42  10k 563  50  20k 563  45  10k 563  49  10k 563  B  H SN172306 324
+129.08   Abergwynfi                 24    2 406  21    2 406               27    2 406                            A  V SS886971 374
+129.15   Broad Haven                61    8  67  58    8  67               54    8  67                            CD V SM861130  50
+         Bronnant                   23  3.2 232  29  3.2 232               26  3.2 232                            A  V SN664664 217
+129.12   Croeserw HP                61    2 386  58    2 386               54    2 386                            CD H SS858952 326
+129.12   Croeserw VP                61   24 390  58   24 390               54   24 390                            CD V SS858952 326
+129.30   Cynwyl Elfed               25    2 122  22    2 122               28    2 122                            A  V SN375273  98
+129.11   Dolgellau                  59    4 124  55    4 124               62    4 124                            CD V SH727185  94
+129.28   Duffryn                    25    2 217  22    2 217               28    2 217                            A  V SS834956 193
+129.19   Ferryside                  21   25  79  30   25  79  27   25  79  24   25  79                            A  V SN371104  70
+135.06   Fishguard                  61   25 152  58   25 152               54   25 152                            CD V SM944391 126
+129.09   Glyncorrwg                 49    2 318  45    2 318               42    2 318                            B  V SS871989 303
+129.18   Haverfordwest              56  100 264  52  100 264               48  100 264                            CD H SN028261 188
+129.03   Llandyfriog                25   22 144  22   22 144               28   22 144                            A  V SN348412 109
+129.14   Llandysul                  60 15.2 163  57 15.2 163               53 15.2 163                            CD V SN425409 133
+129.06   Llangranog                 25    8 141  22    8 141               28    8 141                            A  V SN322538 125
+129.24   Llangybi                   25  2.6 204  22  2.6 204               28  2.6 204                            A  V SN614524 187
+129.10   Llwyn Onn                  25    7 305  22    7 305               28    7 305                            A  V SH625174 273
+129.01   Mynydd Pencarreg           61   24 460  58   24 460               54   24 460                            CD V SN577430 410
+129.17   Newport Bay                47   10 102  51   10 102               44   10 102                            B  V SN066414  88
+129.31   Pembroke Dock              61    5  71  58    5  71               54    5  71                            CD V SM967028  53
+129.13   Pencader                   23    2 215  26    2 215               29    2 215                            A  V SN451370 183
+129.16   Rheola                     59   20 457  55   20 457               62   20 457                            CD V SN841061 410
+129.20   St Davids                  23   16  73  26   16  73               29   16  73                            A  V SM751254  29
+129.04   St Dogmaels                23    3 125  26    3 125               29    3 125                            A  V SN165452 102
+129.07   Trefin                     25  100 155  22  100 155               28  100 155                            A  V SM848310 127
+129.02   Tregaron                   55    3 247  62    3 247               59    3 247                            CD V SN686605 227
+135.28   Ystumtuen                  49   10 362  45   10 362               42   10 362                            B  V SN740795 339
+141.00 + Redruth                    44  20k 400  41  20k 400  48  10k 400  47  20k 400  52  10k 400  51  10k 400  B  H SW690394 229
+141.21   Alverton                   27    2  71  24    2  71               21    2  71                            A  V SW457299  55
+141.05   Boscastle                  25   11 125  22   11 125               28   11 125                            A  V SX096911  95
+141.04   Bossiney                   46   40 111  43   40 111               50   40 111                            B  V SX067889  92
+141.13   Gulval                     25  5.2  78  23  5.2  78               29  5.2  78                            A  V SW475315  59
+141.03   Helston                    54    2 108  61    2 108               58    2 108                            CD V SW651275  74
+141.01   Isles of Scilly            27  100 113  24  100 113               21  100 113                            A  V SV911124  36
+131.17   Penryn                     62  4.4 107  59  4.4 107               55  4.4 107                            CD V SW787334  74
+141.06   Perranporth                46   16  93  43   16  93               50   16  93                            B  V SW758533  71
+141.10   Porthleven                 26    2  60  23    2  60               29    2  60                            A  H SW626257  36
+141.17   Porthtowan                 27   16  78  24   16  78               21   16  78                            A  V SW695478  55
+141.08   Portreath                  26   20  77  23   20  77               29   20  77                            A  V SW658455  54
+141.09   Praa Sands                 62   10  98  59   10  98               56   10  98                            CD V SW572284  67
+141.11   St Anthony-in-Roseland     26    2  70  23    2  70               29    2  70                            A  V SW852318  52
+131.01   St Austell                 62  250 236  59  250 240               56  250 236                            CD V SX008535 182
+141.02   St Just                    56  250 247  50  250 247               53  250 247                            CD V SW382331 191
+131.20   Truro                      54  4.4  87  61  4.4  87               58  4.4  85                            CD V SW835442  59
+149.00 + Ridge Hill                 28  20k 362  25  20k 362  21  10k 362  22  20k 362  24  10k 366  27  10k 362  A  H SO630333 204
+149.11   Andoversford               50   11 317  59   11 317               55   11 317                            CD V SP002183 283
+149.18   Eardiston                  54    2 125  49    2 125               58    2 125                            CD V SO706682  98
+149.21   Ewyas Harold               44    2 143  41    2 143               47    2 143                            B  V SO390269 126
+149.02   Garth Hill HP              53    7 372  60    7 372               57    5 372                            CD H SO273726 335
+149.02   Garth Hill VP              53    5 374  60    5 374               57    5 374                            CD V SO273726 335
+149.05   Hazler Hill                45    5 359  42    5 359               39    5 359                            B  V SO464928 333
+149.20   Hereford                   44    7 180  41    7 180               47    7 180                            B  V SO524365 163
+149.16   Hope under Dinmore         57    2 109  60    2 109               53    2 109                            CD V SO504525  88
+149.01   Kington                    44   20 276  41   20 276               47   20 276                            B  V SO290552 228
+149.14   Knucklas                   39    2 280  42    2 280               45    2 280                            B  V SO270747 256
+149.03   Ludlow                     45    5 241  42    5 241               39    5 241                            B  V SO498741 216
+149.13   New Radnor                 44   25 270  41   25 270               47   25 270                            B  V SO269623 248
+149.06   Oakeley Mynd               45   10 337  49   10 337               42   10 337                            B  V SO346875 298
+149.10   Peterchurch                53   15 259  60   15 259               57   15 259                            CD V SO360380 222
+149.27   Presteigne                 45    3 308  42    3 308               49    3 308                            B  V SO337661 288
+149.24   Ross-on-Wye                50    2  60  59    2  60               55    2  60                            CD V SO605243  40
+149.09   St Briavels                46    5 198  43    5 198               40    5 198                            B  V SO557049 178
+149.17   Upper Soudley              46    2 156  43    2 156               50    2 156                            B  V SO662101 136
+       - Ridge Hill West                         29  20k 352                                                      A  H SO630333 204
+156.00 - Rosemarkie                 45  20k 328  49  20k 328  43  10k 328  42  20k 328  46  10k 328  50  10k 328  B  H NH761622 208
+156.01   Auchmore Wood              28   20 237  25   20 237               22   20 237                            A  V NH483501 206
+156.16   Cromarty                   28    2  21  25    2  21               22    2  21                            A  V NH787676   4
+156.04   Fodderty                   58   24 224  61   24 224               54   24 224                            CD V NH511606 183
+156.02   Fort Augustus              26    2 341  23    2 341               29    2 341                            A  V NH360049 301
+156.17   Glen Convinth              27    7 168  24    7 168               21    7 168                            A  V NH506392 151
+156.07   Glen Urquhart HP           44    2 242  41    2 242               47    2 242                            B  H NH442295 223
+156.07   Glen Urquhart VP           44   18 246  41   18 246               47   18 246                            B  V NH442295 223
+156.10   Inverness                  62    7  40  55    7  40               59    7  40                            CD V NH667447  19
+156.08   Tomatin                    28    3 422  25    3 422               22    3 422                            A  V NH822288 402
+156.13   Tomich                     27    3 137  24    3 137               21    3 137                            A  V NH306276 122
+156.12   Tomich Link                45    2 329  49    2 329               42    2 329                            B  V NH321265 320
+156.06   Wester Erchite             27    3 155  24    3 155               21    3 155                            A  V NH577307 138
+152.11 - Rosneath HP                61    8 212  58    8 212  53    8 212  54    8 212  57    8 212  60    8 212  CD H NS258811 107
+152.11 - Rosneath VP                61   2k 216  58   2k 216  53   2k 216  54   2k 216  57   2k 216  60   2k 216  CD V NS258811 107
+152.26   Ardnadam                   42   14  66  45   14  66               49   14  66                            B  V NS167799  43
+152.27   Garelochhead               42    2  62  45    2  62               49    2  62                            B  V NS235918  43
+108.00 + Rowridge HP                24 200k 299  27 200k 319  25  50k 299  21 200k 325  22  50k 302  28  50k 302  A  H SZ447865 137
+108.00 + Rowridge VP                24 200k 299  27 200k 319  25 200k 299  21 200k 325  22 200k 302  28 200k 302  A  V SZ447865 137
+108.48   Bovington                  44    2  55  41    2  55               47    2  50                            B  V SY844878  27
+108.38   Brading                    49    5  18  46    5  18               43    5  18                            B  V SZ612872   4
+108.30   Brighstone                 44   28  73  41   28  73               47   28  72                            B  V SZ435816  36
+108.45   Canford Heath              45    2  99  49    2  99               42    2  97                            B  V SZ036939  62
+108.37   Cheselbourne               57    2 143  53    2 143               60    2 143                            CD V SY768985 124
+108.17   Corfe Castle               44    4 134  41    4 134               47    4 134                            B  V SY972821  87
+108.27   Donhead                    44  5.8 187  41  5.8 188               47  5.8 187                            B  V ST907230 153
+108.07   Findon                     44   2k 157  41   2k 157               47   2k 157                            B  V TQ120072 124
+108.44   Horndean                   56  2.5 139  50  2.5 139               62  2.5 138                            CD V SU698152 120
+126.14   Luccombe                   54   20 164  56   20 164               60   20 164                            CD V SZ581800 143
+108.32   Lulworth                   62  2.2 172  59  2.2 172               55  2.2 172                            CD V SY824815 154
+108.34   Luscombe Valley            45    2  64  49    2  68               42    2  64                            B  V SZ047908  29
+108.29   Millbrook HP               44    1  54  41    1  59               47    1  54                            B  H SU374138   2
+108.29   Millbrook VP               44    8  53  41    8  53               47    8  53                            B  V SU374138   2
+108.33   Piddletrenthide            45   11 153  49   11 153               42   11 153                            B  V SY704989 130
+108.04   Poole                      57   20 109  60   20 109               53   20 109                            CD V SZ037921  60
+108.47   Poulner                    44   10  47  41   10  48               47   10  47                            B  H SU145053  16
+108.01   Salisbury                  57   2k 152  60   2k 152  62   2k 153  53   2k 152  59   2k 152  55   2k 152  CD V SU136285 107
+108.06   Shrewton                   44    2 139  41    2 139               47    2 139                            B  V SU072438 108
+108.39   Singleton                  44  2.6 109  41  2.6 109               47  2.6 108                            B  V SU866131  81
+126.07   Sutton Row                 29   50 207  23   50 207               26   50 205                            A  V ST976284 157
+108.02   Till Valley                46   15 111  43   15 111               50   15 109                            B  V SU066370  75
+108.03   Ventnor                    54  400 271  49  400 271               52  400 271                            CD V SZ567783 212
+108.20   Westbourne                 44  7.6  74  41  7.6  74               47  7.6  74                            B  V SZ067916  43
+108.36   Winterborne Steepleton     49  2.4 163  45  2.4 163               42  2.4 163                            B  V SY629893 138
+108.10   Winterborne Stickland      46  200 209  43  200 209               50  200 209                            B  V ST838051 153
+148.00 - Rumster Forest             27  20k 454  24  20k 454  30  10k 454  21  20k 454  59  10k 454  62  10k 454  W  H ND197385 221
+148.01   Ben Tongue                 45    7 328  49    7 328               42    7 328                            B  V NC604588 288
+148.07   Durness                    57    2  73  53    2  73               60    2  73                            CD V NC409672  47
+148.03   Melvich                    44   11 159  41   11 159               47   11 159                            B  V NC880637 112
+148.02   Thurso                     57    2  49  60    2  49               53    2  49                            CD V ND119673  34
+124.00 + Sandy Heath                27 180k 292  24 180k 292  51 170k 292  21 180k 292  52 170k 289  48 170k 289  W  H TL204494  55
+124.01   Dallington Park            50   40 106  59   40 106               55   40 106                            CD V SP741612  68
+124.08   Kimpton                    57    2 130  53    2 130               60    2 130                            CD V TL173178 116
+124.02   Luton                      50   80 209  59   80 209               55   80 209                            CD V TL081210 162
+161.00 + Selkirk                    62  10k 522  59  10k 522  57   5k 522  55  10k 522  53   5k 522  60   5k 522  CD H NT500294 288
+161.05   Bonchester Bridge          45    2 202  49    2 202               42    2 202                            B  V NT589114 175
+161.12   Clovenfords                27    2 173  24    2 173               21    2 173                            A  V NT444351 136
+161.01   Eyemouth                   21  400 238  24  400 238               27  400 238                            A  V NT947599 194
+161.02   Galashiels                 44   20 295  41   20 295               47   20 295                            B  V NT507360 246
+161.03   Hawick                     26   10 199  23   10 199               29   10 199                            A  V NT509147 167
+161.08   Innerleithen               61   16 266  54   16 266               58   16 266                            CD V NT325368 245
+161.04   Jedburgh                   44   32 159  41   32 159               47   32 159                            B  V NT661224 107
+161.06   Lauder                     28  2.2 276  25  2.2 276               22  2.2 276                            A  V NT506502 262
+161.07   Peebles                    28   20 400  25   20 400               22   20 400                            A  V NT228416 347
+161.10   Stow                       26    2 301  23    2 301               29    2 301                            A  V NT448445 286
+161.11   Yetholm                    44    2 228  41    2 228               47    2 228                            B  V NT836283 180
+104.03 + Sheffield                  27   1k 289  24   1k 287  42   1k 287  21   1k 291  45   1k 287  49   1k 287  W  V SK324870 247
+104.35   Totley Rise                51   16 177  48   16 177               52   16 177                            B  V SK322807 158
+154.04 - Skriaig                    27  320 449  24  320 449               21  320 449                            A  V NG451408 384
+154.13   Ardintoul                  45    9  23  49    9  23               42    9  23                            B  V NG832242   9
+154.07   Attadale                   28    2  14  25    2  14               22    2  14                            A  V NG924392   2
+154.31   Borve                      28    2  16  25    2  16               22    2  16                            A  V NF648018   1
+154.17   Bruernish                  43    2  30  46    2  30               50    2  30                            B  V NF719023  18
+154.02   Clettraval                 44  400 173  41  400 173               47  400 173                            B  V NF751716 123
+154.03   Daliburgh                  60    6  53  57    6  53               53    6  53                            CD V NF735217   8
+154.06   Duncraig                   44   33 355  41   33 355               47   33 355                            B  V NG827324 327
+154.29   Inverarish                 46    8  77  43    8  77               50    8  77                            B  V NG557343  48
+154.11   Kilbride South Uist        49   26  47  45   26  47               42   26  47                            B  V NF752148  20
+154.37   Kylerhea                   44   10 304  41   10 304               47   10 304                            B  V NG752206 293
+154.30   Lochmaddy HP               28   40  55  25   40  55               22   40  55                            A  H NF951727  32
+154.30   Lochmaddy VP               28    2  55  25    2  55               22    2  55                            A  V NF951727  32
+154.05   Penifiler                  45    8  90  49    8  90               42    8  90                            B  V NG489416  50
+154.01   Scoval HP                  62  132 258  59  132 258               55  132 258                            CD H NG181514 236
+154.01   Scoval VP                  62   32 290  59   32 290               55   32 290                            CD V NG181514 236
+154.16   Tarbert Harris             45   19  58  49   19  58               42   19  58                            B  V NB154001  25
+154.12   Uig                        46    2  96  43    2  96               50    2  96                            B  V NG383640  77
+132.00 + Stockland Hill             26  50k 463  23  50k 463  25  10k 463  29  50k 463  22  10k 463  28  10k 463  A  H ST222014 229*
+132.04   Bampton                    49    6 268  45    6 268               42    6 268                            B  V SS966236 218
+132.07   Beaminster                 62  3.8 200  59  3.8 200               55  3.8 200                            CD V ST490024 141
+132.02   Beer                       62    3 123  59    3 123               56    3 123                            CD V SY230896  80
+132.26   Bincombe Hill              62  6.4 170  59  6.4 170               56  6.4 170                            CD V SY687848 152
+132.21   Branscombe                 44    2 127  47    2 127               41    2 127                            B  V SY195882 103
+132.06   Bridport                   44   17 107  41   17 107               47   17 107                            B  V SY453915  67
+138.10   Brushford                  27  3.2 241  24  3.2 241               21  3.2 241                            A  V SS921262 204
+138.09   Chagford                   27  2.4 280  24  2.4 280               21  2.4 280                            A  V SX689890 253
+132.20   Charmouth                  47  100  74  44  100  74               41  100  74                            B  V SY373933  59
+         Chideock HP                56  2.2 146  52  2.2 146               48  2.2 146                            CD H SY412933 140
+132.30   Chideock VP                56   20 146  52   20 146               48   20 146                            CD V SY412933 140
+132.18   Crediton                   46    7 158  43    7 158               50    7 158                            B  V SS825009 140
+132.05   Culm Valley                45 11.6 221  49 11.6 221               42 11.6 221                            B  V ST108148 177
+132.12   Dawlish                    62   20 139  59   20 139               56   20 139                            CD V SX951772  95
+132.16   Dunsford                   42    2 187  45    2 187               49    2 187                            B  V SX811880 175
+132.01   Exeter St Thomas           44   50 150  41   50 150               47   50 150                            B  V SX898922  92
+132.27   Honiton                    42    2 165  49    2 165               45    2 165                            B  V SY164997 145
+132.23   Pennsylvania               54    2 131  61    2 131               58    2 131                            CD V SX934948  96
+132.28   Preston                    61   20  57  58   20  57               54   20  57                            CD V SY707833  49
+132.22   Rampisham UHF              46  2.4 240  43  2.4 240               50  2.4 240                            B  H ST544008 193
+132.15   Stokeinteignhead           44    2  92  41    2  92               47    2  92                            B  V SX909711  47
+132.03   Tiverton                   46   18 190  43   18 190               50   18 190                            B  V SS939126 146
+132.08   Weymouth                   47  400 112  44  400 112               41  400 112                            B  V SY663778  59
+115.00 - Sudbury                    44 100k 229  41 100k 229  49  14k 186  47 100k 229  54  1k5 228  63  2k2 228  E  H TL912376  69*
+         Burnham on Crouch          48  100  41  52  100  41               51  100  41                            B  H TQ940966  18*
+         Clacton                    48  400  47  52  400  47               42  400  47                            B  H TM183163   7*
+115.06   Felixstowe                 52  200  54  51  200  54               53  200  54                            B  V TM305346  18*
+115.02   Ipswich Stoke              26   28  54  25   28  54               29   28  54                            A  V TM159443   4
+         Rouncefall                 44   4k  79  41   4k  79               47   4k  79                            B  H TQ856931  51
+115.08   Somersham                  28    2  54  25    2  54               22    2  54                            A  V TM086492  41
+115.03   Wivenhoe Park              57   10  57  64   10  57               48   10  57                            CD V TM027240  19*
+115.01   Woodbridge                 48  100  58  64  100  58               57  100  58                            CD V TM271498  33*
+102.00 + Sutton Coldfield           43 200k 433  46 200k 433  42 200k 433  40 200k 433  45 200k 403  39 200k 433  B  H SK113003 169
+102.27   Allesley Park              25    7 152  22    7 152               28    7 152                            A  V SP296796 108
+102.43   Brailes                    24    8 221  21    8 221               27    8 221                            A  V SP319379 189
+102.17   Bretch Hill                56   87 196  48   87 196               52   87 196                            CD V SP438400 153
+102.45   Bridgnorth                 59    3  91  50    3  91               55    3  91                            CD V SO719914  69
+102.03   Brierley Hill              60   2k 179  57   2k 179  50   2k 179  53   2k 179  59   2k 179  55   2k 179  CD V SO916856 131
+102.28   Cheadle                    56    5 263  48    5 263               52    5 263                            CD V SK030435 234
+102.54   Earl Sterndale             49   40 380  58   40 380               54   40 380                            CD V SK090666 344
+102.05   Edgbaston                  24    4 197  21    4 197               27    4 197                            A  V SP058851 140
+102.11   Fenton                     24   2k 252  27   2k 252  25   1k 252  21   2k 252  22   1k 252  28   1k 251  A  V SJ902451 191
+102.66   Gib Heath                  50    3 179  59    3 179               55    3 179                            CD V SP056883 122
+102.51   Gravelly Hill              50    3 118  59    3 118               55    3 118                            CD H SP109899  89
+121.03   Haden Hill                 48   16 127  52   16 127               56   16 127                            CD V SO967846 105
+102.56   Hamstead                   24    2 144  21    2 144               27    2 144                            A  V SP044931 108
+102.52   Harborne                   56   40 195  52   40 195               48   40 195                            CD V SP016836 161
+102.14   Hartington                 56    7 281  48    7 281               52    7 281                            CD V SK117601 260
+102.36   Ipstones Edge              60    6 401  57    6 401               53    6 401                            CD V SK043506 374
+102.32   Ironbridge                 49    2  75  58    2  75               54    2  75                            CD V SJ678032  64
+102.22   Kenilworth                 60   10 108  57   10 108               53   10 108                            CD V SP298726  81
+102.02   Kidderminster              49  400 133  58  400 133               54  400 133                            CD V SO808739  81
+102.01   Kinver                     48    5  88  56    5  88               52    5  88                            CD H SO855831  64
+102.21   Leamington Spa             59   40 133  50   40 133               55   40 133                            CD V SP329663  85
+102.10   Leek                       25  200 309  22  200 309               28  200 309                            A  V SJ999561 259
+102.58   Long Compton               25    4 167  22    4 167               28    4 167                            A  V SP285338 158
+102.07   Malvern                    53  400 204  57  400 204  50  400 204  60  400 204  59  400 203  55  400 204  CD V SO774464 165
+102.38   Oakamoor                   24    2 189  21    2 189               27    2 189                            A  V SK057446 159
+102.59   Perry Beeches              25    2 123  22    2 123               28    2 123                            A  V SP066932 106
+102.57   Queslett                   49    3 152  58    3 152               54    3 152                            CD V SP063948 139
+102.30   Redditch                   25    2 138  22    2 138               28    2 138                            A  V SP028683 112
+102.53   Repton                     60    8  84  57    8  84               53    8  84                            CD V SK307261  64
+102.60   Rugeley                    56    8 110  52    8 110               48    8 110                            CD V SK034178 101
+102.29   Tenbury Wells              60    3 127  57    3 127               53    3 127                            CD V SO588691  92
+102.42   Turves Green               50    2 190  59    2 190               55    2 190                            CD V SP022784 162
+102.37   Whittingslow               60   11 283  57   11 283               53   11 283                            CD V SO429886 265
+102.55   Winchcombe                 49    2 168  58    2 168               54    2 168                            CD V SP036287 135
+102.49   Winshill                   60   60  85  57   60  85               53   60  85                            CD V SK272241  70
+102.47   Woodford Halse             25    2 158  22    2 158               28    2 158                            A  V SP540530 139
+114.00 + Tacolneston                55 100k 263  59 100k 263  42 100k 263  62 100k 263  45 100k 246  50 100k 246  E  H TM130957  70
+114.02   Aldeburgh                  28  10k  87  23  10k  87               25  10k  87                            A  V TM441596  21
+114.17   Bramford                   27    4  49  24    4  49               21    4  49                            A  V TM117458  30
+114.08   Burnham                    41  400 101  47  400 101               44  400 101                            B  V TF795428  47
+114.13   Bury St Edmunds            28   17  90  25   17  90               22   17  90                            A  V TL861651  41
+114.06   Creake                     48    2  89  52    2  89               56    2  89                            CD V TF845370  55
+114.21   Gorleston On Sea           26    2  29  23    2  29               29    2  29                            A  V TG520049   8
+         Great Yarmouth             47  400  52  41  400  52               44  400  52                            B  V TG521070   1
+124.03   King's Lynn                49  300  91  46  300  91               43  300  91                            B  V TF677282  43
+114.14   Linnet Valley              26  3.2  76  23  3.2  76               29  3.2  76                            A  V TL826636  61
+114.05   Little Walsingham          44   11  80  41   11  80               47   11  80                            B  V TF926365  55
+         Lowestoft                  58  400  53  60  400  53               56  400  53                            CD V TM543938  18
+114.09   Norwich Central            46  6.8  53  43  6.8  53               52  6.8  53                            B  V TG237098  29
+114.15   Overstrand                 48   63  89  47   63  89               51   63  89                            B  V TG234408  72
+114.04   Thetford                   26    8  62  23    8  62               29    8  62                            A  V TL865840  31
+114.07   Wells-next-the-Sea         57   1k  69  51   1k  69               56   1k  69                            CD V TF985423  31
+114.01   West Runton                26   2k 140  23   2k 140               29   2k 140                            A  V TG186412  94
+105.10 - Torosay                    28   4k 481  25   4k 481  23   4k 481  22   4k 481  26   4k 481  29   4k 481  A  V NM703357 427
+105.72   Acharacle                  46    2 101  43    2 101               50    2 101                            B  V NM678695  45
+105.64   Arisaig                    26    2 163  23    2 163               29    2 163                            A  V NM669873 127
+105.20   Ballachulish               23    4  48  29    4  48               26    4  48                            A  V NN059592  14
+105.28   Bellanoch                  45   10  95  42   10  95               49   10  95                            B  V NR804920  65
+105.32   Castlebay                  27    2  69  24    2  69               21    2  69                            A  V NL652979  51
+105.12   Cow Hill                   46   13 347  43   13 347               50   13 347                            B  V NN112735 268
+105.34   Dalmally                   44    8 180  41    8 180               47    8 180                            B  V NN143260 148
+105.31   Dychliemore Link           28  .05 206  25  .05 206               22  .05 206                            A  H NN138238 192
+105.42   Fiunary                    46   10  44  43   10  44               50   10  44                            B  V NM603468  14
+105.17   Glengorm                   44   1k 301  41   1k 301               47   1k 301                            B  V NM466565 250
+105.91   Kilmelford                 62   15 297  59   15 297               55   15 297                            CD V NM816100 240
+105.23   Kinlochleven               59    2 297  55    2 297               62    2 297                            CD V NN178629 223
+105.75   Kintraw                    46    4  56  43    4  56               50    4  56                            B  V NM830048  38
+105.74   Loch Feochan               54    8 128  61    8 128               58    8 128                            CD V NM861256 106
+105.19   Mallaig                    46    4  92  43    4  92               50    4  92                            B  V NM676965  67
+105.27   Oban                       44    2 165  41    2 165               47    2 165                            B  V NM850289 126
+105.24   Onich HP                   61    3  86  54    3  86               58    3  86                            CD V NN017618  64
+105.24   Onich VP                   61    3  84  54    3  84               58    3  84                            CD V NN017618  64
+105.26   Spean Bridge               27   14 113  24   14 113               21   14 113                            A  V NN218819  86
+105.60   Strontian                  49    3 254  45    3 254               42    3 254                            B  V NM830657 239
+105.46   Taynuilt                   46    2  73  43    2  73               50    2  73                            B  V NM993313  44
+105.29   Tayvallich                 46    2  68  43    2  68               50    2  68                            B  V NR740866  43
+111.00 + Waltham                    61  50k 442  54  50k 442  29  25k 442  58  50k 442  56  25k 449  57  25k 449  W  H SK809233 133
+102.35   Ambergate                  25   37 185  28   37 185               22   37 185                            A  V SK351513 140
+102.12   Ashbourne                  25   50 208  28   50 208               22   50 208                            A  V SK181460 163
+111.11   Ashford in the Water       23    3 266  26    3 266               30    3 266                            A  V SK189691 233
+111.04   Belper                     59    6 221  62    6 221               55    6 221                            CD V SK337462 186
+111.12   Birchover                  49    5 282  45    5 282               42    5 282                            B  H SK241616 257
+111.09   Bolehill                   53  100 367  57  100 367               60  100 367                            CD V SK294553 304
+111.18   Darley Dale                44    3 302  41    3 302               47    3 302                            B  V SK275642 272
+111.02   Derby                      48   40 131  51   40 131               52   40 131                            E  H SK329342 102
+111.05   Eastwood                   23    2 115  26    2 115               30    2 115                            A  V SK463470  87
+111.03   Leicester City             25    2  85  28    2  85               22    2  85                            A  V SK585033  57
+111.13   Little Eaton               23    4 159  26    4 159               30    4 159                            A  V SK371419 136
+111.10   Matlock                    24    3 230  27    3 230               21    3 230                            A  V SK297589 173
+111.07   Parwich                    24    2 230  27    2 230               21    2 230                            A  V SK185542 215
+111.06   Stamford                   47    2  46  41    2  46               44    2  46                            B  V TF032067  31
+111.08   Stanton Moor               59  400 352  62  400 352               55  400 352                            CD V SK245637 295
+106.00 + Wenvoe                     41 100k 384  44 100k 384  42  50k 384  47 100k 384  45  50k 384  49  50k 384  B  H ST110741 129
+106.37   Aberbeeg                   43    2 305  50    2 305               46    2 305                            B  V SO215029 277
+106.68   Abercynon                  58    2 191  54    2 191               61    2 191                            CD H ST093952 162
+106.06   Aberdare                   24  100 333  21  100 333  25  100 333  27  100 333  22  100 333  28  100 333  A  V SO034012 282
+106.18   Abergavenny                49  200 481  42  200 481               45  200 481                            B  V SO244126 437
+106.12   Abertillery                25   56 442  22   56 442               28   56 442                            A  V SO224023 396
+106.31   Abertridwr                 60   10 299  57   10 299               53   10 299                            CD V ST123885 266
+106.08   Bargoed                    24   60 335  21   60 335               27   60 335                            A  V SO145010 282
+106.43   Bedlinog                   24    2 389  21    2 389               27    2 389                            A  V SO102005 333
+106.53   Blackmill                  25    2 220  22    2 220               28    2 220                            A  V SS930866 187
+106.46   Blaenau Gwent              60  2.2 291  57  2.2 291               53  2.2 291                            CD V SO215049 276
+106.17   Blaenavon                  60   30 417  57   30 417               53   30 417                            CD V SO277063 371
+106.62   Blaenllechau               24    2 289  21    2 289               27    2 289                            A  H SS999976 252
+106.14   Blaina                     43   20 351  50   20 351               46   20 351                            B  V SO196083 322
+106.49   Brecon                     61  200 271  54  200 271               58  200 271                            CD V SO054287 220
+110.52   Chepstow                   24    2  56  21    2  56               27    2  56                            A  V ST544939  39
+106.11   Clydach                    23    2 335  29    2 335               26    2 335                            A  V SO227125 300
+106.51   Clyro                      41   32 264  47   32 264               44   32 264                            B  V SO204432 208
+106.52   Crickhowell                24   30 251  21   30 251               27   30 251                            A  V SO206202 201
+106.75   Crucorney                  24  2.2 243  27  2.2 243               21  2.2 243                            A  V SO323222 224
+106.94   Crumlin                    60    2 348  57    2 348               53    2 348                            CD V ST228984 324
+106.45   Cwm Ffrwd-Oer              43    2 219  46    2 219               50    2 219                            B  V SO265014 202
+106.24   Cwmafon                    24   14 243  21   14 243               27   14 243                            A  V SS798936 193
+106.58   Cwmaman                    49    2 211  42    2 211               45    2 211                            B  V ST000993 196
+106.65   Cwmfelinfach               48    2 228  52    2 228               56    2 228                            CD V ST184909 239
+106.57   Deri                       25    1 418  22    1 418               28    1 418                            A  V SO121022 397
+106.72   Dowlais                    61  2.6 420  58  2.6 420               54  2.6 420                            CD V SO073088 393
+106.13   Ebbw Vale                  59  100 504  55  100 504               62  100 504                            CD V SO159088 432
+106.33   Ebbw Vale South            24    4 296  27    4 296               21    4 296                            A  V SO176073 264
+106.19   Ferndale                   60   20 433  57   20 433               53   20 433                            CD V ST006969 361
+106.38   Fernhill                   59    2 175  55    2 175               62    2 175                            CD V ST030993 172
+106.81   Gelli-fendigaid            59  2.4 215  55  2.4 215               62  2.4 215                            CD H ST070935 200
+106.28   Gilfach                    24   10 314  21   10 314               27   10 314                            A  V SS982890 275
+106.54   Llanfach                   60    2 145  57    2 145               53    2 145                            CD H ST217947 145
+106.66   Llanfoist                  60 14.4 142  53 14.4 142               57 14.4 142                            CD V SO308143 101
+106.22   Llangeinor                 59   38 356  55   38 356               62   38 356                            CD V SS905886 302
+106.78   Llanharan                  24    2  82  21    2  82               27    2  82                            A  V SS998832  70
+106.26   Llanhilleth                49   10 311  42   10 311               45   10 311                            B  V SO213003 274
+106.25   Llyswen                    24    6 256  27    6 256               21    6 256                            A  V SO137361 226
+106.44   Machen Upper               62  7.2 179  55  7.2 179               59  7.2 179                            CD V ST211897 137
+106.04   Maesteg                    25   50 302  22   50 302               28   50 302                            A  V SS841912 233
+106.07   Merthyr Tydfil             25   25 313  22   25 313               28   25 313                            A  V SO057065 249
+106.63   Monmouth                   59   46 217  55   46 217               62   46 217                            CD V SO526127 199
+106.42   Mynydd Bach                61   50 360  58   50 360               54   50 360                            CD V ST168926 310
+106.03   Mynydd Machen              23  400 406  26  400 406               29  400 406                            A  V ST223900 355
+106.34   Nant-y-Moel                27    2 259  21    2 259               24    2 259                            A  V SS934935 246
+106.67   Nantyglo                   60    2 346  57    2 346               53    2 346                            CD V SO189106 342
+106.30   Ogmore Vale                60   20 344  57   20 344               53   20 344                            CD V SS929894 292
+106.48   Pennar                     43   20 276  46   20 276               50   20 276                            B  V ST209958 222
+106.55   Pennorth                   23   10 293  29   10 293               26   10 293                            A  V SO103267 246
+106.39   Penrhiwceiber              53    2 160  57    2 160               60    2 160                            CD V ST066966 157
+106.15   Pontypool                  23   50 294  26   50 294  25   50 294  29   50 294  22   50 294  28   50 294  A  V ST284990 250
+106.05   Pontypridd                 25  400 249  22  400 249               28  400 249                            A  V ST084904 189
+106.20   Porth                      43 11.8 301  46 11.8 301               50 11.8 301                            B  V ST029919 243
+106.73   Rhondda Fach               25    2 267  22    2 267               28    2 267                            A  V ST007939 267
+106.80   Rhondda HP                 23   10 353  26   10 353               29   10 353                            A  H SS990938 306
+106.02   Rhondda VP                 23   1k 362  26   1k 362               29   1k 362                            A  V SS990938 306
+106.09   Rhymney                    60   30 450  57   30 450               53   30 450                            CD V SO127043 419
+106.40   Risca                      43    2  83  46    2  83               50    2  83                            B  V ST240906  70
+106.50   Sennybridge                43 12.8 399  50 12.8 399               46 12.8 399                            B  V SN914295 349
+106.83   South Maesteg              59    2 151  55    2 151               62    2 151                            CD V SS860897 137
+106.10   South Tredegar             49  2.6 308  42  2.6 308               45  2.6 308                            B  V SO155060 297
+106.29   Taffs Well                 59 10.4 186  55 10.4 186               62 10.4 186                            CD V ST123848 146
+106.60   Ton Pentre                 61   16 370  58   16 370               54   16 370                            CD V SS960955 319
+106.35   Tonypandy                  59    2 258  55    2 258               62    2 258                            CD V SS986924 251
+106.76   Tonyrefail                 59    4 193  55    4 193               62    4 193                            CD V ST009874 158
+106.41   Trebanog                   24    2 188  27    2 188               21    2 188                            A  V ST020906 179
+106.61   Trecastle                  25    2 338  22    2 338               28    2 338                            A  V SN885274 317
+106.74   Trefechan                  42   10 305  49   10 305               45   10 305                            B  V SO030085 288
+106.23   Treharris                  52   10 208  48   10 208               56   10 208                            CD V ST103964 166
+106.69   Tynewydd                   59    4 275  62    4 275               55    4 275                            CD V SS931993 233
+106.59   Upper Killay               24    2 102  21    2 102               27    2 102                            A  V SS590927  86
+106.64   Usk                        48  3.6  70  52  3.6  70               56  3.6  70                            CD H SO384006  39
+106.87   Van Terrace                49    2 121  45    2 121               42    2 121                            B  V ST168864 105
+106.21   Wattsville                 60    2 226  57    2 226               53    2 226                            CD V ST215911 191
+106.32   Ynys Owen                  59   16 366  55   16 366               62   16 366                            CD V ST082992 340
+108.05 - Whitehawk Hill             60   4k 171  53   4k 171  57   4k 164  51   4k 171  56   4k 171  48   4k 171  CD V TQ329045 115
+108.25   Bevendean                  43    5  83  29    5  83               46    5  83                            K  V TQ334066  66
+108.26   Brighton Central           41   10  82  47   10  82               44   10  82                            B  H TQ312049  23
+108.24   Coldean                    44    8 122  47    8 122               41    8 122                            B  V TQ329083 104
+108.31   Hangleton                  54    5  99  49    5  82               52    5 104                            CD V TQ269077  69
+108.22   Ovingdean HP               50   10 106  61   10 106               55   10 106                            CD H TQ358044  89
+108.22   Ovingdean VP               50   10 106  61   10 106               55   10 106                            CD V TQ358044  89
+108.08   Patcham                    46   14 141  43   14 141               50   14 141                            B  H TQ318093 110
+108.19   Portslade                  41   10 100  47   10 100               44   10 100                            B  V TQ245080  75
+108.23   Saltdean                   55   20  64  58   20  64               54   20  64                            CD V TQ388034  49
+103.00 + Winter Hill                62 100k 726  59 100k 726  58 100k 726  54 100k 726  61 100k 726  55 100k  726 CD H SD660144 438
+103.76   Austwick                   45  6.3 237  49  6.3 237               42  6.3 237                            B  V SD783672 210
+103.64   Backbarrow                 53    2 126  60    2 126               57    2 126                            CD V SD358841 106
+103.08   Bacup                      46   50 381  43   50 381               50   50 381                            B  V SD878224 332
+103.56   Barrow Town Hall           44    2  60  41    2  60               47    2  60                            B  V SD198691  11
+103.10   Bidston                    44   25  51  41   25  51               47   25  51                            B  V SJ271899   7
+103.11   Birch Vale                 46   50 361  43   50 361               50   50 361                            B  V SK028861 317
+103.39   Blackburn                  46    2 192  43    2 192               50    2 192                            B  V SD703275 176
+103.59   Bollington                 27  4.2 210  24  4.2 210               21  4.2 210                            A  V SJ941778 170
+103.89   Brinscall                  21    2 224  24    2 224               27    2 224                            A  V SD630223 208
+103.90   Broadbottom                45    2 117  42    2 117               49    2 117                            B  V SJ987933 100
+103.66   Brook Bottom               53    2 277  60    2 277               57    2 277                            CD V SD969029 226
+103.30   Burbage                    47  2.8 381  41  2.8 381               44  2.8 381                            B  V SK044726 363
+103.14   Buxton                     27  200 480  24  200 480               21  200 480                            A  V SK059753 429
+103.72   Cartmel                    28    2  55  25    2  55               22    2  55                            A  H SD375793  41
+103.17   Chaigley                   27    2 194  24    2 194               21    2 194                            A  V SD686446 177
+103.77   Chatburn                   26    2  97  23    2  97               29    2  97                            A  V SD765445  76
+103.54   Chinley                    53  2.4 267  60  2.4 267               57  2.4 267                            CD V SK035827 239
+103.27   Congleton                  44   40 159  41   40 159               47   40 159                            B  V SJ865619 131
+103.48   Dalton                     46    5 117  43    5 117               50    5 117                            B  V SD229745  54
+103.01   Darwen                     45  100 312  49  100 312               42  100 312                            B  V SD708223 261
+103.33   Delph                      26    2 268  23    2 268               29    2 268                            A  V SD987080 230
+103.55   Dog Hill                   46   17 300  43   17 300               50   17 300                            B  V SD951091 260
+103.04   Elton                      27 12.6  25  24 12.6  25               21 12.6  25                            A  V SJ457735  10
+103.34   Far Highfield              52  2.8 171  56  2.8 171               48  2.8 171                            CD H SD543672 145
+103.13   Glossop                    28   50 310  25   50 310               22   50 310                            A  V SK027953 253
+103.03   Haslingden                 26   2k 386  23   2k 386               29   2k 386                            A  V SD795236 333
+103.52   Haughton Green             46    2 107  43    2 107               50    2 107                            B  H SJ934925  91
+103.09   Ladder Hill                26  200 452  23  200 452               29  200 452                            A  V SK027788 397
+103.35   Lancaster                  27   2k 181  24   2k 181  25   2k 181  21   2k 181  28   2k 181  22   2k 181  A  V SD490662  89
+103.60   Langley                    27    2 248  24    2 248               21    2 248                            A  V SJ938709 232
+103.46   Lees                       28    2 223  25    2 223               22    2 223                            A  H SD961039 213
+103.22   Littleborough              27  100 271  24  100 271               21  100 271                            A  V SD950166 225
+103.26   Macclesfield               28  7.4 206  25  7.4 206               22  7.4 206                            A  V SJ925725 188
+103.28   Manchester Hulme           44    2 104  41    2 104               47    2 104                            B  V SJ828966  33
+103.74   Melling HP                 57  .84 129  60  .84 129               53  .84 129                            CD H SD602703 100
+103.74   Melling VP                 57    5 131  60    5 131               53    5 131                            CD V SD602703 100
+103.85   Middleton                  28    8 118  25    8 118               22    8 118                            A  V SD876058  96
+103.44   Millom Park                28   43 189  25   43 189               22   43 189                            A  V SD162830 148
+103.15   Moss Bank                  27    2  49  24    2  49               21    2  49                            A  V SJ509974  32
+103.68   Mottram in Longdendale     46    2 235  43    2 235               50    2 235                            B  V SJ988961 216
+103.80   Newchurch                  21    2 280  24    2 280               27    2 280                            A  H SD840226 243
+103.88   Norden                     53    2 209  57    2 209               60    2 209                            CD V SD861142 185
+103.25   North Oldham               27    8 291  24    8 291               21    8 291                            A  V SD928060 244
+103.31   Oakenhead                  44   20 287  41   20 287               47   20 287                            B  V SD806234 249
+103.49   Over Biddulph              57  4.4 249  53  4.4 249               60  4.4 249                            CD V SJ896605 210
+103.53   Parbold                    44   30  24  41   30  24               47   30  24                            B  V SD477112  11
+103.02   Pendle Forest              28  100 324  25  100 324  27  100 324  22  100 324  21  100 324  24  100 324  A  V SD825383 275
+103.71   Penny Bridge               26  6.2 131  23  6.2 131               29  6.2 131                            A  V SD311836  86
+103.91   Portwood                   28    2  66  25    2  66               22    2  66                            A  V SJ908911  42
+103.41   Prestbury                  46    2 163  43    2 163               50    2 163                            B  V SJ885763 156
+103.47   Ramsbottom                 53   16 276  60   16 276               57   16 276                            CD V SD803159 244
+103.62   Ribblesdale                44    6 276  41    6 276               47    6 276                            B  V SD814719 241
+103.58   Romiley                    44  2.2 167  41  2.2 167               47  2.2 167                            B  V SJ954904 118
+103.57   Roose HP                   22   10  29  28   10  29               25   10  29                            A  H SD220692  13
+103.57   Roose VP                   22   20  29  28   20  29               25   20  29                            A  V SD220692  13
+103.06   Saddleworth                45  400 391  49  400 391  51  400 391  42  400 391  52  400 391  48  400 391  B  V SD987049 347
+         Skelmersdale               51  100 168  48  100 168               52  100 168                            B  H SD502074 158
+103.70   Staveley-in-Cartmel        46  2.4 157  43  2.4 157               50  2.4 157                            B  V SD383854 126
+103.42   Stockport                  24    2  77  21    2  77               27    2  77                            A  H SJ867904  50
+203.07   Storeton                   28  560 109  25  560 109  23  560 109  22  560 109  26  560 109  29  560 109  A  V SJ314841  66
+103.18   Trawden                    53   40 315  60   40 315               57   40 315                            CD V SD909378 277
+103.73   Urswick                    44    2  72  41    2  72               47    2  72                            B  V SD263739  54
+103.96   Walton-le-Dale             27    2  75  24    2  75               21    2  75                            A  H SD545291  33
+103.87   Wardle                     28    2 245  25    2 245               22    2 245                            A  H SD915172 216
+103.65   West Kirby                 27   15  76  24   15  76               21   15  76                            A  V SJ224862  61
+103.94   Whaley Bridge              45    2 184  49    2 184               42    2 184                            B  V SK011815 172
+103.19   Whalley                    46   10 218  43   10 218               50   10 218                            B  V SD729352 161
+103.32   Whitewell                  53   16 321  60   16 321               57   16 321                            CD V SD833245 266
+103.12   Whitworth                  28   50 392  25   50 392               22   50 392                            A  V SD886202 344
+103.78   Woodnook                   45    2 198  49    2 198               42    2 198                            B  V SD762277 187
+121.00 - The Wrekin                 26  20k 455  23  20k 455  41  10k 455  30  20k 455  44  10k 455  47  10k 455  K  H SJ629082 389
+121.06   Bucknell                   45    2 200  49    2 200               42    2 200                            B  V SO358734 173
+121.02   Clun                       55   11 450  59   11 450               50   11 450                            CD V SO324799 413
+121.04   Coalbrookdale              50    2 147  43    2 147               46    2 147                            B  V SJ671042  98
+121.05   Halesowen                  58    2 165  61    2 165               54    2 165                            CD V SO971826 149
