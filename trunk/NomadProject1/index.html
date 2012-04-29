@@ -103,7 +103,6 @@
 
             // get the top 5 transmitters that have signal strength 66db+
             for (var i = 0; i < 5; i++) {
-                if ( (txList[i].signalStrength - 66) > 0)
                     txListTop5[i] = txList[i];
             }
 
@@ -166,15 +165,7 @@
 
             var compassdata = document.getElementById('compassdata');
             compassdata.innerHTML = 'heading:' + lastHeading + ', accuracy:' + heading.headingAccuracy;
-            
-
-            var element = document.getElementById('geolocation');
-            element.innerHTML = 'Latitude: ' + lastPosition.coords.latitude + '<br />' +
-                            'Longitude: ' + lastPosition.coords.longitude + '<br />' +
-                            'Altitude: ' + lastPosition.coords.altitude + '<br />' +
-                            'Heading: ' + lastHeading + '<br />' + 
-            'RelativeHeading: ' + relativeHeading + '<br />' +
-            'SelectedTxBearing: ' + m_SelectedTxBearing + '<br />';
+                    
         }
         
         function onFail() {
@@ -188,11 +179,7 @@
         }
 
         function onDeviceReady() {
-            $("#selectedTx").hide();
-            $("#txoptions").hide();
-
             getLocationData();
-           
         }
 
         function populateTxDataPanel() {
@@ -214,10 +201,6 @@
             
             m_SelectedTxIndex = index;
 
-            var element = document.getElementById('txoptions');
-            $("#txoptions").hide();
-            $("#selectedTx").show();
-
             tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
             m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
 
@@ -234,12 +217,16 @@
 
         function calculateNearestTx() {
 
+
+
             nearest5Tx = getNearestTx();
 
             var latitude = parseFloat(lastPosition.coords.latitude);
             var longitude = parseFloat(lastPosition.coords.longitude);
 
             $("#locationdata").html('Latitude: ' + latitude.toFixed(1) + ', Longitude: ' + longitude.toFixed(1) + '<br />');
+
+            $('ul').empty();
 
             for (var i = 0; i < 5; i++) {
 
@@ -248,12 +235,25 @@
 
                     var distance = parseFloat(nearest5Tx[i].distance);
                     distance = distance.toFixed(1);
+                    
+                    $('ul').append($('<li/>', {    //here appendin `<li>`
+                        'data-role': "list-divider"
+                    }).append($('<a/>', {    //here appending `<a>` into `<li>`
+                        'href': '#compasspage',
+                        'data-transition': 'slide',
+                        'onclick' : 'selectTx(' + i + ')',
+                        'html': '<table width="100%"><tr><td>' + nearest5Tx[i].name + '</td><td class="distanceCell">' + distance + "km<br/>" + nearest5Tx[i].signalStrength + "</td></tr></table>"
+                            
+                    })));
 
-                    $("#radiolabel" + radioIndex).find('span.ui-btn-text').html('<table width="100%"><tr><td>' + nearest5Tx[i].name + '</td><td class="distanceCell">' + distance + "km<br/>" + nearest5Tx[i].signalStrength + "</td></tr></table>");
+                    $('ul').listview('refresh');
+
+
+                   // $("#radiolabel" + radioIndex).find('span.ui-btn-text').html('<table width="100%"><tr><td>' + nearest5Tx[i].name + '</td><td class="distanceCell">' + distance + "km<br/>" + nearest5Tx[i].signalStrength + "</td></tr></table>");
                 } else {
-                    var radiobutton = document.getElementById('radio' + radioIndex);
-                    radiobutton.style.display = 'none';
-                    radiobutton.disabled = true;
+//                    var radiobutton = document.getElementById('radio' + radioIndex);
+//                    radiobutton.style.display = 'none';
+//                    radiobutton.disabled = true;
                 }
             }
 
@@ -273,36 +273,49 @@
     </script>
 </head>
 <body>
-    <div data-role="page">
+    <div data-role="page" id="page1">
         <div class="header">
             <img src="images/smalllogo.png" align="middle"/> Antenna Aligner
         </div>
-        <div data-role="content">            
-            <div  id="txoptions" data-role="fieldcontain">
-                <div id="locationdata"></div>
+        <div data-role="content">
+            <div id="txoptions" data-role="fieldcontain">
+                <ul data-role="listview" data-divider-theme="d" data-inset="true">                
+                  
+                </ul>
                 
-                <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-                    <legend>
-                        Select a Transmitter...
-                    </legend>
-                    <input name="radiobuttons1" id="radio1" value="" type="radio" onclick="selectTx(0)"/>
-                    <label id="radiolabel1" for="radio1">
-                    </label>
-                    <input name="radiobuttons1" id="radio2" value="radio2" type="radio" onclick="selectTx(1)" />
-                    <label id="radiolabel2"  for="radio2">
-                    </label>
-                    <input name="radiobuttons1" id="radio3" value="radio3" type="radio" onclick="selectTx(2)"/>
-                    <label id="radiolabel3"  for="radio3">
-                    </label>
-                    <input name="radiobuttons1" id="radio4" value="radio4" type="radio" onclick="selectTx(3)"/>
-                    <label id="radiolabel4"  for="radio4">
-                    </label>
-                    <input name="radiobuttons1" id="radio5" value="radio5" type="radio" onclick="selectTx(4)" />
-                    <label id="radiolabel5"  for="radio5">
-                    </label>
-                </fieldset>
+                <!-- <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                         <legend>
+                             Select a Transmitter...
+                         </legend>
+                         <input name="radiobuttons1" id="radio1" value="" type="radio" onclick="selectTx(0)"/>
+                         <label id="radiolabel1" for="radio1">
+                         </label>
+                         <input name="radiobuttons1" id="radio2" value="radio2" type="radio" onclick="selectTx(1)" />
+                         <label id="radiolabel2"  for="radio2">
+                         </label>
+                         <input name="radiobuttons1" id="radio3" value="radio3" type="radio" onclick="selectTx(2)"/>
+                         <label id="radiolabel3"  for="radio3">
+                         </label>
+                         <input name="radiobuttons1" id="radio4" value="radio4" type="radio" onclick="selectTx(3)"/>
+                         <label id="radiolabel4"  for="radio4">
+                         </label>
+                         <input name="radiobuttons1" id="radio5" value="radio5" type="radio" onclick="selectTx(4)" />
+                         <label id="radiolabel5"  for="radio5">
+                         </label>
+                     </fieldset>-->
                 <button onclick="onDeviceReady();">Recalculate</button>
             </div>
+        </div>
+    </div>
+    
+            
+            
+    <div data-role="page" id="compasspage">
+        <div class="header">
+            <img src="images/smalllogo.png" align="middle"/> Antenna Aligner
+        </div>
+        <div data-role="content">             
+
             <div  id="selectedTx">
                 <div id="txName">
                     <b>
@@ -327,8 +340,10 @@
                     </div>
                 </div>
 
-                <button onclick="displayTxList();">Try another tx</button>
-
+                <a data-role="button" data-rel="back" href="#page1">
+                  Try another station
+                </a>
+               
             </div>
         </div>
 

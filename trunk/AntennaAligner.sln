@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{4B160523-D178-4405-B438-79FB67C8D499}") = "AntennaAlignerApp", "NomadProject1\AntennaAlignerApp.nomadproj", "{C11B75D7-A221-4A1B-B666-07EF3E96C543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxDataMunger", "TxDataMunger\TxDataMunger.csproj", "{D97AB0BE-CEF0-49B0-8567-C664095AE39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoords", "DotNetCoords\DotNetCoords.csproj", "{F0373390-A24B-4D13-9AE2-714A2606993B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Debug|x86.ActiveCfg = Debug|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Debug|x86.Build.0 = Debug|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Release|Any CPU.ActiveCfg = Release|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Release|x86.ActiveCfg = Release|x86
+		{C11B75D7-A221-4A1B-B666-07EF3E96C543}.Release|x86.Build.0 = Release|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Debug|x86.ActiveCfg = Debug|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Debug|x86.Build.0 = Debug|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Release|Any CPU.ActiveCfg = Release|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Release|x86.ActiveCfg = Release|x86
+		{D97AB0BE-CEF0-49B0-8567-C664095AE39B}.Release|x86.Build.0 = Release|x86
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F0373390-A24B-4D13-9AE2-714A2606993B}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
