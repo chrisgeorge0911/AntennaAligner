@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <script type="text/javascript" charset="utf-8" src="scripts/phonegap-1.4.1.js"></script>
+    <script src="scripts/jquery-1.6.4.js" type="text/javascript"></script>
+    <script src="scripts/jquery.mobile-1.0.1.min.js" type="text/javascript"></script>
+    <script src="scripts/xui.js" type="text/javascript"></script>
+    <script src="scripts/positionUtils.js" type="text/javascript"></script>
+    <script src="scripts/txdata.js" type="text/javascript"></script>
+    <link rel="Stylesheet" href="style/jquery.mobile-1.0.1.min.css" />   
+    <link rel="Stylesheet" href="style/fonts/ariblk.css" />
+    <link rel="Stylesheet" href="style/master.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" charset="utf-8">
+
+        var lastHeading = -1;
+        var lastPosition;
+        var nearest5Tx;
+        var m_SelectedTxIndex = -1;
+        var m_SelectedTxBearing;
+
+
+        function getLocationData() {        
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(onLocationSuccess, onError);
+            }
+            else {
+                position = {
+                    coords: {
+                        latitude: 50,
+                        longitude: -0.4,
+                        altitude: 40.5,
+                        accuracy: 65,
+                        altitudeAccuracy: 30,
+                        heading: 0,
+                        speed: 0,
+                        timestamp: 0
+                    }
+                };
+                onLocationSuccess(position);
+            }
+        }
+
+        function onLocationSuccess(position)
+        {
+            lastPosition = position;
+
+            calculateNearestTx();
+        }
+
+        function getCompassData() {
+
+            if (navigator.compass) {
+                var options = { filter: 1 };
+                watchID = navigator.compass.watchHeadingFilter(success, onFail, options);
+                //navigator.compass.getCurrentHeading(success, onFail);
+                //navigator.compass.watchHeading(success, onFail, { frequency: 1 });
+            }
+            else {
+                success(30);
+            }          
+        }
+
+        function log10(val) {
+            return Math.log(val) / Math.log(10);
+        }
+        
+        function getFieldStrength(power, distance, channel) {
+
+            var d = distance * 1000;  // need distance in metres
+            var e = (Math.sqrt(30 * power)) / d;
+
+            var dbuvm = 20 * log10(e / 0.000001);
+
+            var freq = 8 * (channel - 21) + 474;
+            var lambda = 300000000 / (freq * 1000000);
+
+            var V = 0.5 * e * lambda / 3.14159;
+
+            var signalStrength = 20 * log10(V / 0.000001);
+
+            signalStrength = parseFloat(signalStrength);
+            return signalStrength.toFixed(1);
+        }
+
+
+        function getNearestTx() {
+
+            var txList = getListOfTx();
+            
+            for ( var i = 0; i < txList.length; i++ )
+            {
+                txList[i].distance = getDistanceBetween(lastPosition, txList[i].position);
+                txList[i].signalStrength = getFieldStrength(txList[i].ch1pwr, txList[i].distance, txList[i].ch1);
+            }
+
+            txList.sort(signalSort);
+
+            var txListTop5 = new Array();
+
+
+            // get the top 5 transmitters that have signal strength 66db+
+            for (var i = 0; i < 5; i++) {
+                if ( (txList[i].signalStrength - 66) > 0)
+                    txListTop5[i] = txList[i];
+            }
+
+            return txListTop5;
+        }
+
+        function distanceSort(a, b){
+            if ( a.distance > b.distance )
+            {
+                return 1;
+            }
+            else if ( a.distance < b.distance )
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        // sort the transmitters by signal strength in descending order (strongest first)
+        function signalSort(a, b) {
+            return b.signalStrength - a.signalStrength;               
+        }
+
+
+        function success(heading) {
+                   
+            if (lastHeading === heading.magneticHeading) return;
+            lastHeading = heading.magneticHeading;
+
+            //if (lastHeading === heading) return;
+            //lastHeading = heading;
+
+            var compass = x$("#compass .compass");
+                       
+            compass.css({
+                "-webkit-transform": "rotate(-" + lastHeading + "deg)",
+                "transform": "rotate(-" + lastHeading + "deg)",
+                "-moz-transform": "rotate(-" + lastHeading + "deg)",
+                "z-index": "0"
+            });
+
+            if (m_SelectedTxIndex > -1) {
+
+                var relativeHeading = parseFloat(m_SelectedTxBearing) - parseFloat(lastHeading);
+                var needle = x$("#compass .needle");
+                //alert(m_SelectedTxBearing + ":" + relativeHeading);
+                
+
+                needle.css({
+                    "-webkit-transform": "rotate(" + relativeHeading + "deg)",
+                    "transform": "rotate(" + relativeHeading + "deg)",
+                    "-moz-transform": "rotate(" + relativeHeading + "deg)",
+                    "position": "absolute",
+                    "z-index": "1"
+                });
+            }
+
+            var compassdata = document.getElementById('compassdata');
+            compassdata.innerHTML = 'heading:' + lastHeading + ', accuracy:' + heading.headingAccuracy;
+            
+
+            var element = document.getElementById('geolocation');
+            element.innerHTML = 'Latitude: ' + lastPosition.coords.latitude + '<br />' +
+                            'Longitude: ' + lastPosition.coords.longitude + '<br />' +
+                            'Altitude: ' + lastPosition.coords.altitude + '<br />' +
+                            'Heading: ' + lastHeading + '<br />' + 
+            'RelativeHeading: ' + relativeHeading + '<br />' +
+            'SelectedTxBearing: ' + m_SelectedTxBearing + '<br />';
+        }
+        
+        function onFail() {
+            alert("heading fail");
+        }
+        // onError Callback receives a PositionError object
+        //
+        function onError(error) {
+            alert('code: ' + error.code + '\n' +
+              'message: ' + error.message + '\n');
+        }
+
+        function onDeviceReady() {
+            $("#selectedTx").hide();
+            $("#txoptions").hide();
+
+            getLocationData();
+           
+        }
+
+        function populateTxDataPanel() {
+
+            var nameDiv = document.getElementById('txName');
+            var distanceDiv = document.getElementById('txDistance');
+            var channelDiv = document.getElementById('txChannels');
+
+            nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
+            distanceDiv.innerHTML = "Distance: " + parseFloat(nearest5Tx[m_SelectedTxIndex].distance).toFixed(1) + "km";
+
+            channelDiv.innerHTML = "Channels: " + nearest5Tx[m_SelectedTxIndex].ch1 + ", " + nearest5Tx[m_SelectedTxIndex].ch2 + ", " + nearest5Tx[m_SelectedTxIndex].ch3;
+        }
+
+        function selectTx(index) {
+
+            if (index >= nearest5Tx.length) // if we've clicked on a button that has no entry in the nearest array, do nothing.
+                return;
+            
+            m_SelectedTxIndex = index;
+
+            var element = document.getElementById('txoptions');
+            $("#txoptions").hide();
+            $("#selectedTx").show();
+
+            tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
+            m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
+
+            populateTxDataPanel();
+
+            // reset lastHeading so that the compass is redrawn.
+            lastHeading = -1;
+            getCompassData();
+
+            
+
+        }
+
+
+        function calculateNearestTx() {
+
+            nearest5Tx = getNearestTx();
+
+            var latitude = parseFloat(lastPosition.coords.latitude);
+            var longitude = parseFloat(lastPosition.coords.longitude);
+
+            $("#locationdata").html('Latitude: ' + latitude.toFixed(1) + ', Longitude: ' + longitude.toFixed(1) + '<br />');
+
+            for (var i = 0; i < 5; i++) {
+
+                var radioIndex = parseInt(i) + 1;
+                if (i < nearest5Tx.length) {
+
+                    var distance = parseFloat(nearest5Tx[i].distance);
+                    distance = distance.toFixed(1);
+
+                    $("#radiolabel" + radioIndex).find('span.ui-btn-text').html('<table width="100%"><tr><td>' + nearest5Tx[i].name + '</td><td class="distanceCell">' + distance + "km<br/>" + nearest5Tx[i].signalStrength + "</td></tr></table>");
+                } else {
+                    var radiobutton = document.getElementById('radio' + radioIndex);
+                    radiobutton.style.display = 'none';
+                    radiobutton.disabled = true;
+                }
+            }
+
+            $("#txoptions").show();
+        }
+
+
+        function displayTxList() {
+
+            $("#selectedTx").hide();
+            $("#txoptions").show();
+            
+        }
+        
+        document.addEventListener("deviceready", onDeviceReady, false);
+       
+    </script>
+</head>
+<body>
+    <div data-role="page">
+        <div class="header">
+            <img src="images/smalllogo.png" align="middle"/> Antenna Aligner
+        </div>
+        <div data-role="content">            
+            <div  id="txoptions" data-role="fieldcontain">
+                <div id="locationdata"></div>
+                
+                <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                    <legend>
+                        Select a Transmitter...
+                    </legend>
+                    <input name="radiobuttons1" id="radio1" value="" type="radio" onclick="selectTx(0)"/>
+                    <label id="radiolabel1" for="radio1">
+                    </label>
+                    <input name="radiobuttons1" id="radio2" value="radio2" type="radio" onclick="selectTx(1)" />
+                    <label id="radiolabel2"  for="radio2">
+                    </label>
+                    <input name="radiobuttons1" id="radio3" value="radio3" type="radio" onclick="selectTx(2)"/>
+                    <label id="radiolabel3"  for="radio3">
+                    </label>
+                    <input name="radiobuttons1" id="radio4" value="radio4" type="radio" onclick="selectTx(3)"/>
+                    <label id="radiolabel4"  for="radio4">
+                    </label>
+                    <input name="radiobuttons1" id="radio5" value="radio5" type="radio" onclick="selectTx(4)" />
+                    <label id="radiolabel5"  for="radio5">
+                    </label>
+                </fieldset>
+                <button onclick="onDeviceReady();">Recalculate</button>
+            </div>
+            <div  id="selectedTx">
+                <div id="txName">
+                    <b>
+                        ?
+                    </b>
+                </div>
+                <div id="txDistance">
+                    <b>
+                        ?
+                    </b>
+                </div>
+                <div id="txChannels">
+                    <b>
+                        ?
+                    </b>
+                </div>         
+                <div id="compassdata"></div>           
+                <div id="compass" class="view">
+                    <div class="container">
+                        <img class="needle" id="needle" src="images/direction-needle.png">
+                        <img class="compass" id="compassback" src="images/direction-indicator.png">
+                    </div>
+                </div>
+
+                <button onclick="displayTxList();">Try another tx</button>
+
+            </div>
+        </div>
+
+
+        <!-- <div data-role="footer">
+                 Page footer</div>-->
+    </div>
+</body>
+</html>
