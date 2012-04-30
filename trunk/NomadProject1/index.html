@@ -182,6 +182,10 @@
             getLocationData();
         }
 
+        $("#compasspage").live('pageinit', function () {
+            populateTxDataPanel();
+        });
+
         function populateTxDataPanel() {
 
             var nameDiv = document.getElementById('txName');
@@ -203,21 +207,15 @@
 
             tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
             m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
-
-            populateTxDataPanel();
-
+            
             // reset lastHeading so that the compass is redrawn.
             lastHeading = -1;
             getCompassData();
-
             
-
         }
 
 
         function calculateNearestTx() {
-
-
 
             nearest5Tx = getNearestTx();
 
