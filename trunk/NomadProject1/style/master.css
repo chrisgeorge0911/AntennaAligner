@@ -58,6 +58,10 @@
 {
 }
 
+.ui-page {
+    -webkit-backface-visibility: hidden;
+}
+
 .ui-field-contain,fieldset.ui-field-contain
 {
     padding: 0;
