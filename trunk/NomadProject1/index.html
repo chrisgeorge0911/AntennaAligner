@@ -165,8 +165,8 @@
                 });
             }
 
-            var compassdata = document.getElementById('compassdata');
-            compassdata.innerHTML = 'heading:' + lastHeading + ', accuracy:' + heading.headingAccuracy;
+//            var compassdata = document.getElementById('compassdata');
+//            compassdata.innerHTML = 'heading:' + lastHeading + ', accuracy:' + heading.headingAccuracy;
                     
         }
         
@@ -238,7 +238,7 @@
                         'data-role': "list-divider"
                     }).append($('<a/>', {    //here appending `<a>` into `<li>`
                         'href': '#compasspage',
-                        'data-transition': 'slide',
+                        'data-transition': 'none',
                         'onclick' : 'selectTx(' + i + ')',
                         'html': '<table width="100%"><tr><td>' + nearest5Tx[i].name + '</td><td class="distanceCell">' + distance + "km<br/>" + nearest5Tx[i].signalStrength + "</td></tr></table>"
                             
@@ -263,8 +263,10 @@
 </head>
 <body>
     <div data-role="page" id="page1">
-        <div class="header">
-            <img src="images/smalllogo.png" align="middle"/> Antenna Aligner
+        <div data-role="header">
+            <h1>Antenna Aligner</h1>
+            <a data-role="button" data-transition="none" data-mini="true" data-inline="true" onclick="onDeviceReady()" class="ui-btn-right">Refresh</a>
+            
         </div>
         <div data-role="content">
             <div id="txoptions" data-role="fieldcontain">
@@ -278,34 +280,39 @@
     
             
             
-    <div data-role="page" id="compasspage">
+    <div data-role="page" id="compasspage" data-add-back-btn="true">
     <script>
        $("#compasspage").live('pagebeforeshow', function () {
             populateTxDataPanel();
         });
+
         </script>
 
-        <div class="header">
-            <img src="images/smalllogo.png" align="middle"/> Antenna Aligner
-        </div>
+        <div data-role="header">
+            <a data-role="button" data-transition="none" data-mini="true" data-inline="true" href="#page1">Back</a>
+            <h1>Antenna Aligner</h1>
+            </div>
         <div data-role="content">             
 
-            <div  id="selectedTx">
+            <div id="selectedTx">
                 <div id="txName">
                     <b>
                         ?
                     </b>
                 </div>
-                <div id="txDistance">
-                    <b>
-                        ?
-                    </b>
-                </div>
-                <div id="txChannels">
-                    <b>
-                        ?
-                    </b>
-                </div>         
+                <div id="datapanel">
+                    <div id="txDistance">
+                        <b>
+                            ?
+                        </b>
+                    </div>
+                    <div id="txChannels">
+                        <b>
+                            ?
+                        </b>
+                    </div>  
+                </div>  
+                     
                 <div id="compassdata"></div>           
                 <div id="compass" class="view">
                     <div class="container">
@@ -314,10 +321,6 @@
                     </div>
                 </div>
 
-                <a data-role="button" data-rel="back" href="#page1">
-                  Try another station
-                </a>
-               
             </div>
         </div>
 
