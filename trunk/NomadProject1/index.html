@@ -182,9 +182,7 @@
             getLocationData();
         }
 
-        $("#compasspage").live('pageinit', function () {
-            populateTxDataPanel();
-        });
+     
 
         function populateTxDataPanel() {
 
@@ -279,6 +277,12 @@
             
             
     <div data-role="page" id="compasspage">
+    <script>
+       $("#compasspage").live('pagebeforeshow', function () {
+            populateTxDataPanel();
+        });
+        </script>
+
         <div class="header">
             <img src="images/smalllogo.png" align="middle"/> Antenna Aligner
         </div>
