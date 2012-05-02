@@ -54,9 +54,9 @@
 
             if (navigator.compass) {
                 var options = { filter: 1 };
-                watchID = navigator.compass.watchHeadingFilter(success, onFail, options);
-                //navigator.compass.getCurrentHeading(success, onFail);
-                //navigator.compass.watchHeading(success, onFail, { frequency: 1 });
+                    watchID = navigator.compass.watchHeadingFilter(success, onFail, options);
+                    //navigator.compass.getCurrentHeading(success, onFail);
+                    //navigator.compass.watchHeading(success, onFail, { frequency: 1 });
             }
             else {
                 success(30);
@@ -72,7 +72,7 @@
             var d = distance * 1000;  // need distance in metres
             var e = (Math.sqrt(30 * power)) / d;
 
-            var dbuvm = 20 * log10(e / 0.000001);
+            //var dbuvm = 20 * log10(e / 0.000001);
 
             var freq = 8 * (channel - 21) + 474;
             var lambda = 300000000 / (freq * 1000000);
@@ -246,8 +246,6 @@
 
                     $('ul').listview('refresh');
 
-
-                   // $("#radiolabel" + radioIndex).find('span.ui-btn-text').html('<table width="100%"><tr><td>' + nearest5Tx[i].name + '</td><td class="distanceCell">' + distance + "km<br/>" + nearest5Tx[i].signalStrength + "</td></tr></table>");
                 } else {
 //                    var radiobutton = document.getElementById('radio' + radioIndex);
 //                    radiobutton.style.display = 'none';
@@ -259,13 +257,6 @@
         }
 
 
-        function displayTxList() {
-
-            $("#selectedTx").hide();
-            $("#txoptions").show();
-            
-        }
-        
         document.addEventListener("deviceready", onDeviceReady, false);
        
     </script>
@@ -279,28 +270,7 @@
             <div id="txoptions" data-role="fieldcontain">
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">                
                   
-                </ul>
-                
-                <!-- <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
-                         <legend>
-                             Select a Transmitter...
-                         </legend>
-                         <input name="radiobuttons1" id="radio1" value="" type="radio" onclick="selectTx(0)"/>
-                         <label id="radiolabel1" for="radio1">
-                         </label>
-                         <input name="radiobuttons1" id="radio2" value="radio2" type="radio" onclick="selectTx(1)" />
-                         <label id="radiolabel2"  for="radio2">
-                         </label>
-                         <input name="radiobuttons1" id="radio3" value="radio3" type="radio" onclick="selectTx(2)"/>
-                         <label id="radiolabel3"  for="radio3">
-                         </label>
-                         <input name="radiobuttons1" id="radio4" value="radio4" type="radio" onclick="selectTx(3)"/>
-                         <label id="radiolabel4"  for="radio4">
-                         </label>
-                         <input name="radiobuttons1" id="radio5" value="radio5" type="radio" onclick="selectTx(4)" />
-                         <label id="radiolabel5"  for="radio5">
-                         </label>
-                     </fieldset>-->
+                </ul>             
                 <button onclick="onDeviceReady();">Recalculate</button>
             </div>
         </div>

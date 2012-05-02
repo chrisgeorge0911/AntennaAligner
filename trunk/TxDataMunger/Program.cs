@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
 using System.IO;
-using System.Net;
 using System.Text.RegularExpressions;
 using DotNetCoords;
-using TDPG.GeoCoordConversion;
 
 namespace TxDataMunger
 {
