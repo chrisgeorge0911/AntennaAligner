@@ -258,15 +258,15 @@
 
 
         document.addEventListener("deviceready", onDeviceReady, false);
+
+        $("[data-role=header]").fixedtoolbar({ tapToggle: false });
        
     </script>
 </head>
 <body>
     <div data-role="page" id="page1">
         <div data-role="header">
-            <h1>Antenna Aligner</h1>
-            <a data-role="button" data-transition="none" data-mini="true" data-inline="true" onclick="onDeviceReady()" class="ui-btn-right">Refresh</a>
-            
+            <h1>Antenna Aligner</h1>            
         </div>
         <div data-role="content">
             <div id="txoptions" data-role="fieldcontain">
@@ -275,7 +275,10 @@
                 </ul>             
                 <button onclick="onDeviceReady();">Recalculate</button>
             </div>
+            
         </div>
+        <div data-role="footer">
+                 Page footer</div>
     </div>
     
             
@@ -289,11 +292,12 @@
         </script>
 
         <div data-role="header">
-            <a data-role="button" data-transition="none" data-mini="true" data-inline="true" href="#page1">Back</a>
+            <!-- <a data-role="button" data-transition="none" data-mini="true" data-inline="true" href="#page1">Back</a> -->
             <h1>Antenna Aligner</h1>
-            </div>
+        </div>
         <div data-role="content">             
-
+        
+            
             <div id="selectedTx">
                 <div id="txName">
                     <b>
@@ -325,8 +329,9 @@
         </div>
 
 
-        <!-- <div data-role="footer">
-                 Page footer</div>-->
+        <div data-role="footer">
+                 Page footer</div>
     </div>
+    
 </body>
 </html>

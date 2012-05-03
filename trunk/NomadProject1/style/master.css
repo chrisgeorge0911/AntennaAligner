@@ -61,8 +61,7 @@
 }
 
 
-.ui-page {
-    -webkit-backface-visibility: hidden;
+.ui-page {    
     background-image: -webkit-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
     background-image: -moz-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
     background-image: -ms-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
