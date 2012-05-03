@@ -46,8 +46,14 @@
 
 #datapanel
 {
-    background-color: #999999;
-    color: #FFFFFF;  
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em;
+    background-color: #DDDDDD;
+    border: 1px solid #999999;   
+    margin-top:3px; 
+    padding-left:4px;
+    padding-top:2px;
+    padding-bottom:2px;
 }
 
 .ui-btn-inner {
