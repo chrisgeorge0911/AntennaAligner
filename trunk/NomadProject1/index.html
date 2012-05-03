@@ -205,7 +205,7 @@
             var channelDiv = document.getElementById('txChannels');
 
             nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
-            distanceDiv.innerHTML = "Distance: " + parseFloat(nearest5Tx[m_SelectedTxIndex].distance).toFixed(1) + "km";
+            distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distance).toFixed(1) + "km";
 
             channelDiv.innerHTML = "Channels: " + nearest5Tx[m_SelectedTxIndex].ch1 + ", " + nearest5Tx[m_SelectedTxIndex].ch2 + ", " + nearest5Tx[m_SelectedTxIndex].ch3;
         }
@@ -270,7 +270,11 @@
 <body>
     <div data-role="page" id="page1">
         <div data-role="header">
-            <h1>Antenna Aligner</h1>            
+            <h1>Antenna Aligner</h1>         
+            
+            <!-- <a href="#dialog" data-rel="dialog" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a> -->
+             
+            <!-- <a href="#dialog" data-rel="dialog">Open Dialog</a>                        -->
         </div>
         <div data-role="content">
             <div id="txoptions" data-role="fieldcontain">
@@ -281,11 +285,7 @@
             </div>
             
         </div>
-        <div data-role="footer">
-                 Page footer</div>
     </div>
-    
-            
             
     <div data-role="page" id="compasspage" data-add-back-btn="true">
     <script>
@@ -300,42 +300,45 @@
             <h1>Antenna Aligner</h1>
         </div>
         <div data-role="content">             
-        
+            <div class="datapanel">
+                <div class="datapanel-top">
+                    <div id="selectedTx">
+                        <div id="txName">
+                            <b>
+                                ?
+                            </b>
+                        </div>
+                        <table width="100%"><tr><td width="50%"><span class="data" id="txDistance"></span></td>
+                        <td><span class="data" id="txChannels"></span> </td></tr></table>
+                        
+                         
+                    </div>
+                </div>
             
-            <div id="selectedTx">
-                <div id="txName">
-                    <b>
-                        ?
-                    </b>
-                </div>
-                <div id="datapanel">
-                    <div id="txDistance">
-                        <b>
-                            ?
-                        </b>
+                <div class="datapanel-bottom" id="compassdatapanel">     
+                    <div id="compassdata"></div>           
+                    <div id="compass" class="view">
+                        <div class="container">
+                            <img class="needle" id="needle" src="images/direction-needle.png">
+                            <img class="compass" id="compassback" src="images/direction-indicator.png">
+                        </div>
                     </div>
-                    <div id="txChannels">
-                        <b>
-                            ?
-                        </b>
-                    </div>  
-                </div>  
-                     
-                <div id="compassdata"></div>           
-                <div id="compass" class="view">
-                    <div class="container">
-                        <img class="needle" id="needle" src="images/direction-needle.png">
-                        <img class="compass" id="compassback" src="images/direction-indicator.png">
-                    </div>
-                </div>
-
-            </div>
+                </div>     
+            </div>       
         </div>
-
-
-        <div data-role="footer">
-                 Page footer</div>
-    </div>
+    </div>    
     
+
+   <!-- <div data-role="page" id="dialog">
+
+      <div data-role="header">
+        <h1>Dialog</h1>
+      </div>
+
+      <div data-role="content"> 
+        <p>Dialog content goes here</p>    
+      </div>
+
+    </div>  -->
 </body>
 </html>
