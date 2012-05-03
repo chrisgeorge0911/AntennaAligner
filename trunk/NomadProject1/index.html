@@ -56,9 +56,14 @@
 
             if (navigator.compass) {
                 var options = { filter: 1 };
+
+                if (eval("typeof navigator.compass.watchHeadingFilter == 'function'")) {
                     watchID = navigator.compass.watchHeadingFilter(success, onFail, options);
-                    //navigator.compass.getCurrentHeading(success, onFail);
-                    //navigator.compass.watchHeading(success, onFail, { frequency: 1 });
+                }
+                else {
+                    navigator.compass.getCurrentHeading(success, onFail);
+                    navigator.compass.watchHeading(success, onFail, { frequency: 1 });
+                }
             }
             else {
                 success(30);
@@ -188,6 +193,13 @@
 
         function populateTxDataPanel() {
 
+            tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
+            m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
+
+            // reset lastHeading so that the compass is redrawn.
+            lastHeading = -1;
+            getCompassData();
+
             var nameDiv = document.getElementById('txName');
             var distanceDiv = document.getElementById('txDistance');
             var channelDiv = document.getElementById('txChannels');
@@ -204,14 +216,6 @@
                 return;
             
             m_SelectedTxIndex = index;
-
-            tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
-            m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
-            
-            // reset lastHeading so that the compass is redrawn.
-            lastHeading = -1;
-            getCompassData();
-            
         }
 
 
@@ -288,7 +292,7 @@
        $("#compasspage").live('pagebeforeshow', function () {
             populateTxDataPanel();
         });
-
+        
         </script>
 
         <div data-role="header">
