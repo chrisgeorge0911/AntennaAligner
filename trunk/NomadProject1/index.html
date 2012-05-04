@@ -237,15 +237,22 @@
 
                     var distance = parseFloat(nearest5Tx[i].distance);
                     distance = distance.toFixed(1);
-                    
+
+                    var buttonHtml = '<table width="100%"><tr>';
+                    buttonHtml += '<td class="txListName" colspan="3">' + nearest5Tx[i].name + '</td>';
+                    buttonHtml += '</tr><tr>';
+                    buttonHtml += '<td class="distanceCell" width="30%">' + distance + "km</td>";
+                    buttonHtml += '<td class="distanceCell">'  + nearest5Tx[i].signalStrength + "dBµV/m</td>";
+                    buttonHtml += '<td width="20%" align="right">test</td>';
+                    buttonHtml += '</tr></table>';
+
                     $('ul').append($('<li/>', {    //here appendin `<li>`
                         'data-role': "list-divider"
                     }).append($('<a/>', {    //here appending `<a>` into `<li>`
                         'href': '#compasspage',
                         'data-transition': 'none',
                         'onclick' : 'selectTx(' + i + ')',
-                        'html': '<table width="100%"><tr><td>' + nearest5Tx[i].name + '</td><td class="distanceCell">' + distance + "km<br/>" + nearest5Tx[i].signalStrength + "</td></tr></table>"
-                            
+                        'html': buttonHtml
                     })));
 
                     $('ul').listview('refresh');
@@ -281,7 +288,7 @@
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">                
                   
                 </ul>             
-                <button onclick="onDeviceReady();">Recalculate</button>
+                <a data-role="button" onclick="onDeviceReady();">Recalculate</a>
             </div>
             
         </div>
@@ -308,8 +315,12 @@
                                 ?
                             </b>
                         </div>
-                        <table width="100%"><tr><td width="50%"><span class="data" id="txDistance"></span></td>
-                        <td><span class="data" id="txChannels"></span> </td></tr></table>
+                        <table width="100%">
+                            <tr>
+                                <td width="50%"><span class="data" id="txDistance"></span></td>
+                                <td style="text-align:right"><span class="data" id="txChannels"></span> </td>
+                            </tr>
+                        </table>
                         
                          
                     </div>
