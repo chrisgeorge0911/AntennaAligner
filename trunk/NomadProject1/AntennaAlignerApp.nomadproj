@@ -134,6 +134,9 @@
     <Content Include="style\images\icons-36-white.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="style\images\statusicons.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="style\jquery.mobile-1.0.1.min.css">
       <SubType>Content</SubType>
     </Content>

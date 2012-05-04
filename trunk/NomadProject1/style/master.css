@@ -44,7 +44,6 @@
 
 #txName
 {
-    font-family:ArialBlack;
     font-size:1.2em;
     font-weight:bold;
 }
@@ -125,4 +124,20 @@
 .ui-li .ui-btn-inner a.ui-link-inherit
 {
     padding: 4px 30px 4px 4px;   
+}
+
+
+.ui-icon-alt, .ui-icon-good, .ui-icon-low, .ui-icon-poor {
+    background-image: url(images/statusicons.png);
+    height: 20px;
+    width: 50px;    
+}
+.ui-icon-good {
+    background-position:-0 50%
+}
+.ui-icon-low {
+    background-position:-50px 50%
+}
+.ui-icon-poor {
+    background-position:-100px 50%
 }

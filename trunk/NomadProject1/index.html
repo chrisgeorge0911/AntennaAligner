@@ -238,12 +238,21 @@
                     var distance = parseFloat(nearest5Tx[i].distance);
                     distance = distance.toFixed(1);
 
+                    var signalStrength = nearest5Tx[i].signalStrength;
+
+                    var iconClass = "ui-icon-good";
+                    if (signalStrength < 66) {
+                        iconClass = 'ui-icon-poor';
+                    } else if (signalStrength < 72) {
+                        iconClass = 'ui-icon-low';
+                    }
+
                     var buttonHtml = '<table width="100%"><tr>';
                     buttonHtml += '<td class="txListName" colspan="3">' + nearest5Tx[i].name + '</td>';
                     buttonHtml += '</tr><tr>';
                     buttonHtml += '<td class="distanceCell" width="30%">' + distance + "km</td>";
-                    buttonHtml += '<td class="distanceCell">'  + nearest5Tx[i].signalStrength + "dBµV/m</td>";
-                    buttonHtml += '<td width="20%" align="right">test</td>';
+                    buttonHtml += '<td class="distanceCell">'  + signalStrength + "dBµV/m</td>";
+                    buttonHtml += '<td width="60px" align="left"><div class="' + iconClass + '"></div></td>';
                     buttonHtml += '</tr></table>';
 
                     $('ul').append($('<li/>', {    //here appendin `<li>`
