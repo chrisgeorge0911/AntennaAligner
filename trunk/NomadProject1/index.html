@@ -23,6 +23,14 @@
         var m_SelectedTxIndex = -1;
         var m_SelectedTxBearing;
 
+        /**
+        * Delay for a number of milliseconds
+        */
+        function sleep(delay) {
+            var start = new Date().getTime();
+            while (new Date().getTime() < start + delay);
+        }
+
 
         function getLocationData() {        
             if (navigator.geolocation) {
@@ -185,10 +193,27 @@
               'message: ' + error.message + '\n');
         }
 
+        var showLoader = function () {
+            $('.ui-loader').css('display', 'block');
+        }
+
+        //hide loader
+        var hideLoader = function () {
+            $('.ui-loader').css('display', 'none');
+        }
+
         function onDeviceReady() {
+            showLoader();
+            ss
             getLocationData();
         }
 
+        function recalculate() {
+            showLoader();
+
+            setTimeout(getLocationData(), 2000);            
+            
+        }
      
 
         function populateTxDataPanel() {
@@ -211,6 +236,7 @@
         }
 
         function selectTx(index) {
+            showLoader();
 
             if (index >= nearest5Tx.length) // if we've clicked on a button that has no entry in the nearest array, do nothing.
                 return;
@@ -220,6 +246,8 @@
 
 
         function calculateNearestTx() {
+
+            $('ul').empty();
 
             nearest5Tx = getNearestTx();
 
@@ -266,6 +294,7 @@
 
                     $('ul').listview('refresh');
 
+                    hideLoader();
                 } else {
 //                    var radiobutton = document.getElementById('radio' + radioIndex);
 //                    radiobutton.style.display = 'none';
@@ -275,8 +304,9 @@
 
             $("#txoptions").show();
         }
+        
 
-
+        
         document.addEventListener("deviceready", onDeviceReady, false);
 
         $("[data-role=header]").fixedtoolbar({ tapToggle: false });
@@ -284,11 +314,11 @@
     </script>
 </head>
 <body>
-    <div data-role="page" id="page1">
+    <div data-role="page" id="page1">         
         <div data-role="header">
             <h1>Antenna Aligner</h1>         
             
-            <!-- <a href="#dialog" data-rel="dialog" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a> -->
+            <a href="#infomain" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>
              
             <!-- <a href="#dialog" data-rel="dialog">Open Dialog</a>                        -->
         </div>
@@ -297,7 +327,7 @@
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">                
                   
                 </ul>             
-                <a data-role="button" onclick="onDeviceReady();">Recalculate</a>
+                <a data-role="button" onclick="recalculate();">Recalculate</a>               
             </div>
             
         </div>
@@ -308,7 +338,10 @@
        $("#compasspage").live('pagebeforeshow', function () {
             populateTxDataPanel();
         });
-        
+
+        $("#compasspage").live('pageshow', function () {
+            hideLoader();
+        });
         </script>
 
         <div data-role="header">
@@ -349,16 +382,20 @@
     </div>    
     
 
-   <!-- <div data-role="page" id="dialog">
-
-      <div data-role="header">
-        <h1>Dialog</h1>
-      </div>
-
-      <div data-role="content"> 
-        <p>Dialog content goes here</p>    
-      </div>
-
-    </div>  -->
+   <div data-role="page" id="infomain" data-add-back-btn="true">
+        <div data-role="header">
+            <h1>Antenna Aligner</h1>
+        </div>
+       <div data-role="content">
+           <div class="datapanel">
+               <div class="datapanel-top">
+                   <p>Use this app to align your aerial to one of the listed Freeview transmitters.</p>
+                   <p>Due to terrain and other structures, the top rated transmitter may not necessarily be the best one for your location. So the top 5 are provided.</p>
+               </div>
+               <div class="datapanel-bottom">
+                   <p>&copy; Chris George 2012</p>
+               </div>
+       </div>
+    </div>
 </body>
 </html>
