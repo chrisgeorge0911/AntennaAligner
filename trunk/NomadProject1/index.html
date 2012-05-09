@@ -74,27 +74,7 @@
         }
 
 
-        function getLocationData3() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(onLocationSuccess, onError);
-            }
-            else {
-                position = {
-                    coords: {
-                        latitude: 50,
-                        longitude: -0.4,
-                        altitude: 40.5,
-                        accuracy: 65,
-                        altitudeAccuracy: 30,
-                        heading: 0,
-                        speed: 0,
-                        timestamp: 0
-                    }
-                };
-                onLocationSuccess(position);
-            }
-        }
-        // END DEBUGGING
+       // END DEBUGGING
 
 
         function onLocationSuccess(position)
