@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Page Title</title>
-    <script type="text/javascript" charset="utf-8" src="scripts/phonegap-1.4.1.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>
     <script src="scripts/jquery-1.7.1.js" type="text/javascript"></script>
     <script src="scripts/jquery.mobile-1.1.0.min.js" type="text/javascript"></script>
     <script src="scripts/xui.js" type="text/javascript"></script>
@@ -51,32 +51,6 @@
             }
         }
 
-        // FOR DEBUGGING ONLY
-        function getLocationData2() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(onLocationSuccess, onError);
-            }
-            else {
-                position = {
-                    coords: {
-                        latitude: 50,
-                        longitude: -0.4,
-                        altitude: 40.5,
-                        accuracy: 65,
-                        altitudeAccuracy: 30,
-                        heading: 0,
-                        speed: 0,
-                        timestamp: 0
-                    }
-                };
-                onLocationSuccess(position);
-            }
-        }
-
-
-       // END DEBUGGING
-
-
         function onLocationSuccess(position)
         {
             lastPosition = position;
@@ -88,15 +62,11 @@
 
             if (navigator.compass) {
                 var options = { filter: 1 };
-
-                if (eval("typeof navigator.compass.watchHeadingFilter == 'function'")) {
-                    watchID = navigator.compass.watchHeadingFilter(success, onFail, options);
+                
+                if (eval("typeof navigator.compass.watchHeading == 'function'")) {
+                    watchID = navigator.compass.watchHeading(success, onFail, options);
                 }
-                else {
-                    navigator.compass.getCurrentHeading(success, onFail);
-                    navigator.compass.watchHeading(success, onFail, { frequency: 1 });
-                }
-            }
+            }        
             else {
                 success(30);
             }          
@@ -138,11 +108,10 @@
             txList.sort(signalSort);
 
             var txListTop5 = new Array();
-
-
+            
             // get the top 5 transmitters that have signal strength 66db+
             for (var i = 0; i < 5; i++) {
-                    txListTop5[i] = txList[i];
+                txListTop5[i] = txList[i];
             }
 
             return txListTop5;
@@ -327,9 +296,7 @@
         <div data-role="header">
             <h1>Antenna Aligner</h1>         
             
-            <a href="#infomain" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>
-             
-            <!-- <a href="#dialog" data-rel="dialog">Open Dialog</a>                        -->
+            <a href="#infomain" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             
         </div>
         <div data-role="content">
             <div id="txoptions" data-role="fieldcontain">
@@ -354,7 +321,6 @@
         </script>
 
         <div data-role="header">
-            <!-- <a data-role="button" data-transition="none" data-mini="true" data-inline="true" href="#page1">Back</a> -->
             <h1>Antenna Aligner</h1>
         </div>
         <div data-role="content">             
@@ -400,10 +366,12 @@
                <div class="datapanel-top">
                    <p>Use this app to align your aerial to one of the listed Freeview transmitters.</p>
                    <p>Due to terrain and other structures, the top rated transmitter may not necessarily be the best one for your location. So the top 5 are provided.</p>
+                   
                </div>
                <div class="datapanel-bottom">
                    <p>&copy; Chris George 2012</p>
                </div>
+           </div>
        </div>
     </div>
 </body>

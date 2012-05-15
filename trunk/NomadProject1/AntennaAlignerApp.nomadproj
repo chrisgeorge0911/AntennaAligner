@@ -25,6 +25,18 @@
     <Content Include="compass.html">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="icons\ios\Default%402x~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default~iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon%402x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="images\air.png">
       <SubType>Content</SubType>
     </Content>
@@ -65,19 +77,13 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="index.html" />
-    <Content Include="scripts\jquery-1.6.4.js">
+    <Content Include="scripts\cordova.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\jquery-1.7.1.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="scripts\jquery.mobile-1.0.1.min.js">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="scripts\jquery.mobile-1.1.0.min.js">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="scripts\phonegap-1.4.1.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\positionUtils.js">
@@ -137,9 +143,6 @@
     <Content Include="style\images\statusicons.png">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="style\jquery.mobile-1.0.1.min.css">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="style\jquery.mobile-1.1.0.min.css">
       <SubType>Content</SubType>
     </Content>
@@ -151,7 +154,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="icons\ios" />
     <Folder Include="images" />
+    <Folder Include="icons" />
     <Folder Include="style" />
     <Folder Include="scripts" />
     <Folder Include="style\images" />
