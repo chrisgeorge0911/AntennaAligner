@@ -8,6 +8,7 @@
     <script src="scripts/xui.js" type="text/javascript"></script>
     <script src="scripts/positionUtils.js" type="text/javascript"></script>
     <script src="scripts/txdata.js" type="text/javascript"></script>
+    <script src="scripts/signal.js" type="text/javascript"></script>
     <link rel="Stylesheet" href="style/jquery.mobile-1.1.0.min.css" />   
     <link rel="Stylesheet" href="style/fonts/ariblk.css" />
     <link rel="Stylesheet" href="style/master.css" />
@@ -15,7 +16,7 @@
 
     <script type="text/javascript" charset="utf-8">
 
-        var lastHeading = -1;
+        var lastHeading = -1; 
         var lastPosition;
         var nearest5Tx;
         var m_SelectedTxIndex = -1;
@@ -24,9 +25,9 @@
         /**
         * Delay for a number of milliseconds
         */
-        function sleep(delay) {
+        function sleep(delayms) {
             var start = new Date().getTime();
-            while (new Date().getTime() < start + delay);
+            while (new Date().getTime() < start + delayms);
         }
 
 
@@ -72,29 +73,6 @@
             }          
         }
 
-        function log10(val) {
-            return Math.log(val) / Math.log(10);
-        }
-        
-        function getFieldStrength(power, distance, channel) {
-
-            var d = distance * 1000;  // need distance in metres
-            var e = (Math.sqrt(30 * power)) / d;
-
-            //var dbuvm = 20 * log10(e / 0.000001);
-
-            var freq = 8 * (channel - 21) + 474;
-            var lambda = 300000000 / (freq * 1000000);
-
-            var V = 0.5 * e * lambda / 3.14159;
-
-            var signalStrength = 20 * log10(V / 0.000001);
-
-            signalStrength = parseFloat(signalStrength);
-            return signalStrength.toFixed(1);
-        }
-
-
         function getNearestTx() {
 
             var txList = getListOfTx();
@@ -117,26 +95,7 @@
             return txListTop5;
         }
 
-        function distanceSort(a, b){
-            if ( a.distance > b.distance )
-            {
-                return 1;
-            }
-            else if ( a.distance < b.distance )
-            {
-                return -1;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-
-        // sort the transmitters by signal strength in descending order (strongest first)
-        function signalSort(a, b) {
-            return b.signalStrength - a.signalStrength;               
-        }
-
+       
 
         function success(heading) {
                    
@@ -178,29 +137,10 @@
               'message: ' + error.message + '\n');
         }
 
-        var showLoader = function () {
-             $('.ui-loader').css('display', 'block');
-            //$.mobile.showPageLoadingMsg("a", "Recalculating data", false);
-        }
-
-        //hide loader
-        var hideLoader = function () {
-            $('.ui-loader').css('display', 'none');
-            //$.mobile.hidePageLoadingMsg();
-        }
-
         function onDeviceReady() {
-            showLoader();
             
             getLocationData();
         }
-
-        function recalculate() {
-            showLoader();
-            
-            setTimeout(getLocationData(), 3000);                        
-        }
-     
 
         function populateTxDataPanel() {
 
@@ -222,7 +162,6 @@
         }
 
         function selectTx(index) {
-            showLoader();
 
             if (index >= nearest5Tx.length) // if we've clicked on a button that has no entry in the nearest array, do nothing.
                 return;
@@ -278,16 +217,26 @@
                         })));
 
                     $('ul').listview('refresh');
-
-                    hideLoader();
                 }
             }
 
             $("#txoptions").show();
         }
 
+        $(document).on("click", ".show-page-loading-msg", function () {
+            var $this = $(this),
+                theme = $this.jqmData("theme") || $.mobile.loadingMessageTheme;
+            $.mobile.showPageLoadingMsg(theme, "recalculating", false);
+            
+            setTimeout(function () { $.mobile.hidePageLoadingMsg(); }, 2000);
 
-        showLoader();
+            populateTxDataPanel();
+            
+        })
+		.on("click", ".hide-page-loading-msg", function () {
+		    $.mobile.hidePageLoadingMsg();
+		});
+
         document.addEventListener("deviceready", onDeviceReady, false);
     </script>
 </head>
@@ -303,7 +252,7 @@
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">                
                   
                 </ul>             
-                <a data-role="button" onclick="recalculate();">Recalculate</a>               
+                <a data-role="button" class="show-page-loading-msg">Recalculate</a>
             </div>
             
         </div>
@@ -316,7 +265,7 @@
         });
 
         $("#compasspage").live('pageshow', function () {
-            hideLoader();
+           
         });
         </script>
 
@@ -362,14 +311,17 @@
             <h1>Antenna Aligner</h1>
         </div>
        <div data-role="content">
-           <div class="datapanel">
-               <div class="datapanel-top">
+           
+           <img src="images/logo.png" />
+           
+           <div class="datapanel" style="padding-left: 4px;padding-right: 4px;">
+               <div class="datapanel-top" >
                    <p>Use this app to align your aerial to one of the listed Freeview transmitters.</p>
                    <p>Due to terrain and other structures, the top rated transmitter may not necessarily be the best one for your location. So the top 5 are provided.</p>
                    
                </div>
                <div class="datapanel-bottom">
-                   <p>&copy; Chris George 2012</p>
+                   <p>Antenna Aligner &copy; 2012 Chris George</p>
                </div>
            </div>
        </div>

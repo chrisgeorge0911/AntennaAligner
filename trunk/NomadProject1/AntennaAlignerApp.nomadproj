@@ -12,7 +12,7 @@
     <BundleID>AntennaAligner</BundleID>
     <CertificatePath>Certificates\2012-04-06 - iPhone Distribution Red Gate Software Ltd</CertificatePath>
     <ProvisioningProfilePath>ProvisioningProfiles\Nomad_Ad_Hoc_Wildcard (3).mobileprovision</ProvisioningProfilePath>
-    <ProjectName>Antenna Aligner</ProjectName>
+    <ProjectName>Ant.Aligner</ProjectName>
     <Description />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -64,6 +64,12 @@
     <Content Include="images\ipod.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="images\logo%402x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="images\logo.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="images\select_slice.png">
       <SubType>Content</SubType>
     </Content>
@@ -90,6 +96,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\script.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\signal.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\txdata.js">
