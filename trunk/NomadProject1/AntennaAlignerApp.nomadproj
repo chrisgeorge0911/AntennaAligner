@@ -9,7 +9,7 @@
     <Version>1.0.0.2</Version>
     <Name>AntennaAlignerApp</Name>
     <RootNamespace>NomadProject1</RootNamespace>
-    <BundleID>AntennaAligner</BundleID>
+    <BundleID>test.AntennaAligner</BundleID>
     <CertificatePath>Certificates\2012-04-06 - iPhone Distribution Red Gate Software Ltd</CertificatePath>
     <ProvisioningProfilePath>ProvisioningProfiles\Nomad_Ad_Hoc_Wildcard (3).mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
