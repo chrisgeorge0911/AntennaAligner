@@ -227,17 +227,20 @@
             var $this = $(this),
                 theme = $this.jqmData("theme") || $.mobile.loadingMessageTheme;
             $.mobile.showPageLoadingMsg(theme, "recalculating", false);
-            
+
             setTimeout(function () { $.mobile.hidePageLoadingMsg(); }, 2000);
 
-            populateTxDataPanel();
-            
+            getLocationData();
         })
 		.on("click", ".hide-page-loading-msg", function () {
 		    $.mobile.hidePageLoadingMsg();
 		});
 
-        document.addEventListener("deviceready", onDeviceReady, false);
+		$(document).on('ready', function () {
+		    onDeviceReady();		    
+		}); 
+            
+        //document.addEventListener("deviceready", onDeviceReady, false);
     </script>
 </head>
 <body>
@@ -250,7 +253,7 @@
         <div data-role="content">
             <div id="txoptions" data-role="fieldcontain">
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">                
-                  
+                  <li>Please wait...</li>
                 </ul>             
                 <a data-role="button" class="show-page-loading-msg">Recalculate</a>
             </div>
