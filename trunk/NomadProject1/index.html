@@ -246,9 +246,9 @@
             
             <a href="#infomain" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             
         </div>
-        <div data-role="content">
+        <div data-role="content">            
             <div id="txoptions" data-role="fieldcontain">
-                Select a transmitter from the list:
+                <div style="font-weight:bold;padding-bottom:6px">Select a transmitter from the list...</div>                
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">                
                     <li>Please wait...</li>
                 </ul>             
@@ -297,6 +297,9 @@
                             <img class="needle" id="needle" src="images/direction-needle.png">
                             <img class="compass" id="compassback" src="images/direction-indicator.png">
                         </div>
+                        <div style="padding-left:5px;padding-right:5px;font-size: 13px;">
+                            Keep away from any metallic objects as they may affect the compass.
+                            </div>
                     </div>
                 </div>     
             </div>       
@@ -312,14 +315,24 @@
            
            <img src="images/logo.png" />
            
-           <div class="datapanel" style="padding-left: 4px;padding-right: 4px;">
-               <div class="datapanel-top" >
-                   <p>Use this app to align your aerial to one of the listed Freeview transmitters.</p>
-                   <p>Due to terrain and other structures, the top rated transmitter may not necessarily be the best one for your location. So the top 5 are provided.</p>
+           <div class="datapanel">
+               <div class="datapanel-top" style="padding-left: 10px;padding-right: 10px;padding-bottom:10px;">
+                   Use this app to align your aerial to one of the Freeview transmitters.<br /><br />
+                   Due to terrain and other structures, the top rated transmitter may not necessarily be the best one for your location. So the top 5 are provided.
                    
                </div>
-               <div class="datapanel-bottom">
-                   <p>Antenna Aligner &copy; 2012 Chris George</p>
+               <div class="datapanel-bottom" style="padding-left: 4px;padding-right: 4px;padding-top:10px;padding-bottom:10px;"> 
+                   Problems or Suggestions?<br />
+                   email <a href="mailto:aligner@chrisgeorge.org.uk">aligner@chrisgeorge.org.uk</a>
+               </div>
+           </div>
+           
+           <div class="datapanel" style="margin-top:15px;">
+               <div class="datapanel-top" style="text-align:right;padding-left: 8px;padding-right: 8px;">
+                   Powered by Nomad
+               </div>
+               <div class="datapanel-bottom" style="text-align:right;padding-left: 8px;padding-right: 8px;">
+                   Antenna Aligner &copy; 2012 Chris George
                </div>
            </div>
        </div>

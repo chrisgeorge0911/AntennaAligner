@@ -9,9 +9,9 @@
     <Version>1.0.0.2</Version>
     <Name>AntennaAlignerApp</Name>
     <RootNamespace>NomadProject1</RootNamespace>
-    <BundleID>test.AntennaAligner</BundleID>
-    <CertificatePath>Certificates\2012-04-06 - iPhone Distribution Red Gate Software Ltd</CertificatePath>
-    <ProvisioningProfilePath>ProvisioningProfiles\Nomad_Ad_Hoc_Wildcard (3).mobileprovision</ProvisioningProfilePath>
+    <BundleID>uk.co.kibahsoftware.antennaaligner</BundleID>
+    <CertificatePath>Certificates\2012-05-23 - Chris George</CertificatePath>
+    <ProvisioningProfilePath>ProvisioningProfiles\DevProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
   </PropertyGroup>
