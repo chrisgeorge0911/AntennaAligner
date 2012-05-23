@@ -235,12 +235,8 @@
 		.on("click", ".hide-page-loading-msg", function () {
 		    $.mobile.hidePageLoadingMsg();
 		});
-
-		$(document).on('ready', function () {
-		    onDeviceReady();		    
-		}); 
-            
-        //document.addEventListener("deviceready", onDeviceReady, false);
+        
+        document.addEventListener("deviceready", onDeviceReady, false);
     </script>
 </head>
 <body>
@@ -290,8 +286,6 @@
                                 <td style="text-align:right"><span class="data" id="txChannels"></span> </td>
                             </tr>
                         </table>
-                        
-                         
                     </div>
                 </div>
             
