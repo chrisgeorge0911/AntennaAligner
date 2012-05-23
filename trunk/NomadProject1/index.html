@@ -62,7 +62,7 @@
         function getCompassData() {
 
             if (navigator.compass) {
-                var options = { filter: 1 };
+                var options = { filter: 0.5 };
                 
                 if (eval("typeof navigator.compass.watchHeading == 'function'")) {
                     watchID = navigator.compass.watchHeading(success, onFail, options);
