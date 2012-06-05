@@ -10,10 +10,11 @@
     <Name>AntennaAlignerApp</Name>
     <RootNamespace>NomadProject1</RootNamespace>
     <BundleID>uk.co.kibahsoftware.antennaaligner</BundleID>
-    <CertificatePath>Certificates\2012-05-23 - Chris George</CertificatePath>
-    <ProvisioningProfilePath>ProvisioningProfiles\DevProfile.mobileprovision</ProvisioningProfilePath>
+    <CertificatePath>Certificates\2012-05-30 - Chris George</CertificatePath>
+    <ProvisioningProfilePath>ProvisioningProfiles\DistProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
+    <LastBuildVersion>1.0.1</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,10 +29,22 @@
     <Content Include="icons\ios\Default%402x~iphone.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="icons\ios\Default-Landscape~ipad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\Default-Portrait~ipad.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="icons\ios\Default~iphone.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="icons\ios\icon%402x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon-72%402x.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="icons\ios\icon-72.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="icons\ios\icon.png">
