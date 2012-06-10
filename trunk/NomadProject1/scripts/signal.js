@@ -27,3 +27,17 @@ function signalSort(a, b) {
     return b.signalStrength - a.signalStrength;
 }
 
+
+function getListOfTxBySignalStrength(lastPosition) {
+
+    var txList = getListOfTx();
+
+    for (var i = 0; i < txList.length; i++) {
+        txList[i].distance = getDistanceBetween(lastPosition, txList[i].position);
+        txList[i].signalStrength = getFieldStrength(txList[i].ch1pwr, txList[i].distance, txList[i].ch1);
+    }
+
+    txList.sort(signalSort);
+
+    return txList;
+}

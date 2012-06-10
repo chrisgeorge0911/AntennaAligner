@@ -31,15 +31,15 @@
         }
 
 
-        function getLocationData() {        
+        function getLocationData() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(onLocationSuccess, onError);
             }
             else {
                 position = {
                     coords: {
-                        latitude: 50,
-                        longitude: -0.4,
+                        latitude: 51.7,
+                        longitude: -0.45,
                         altitude: 40.5,
                         accuracy: 65,
                         altitudeAccuracy: 30,
@@ -49,7 +49,7 @@
                     }
                 };
                 onLocationSuccess(position);
-            }
+            }           
         }
 
         function onLocationSuccess(position)
@@ -75,15 +75,7 @@
 
         function getNearestTx() {
 
-            var txList = getListOfTx();
-            
-            for ( var i = 0; i < txList.length; i++ )
-            {
-                txList[i].distance = getDistanceBetween(lastPosition, txList[i].position);
-                txList[i].signalStrength = getFieldStrength(txList[i].ch1pwr, txList[i].distance, txList[i].ch1);
-            }
-
-            txList.sort(signalSort);
+            var txList = getListOfTxBySignalStrength(lastPosition);
 
             var txListTop5 = new Array();
             
@@ -133,8 +125,17 @@
         // onError Callback receives a PositionError object
         //
         function onError(error) {
-            alert('code: ' + error.code + '\n' +
-              'message: ' + error.message + '\n');
+
+            switch (error.code) {
+                case 2:
+                    message = "Please enable locations services on your device";
+                    break;
+                default:
+                    message = 'code: ' + error.code + '\n' + 'message: ' + error.message + '\n';
+            }
+
+            alert(message);
+            
         }
 
         function onDeviceReady() {
