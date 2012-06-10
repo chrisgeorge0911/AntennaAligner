@@ -29,8 +29,8 @@ namespace TxDataMunger
 
                 foreach (TxDataEntry tx in txData)
                 {
-                    string arrayString = String.Format("txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3}}}, gridref: '{4}'}}, ch1: '{5}', ch1pwr: '{6}', ch2: '{7}', ch2pwr: '{8}', ch3: '{9}', ch3pwr: '{10}'}};",
-                        count, tx.Name, tx.Coord.Latitude.ToString(), tx.Coord.Longitude.ToString(), tx.Ngr, tx.Ch1.ChannelNumber, tx.Ch1.PowerInWatts, tx.Ch2.ChannelNumber, tx.Ch2.PowerInWatts, tx.Ch3.ChannelNumber, tx.Ch3.PowerInWatts);
+                    string arrayString = String.Format("txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3}}}, gridref: '{4}'}}, ch1: '{5}', ch1pwr: '{6}', ch2: '{7}', ch2pwr: '{8}', ch3: '{9}', ch3pwr: '{10}', asl: '{11}'}};",
+                        count, tx.Name, tx.Coord.Latitude.ToString(), tx.Coord.Longitude.ToString(), tx.Ngr, tx.Ch1.ChannelNumber, tx.Ch1.PowerInWatts, tx.Ch2.ChannelNumber, tx.Ch2.PowerInWatts, tx.Ch3.ChannelNumber, tx.Ch3.PowerInWatts, tx.Asl);
 
                     count++;
                     file.WriteLine(arrayString);
@@ -191,13 +191,19 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 string ch3aod = line.Substring(83, 3).Trim();
                 string ngr = line.Substring(119, 8).Replace(" ","");
 
+                string asl = "0";
+                if ( line.Length > 130 )
+                    asl = line.Substring(128, 3).Trim();
+
+
                 txData.Add( new TxDataEntry(
                     name,
                     ngr,
                     new TxChannel(ch1, ch1pwr),
                     new TxChannel(ch2, ch2pwr),
                     new TxChannel(ch3, ch3pwr),
-                    null
+                    null,
+                    asl
                     ));
 
                 
@@ -231,10 +237,11 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
             public TxChannel Ch2 { get; set; }
             public TxChannel Ch3 { get; set; }
             public string Region { get; set; }
+            public string Asl { get; set; }
 
             private Coordinate m_Coord;
 
-            public TxDataEntry(string name, string ngr, TxChannel ch1, TxChannel ch2, TxChannel ch3, string region)
+            public TxDataEntry(string name, string ngr, TxChannel ch1, TxChannel ch2, TxChannel ch3, string region, string asl)
             {
                 Name = name;
                 Ngr = ngr;
@@ -242,6 +249,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 Ch2 = ch2;
                 Ch3 = ch3;
                 Region = region;
+                Asl = asl;
             }
             
             public Coordinate Coord 
