@@ -156,3 +156,10 @@
           background-image:-o-linear-gradient(#aaa,#555);
           background-image:linear-gradient(#aaa,#555)
 } */
+
+.ui-mobile .ui-dialog {
+    background  : none !important;
+    width       : 75% !important;
+    left        : 50% !important;
+    margin-left : -37.5% !important;
+}​

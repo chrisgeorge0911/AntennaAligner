@@ -134,12 +134,11 @@
                     message = 'code: ' + error.code + '\n' + 'message: ' + error.message + '\n';
             }
 
-            alert(message);
+            $.mobile.changePage('#location', 'pop', false, true);
             
         }
 
         function onDeviceReady() {
-            
             getLocationData();
         }
 
@@ -308,34 +307,44 @@
     </div>    
     
 
-   <div data-role="page" id="infomain" data-add-back-btn="true">
+    <div data-role="page" id="infomain" data-add-back-btn="true">
         <div data-role="header">
             <h1>Antenna Aligner</h1>
         </div>
-       <div data-role="content">
+        <div data-role="content">
            
-           <img src="images/logo.png" />
+            <img src="images/logo.png" />
            
-           <div class="datapanel">
-               <div class="datapanel-top" style="padding-left: 10px;padding-right: 10px;padding-bottom:10px;">
-                   Use this app to align your aerial to one of the Freeview transmitters.<br /><br />
-                   Please note that the top rated transmitter may not necessarily be the best one for your location due to terrain and other structures.
-               </div>
-               <div class="datapanel-bottom" style="padding-left: 4px;padding-right: 4px;padding-top:10px;padding-bottom:10px;"> 
-                   Problems or Suggestions?<br />
-                   email <a href="mailto:aligner@chrisgeorge.org.uk">aligner@chrisgeorge.org.uk</a>
-               </div>
-           </div>
+            <div class="datapanel">
+                <div class="datapanel-top" style="padding-left: 10px;padding-right: 10px;padding-bottom:10px;">
+                    Use this app to align your aerial to one of the Freeview transmitters.<br /><br />
+                    Please note that the top rated transmitter may not necessarily be the best one for your location due to terrain and other structures.
+                </div>
+                <div class="datapanel-bottom" style="padding-left: 4px;padding-right: 4px;padding-top:10px;padding-bottom:10px;"> 
+                    Problems or Suggestions?<br />
+                    email <a href="mailto:aligner@chrisgeorge.org.uk">aligner@chrisgeorge.org.uk</a>
+                </div>
+            </div>
            
-           <div class="datapanel" style="margin-top:15px;">
-               <div class="datapanel-top" style="text-align:right;padding-left: 8px;padding-right: 8px;">
-                   Powered by <a href="http:\\www.vsnomad.com">Nomad</a>
-               </div>
-               <div class="datapanel-bottom" style="text-align:right;padding-left: 8px;padding-right: 8px;">
-                   Antenna Aligner &copy; 2012 Chris George
-               </div>
-           </div>
-       </div>
+            <div class="datapanel" style="margin-top:15px;">
+                <div class="datapanel-top" style="text-align:right;padding-left: 8px;padding-right: 8px;">
+                    Powered by <a href="http:\\www.vsnomad.com">Nomad</a>
+                </div>
+                <div class="datapanel-bottom" style="text-align:right;padding-left: 8px;padding-right: 8px;">
+                    Antenna Aligner &copy; 2012 Chris George
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div data-role="dialog" id="location">
+        <div data-role="header">
+            <h1>GPS Error</h1>
+        </div>
+        <div data-role="content">
+            <p>The GPS system is not enabled.</p>
+            <p>To use Antenna Aligner, please enable the GPS in your device's settings.</p>        
+        </div>
     </div>
 </body>
 </html>
