@@ -21,6 +21,7 @@
         var nearest5Tx;
         var m_SelectedTxIndex = -1;
         var m_SelectedTxBearing;
+        var c_DistanceLimit = 100; // in km
 
         /**
         * Delay for a number of milliseconds
@@ -78,16 +79,26 @@
             var txList = getListOfTxBySignalStrength(lastPosition);
 
             var txListTop5 = new Array();
-            
+
+            var top5ListCount = 0;
             // get the top 5 transmitters that have signal strength 66db+
-            for (var i = 0; i < 5; i++) {
-                txListTop5[i] = txList[i];
+            for (var i = 0; i < txList.length; i++) 
+            {
+                var currentTx = txList[i];
+
+                if (currentTx.distance < c_DistanceLimit) {
+                    txListTop5[top5ListCount] = txList[i];
+                    txListTop5[top5ListCount].distanceMiles = txListTop5[top5ListCount].distance * 0.62137119;
+                    top5ListCount++;
+                }
+
+                if ( txListTop5.length == 5)
+                    break;
             }
 
             return txListTop5;
         }
-
-       
+        
 
         function success(heading) {
                    
@@ -156,7 +167,7 @@
             var channelDiv = document.getElementById('txChannels');
 
             nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
-            distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distance).toFixed(1) + "km";
+            distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distanceMiles).toFixed(1) + " miles";
 
             channelDiv.innerHTML = "Channels: " + nearest5Tx[m_SelectedTxIndex].ch1 + ", " + nearest5Tx[m_SelectedTxIndex].ch2 + ", " + nearest5Tx[m_SelectedTxIndex].ch3;
         }
@@ -187,7 +198,7 @@
 
                 if (i < nearest5Tx.length) {
 
-                    var distance = parseFloat(nearest5Tx[i].distance);
+                    var distance = parseFloat(nearest5Tx[i].distanceMiles);
                     distance = distance.toFixed(1);
 
                     var signalStrength = nearest5Tx[i].signalStrength;
@@ -202,7 +213,7 @@
                     var buttonHtml = '<table width="100%"><tr>';
                     buttonHtml += '<td class="txListName" colspan="3">' + nearest5Tx[i].name + '</td>';
                     buttonHtml += '</tr><tr>';
-                    buttonHtml += '<td class="distanceCell" width="30%">' + distance + "km</td>";
+                    buttonHtml += '<td class="distanceCell" width="30%">' + distance + " miles</td>";
                     buttonHtml += '<td class="distanceCell">' + signalStrength + "dBµV/m</td>";
                     buttonHtml += '<td width="60px" align="left"><div class="' + iconClass + '"></div></td>';
                     buttonHtml += '</tr></table>';
