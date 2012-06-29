@@ -66,7 +66,7 @@
 
                 var options = { filter: 0.5 };
                 if ( device.platform == 'Android')
-                    options = { frequency: 100 };
+                    options = { frequency: 50 };
                 
                 if (eval("typeof navigator.compass.watchHeading == 'function'")) {
                     watchID = navigator.compass.watchHeading(success, onFail, options);
