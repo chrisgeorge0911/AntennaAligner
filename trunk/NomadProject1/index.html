@@ -63,13 +63,17 @@
         function getCompassData() {
 
             if (navigator.compass) {
+
                 var options = { filter: 0.5 };
+                if ( device.platform == 'Android')
+                    options = { frequency: 100 };
                 
                 if (eval("typeof navigator.compass.watchHeading == 'function'")) {
                     watchID = navigator.compass.watchHeading(success, onFail, options);
                 }
-            }        
+            }
             else {
+                alert("compass not working");
                 success(30);
             }          
         }
@@ -339,7 +343,8 @@
            
             <div class="datapanel" style="margin-top:15px;">
                 <div class="datapanel-top" style="text-align:right;padding-left: 8px;padding-right: 8px;">
-                    Powered by <a href="http:\\www.vsnomad.com">Nomad</a>
+                    <table width="100%"><tr><td align="left">1.0.2</td><td align="right">Powered by <a href="http:\\www.vsnomad.com">Nomad</a></td></tr></table>
+                    
                 </div>
                 <div class="datapanel-bottom" style="text-align:right;padding-left: 8px;padding-right: 8px;">
                     Antenna Aligner &copy; 2012 Chris George
