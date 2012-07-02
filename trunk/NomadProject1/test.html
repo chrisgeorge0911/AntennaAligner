@@ -30,23 +30,30 @@
                 return position;
 
       }
-
-
-
+      
       $(document).ready(
 
       function () {
+      
+          module("Module A");
 
-          var lastPosition = GetTestLocation();
-
-          var txList = getListOfTxBySignalStrength(lastPosition);
-
-          for (var i = 0; i < txList.length; i++) {
-              document.writeln(txList[i].name + ": " + txList[i].distance + " : " + txList[i].signalStrength);
-              document.write("<br/>");
-          }
+          test("Check first item in list", function () { CheckListItem(0, "Crystal Palace"); });
+          test("Check second item in list", function () { CheckListItem(1, "Sandy Heath"); });
+          test("Check third item in list", function () { CheckListItem(2, "Oxford"); });
+          test("Check fourth item in list", function () { CheckListItem(3, "Hemel Hempstead"); });
+          test("Check fifth item in list", function () { CheckListItem(4, "Sudbury"); });
 
       });
+
+      function CheckListItem(index, name) {
+          var lastPosition = GetTestLocation();
+
+          var txList = getNearestTx(lastPosition);
+          
+          var value = txList[index];
+          equal(value.name, name, "We expect value to be " + name);
+      }
+
   </script>
   
 </head>
