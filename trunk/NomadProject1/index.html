@@ -10,7 +10,6 @@
     <script src="scripts/txdata.js" type="text/javascript"></script>
     <script src="scripts/signal.js" type="text/javascript"></script>
     <link rel="Stylesheet" href="style/jquery.mobile-1.1.0.min.css" />   
-    <link rel="Stylesheet" href="style/fonts/ariblk.css" />
     <link rel="Stylesheet" href="style/master.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -139,18 +138,18 @@
 
         // onError Callback receives a PositionError object
         //
-        function onError(error) {
+        function onError(error) 
+        {
+            // Show that the GPS is disabled in the transmitter list.
+            $('ul').empty();
+            $('ul').append($('<li/>', {
+                'data-role': "list-divider",
+                'html': "GPS Disabled"
+            }));
 
-            switch (error.code) {
-                case 2:
-                    message = "Please enable locations services on your device";
-                    break;
-                default:
-                    message = 'code: ' + error.code + '\n' + 'message: ' + error.message + '\n';
-            }
-
-            $.mobile.changePage('#location', 'pop', false, true);
+            $('ul').listview('refresh');
             
+            $.mobile.changePage('#locationError', 'none', false, true);            
         }
 
         function onDeviceReady() {
@@ -332,7 +331,9 @@
            
             <div class="datapanel">
                 <div class="datapanel-top" style="padding-left: 10px;padding-right: 10px;padding-bottom:10px;">
-                    Use this app to align your aerial to one of the Freeview transmitters.<br /><br />
+                    This app will help you to align your aerial to a Freeview transmitter.<br/><br/>
+                    Select a transmitter from the list, then use the compass view to point your aerial in the direction indicated by the yellow arrow.<br/><br/>
+
                     Please note that the top rated transmitter may not necessarily be the best one for your location due to terrain and other structures.
                 </div>
                 <div class="datapanel-bottom" style="padding-left: 4px;padding-right: 4px;padding-top:10px;padding-bottom:10px;"> 
@@ -343,17 +344,16 @@
            
             <div class="datapanel" style="margin-top:15px;">
                 <div class="datapanel-top" style="text-align:right;padding-left: 8px;padding-right: 8px;">
-                    <table width="100%"><tr><td align="left">1.0.2</td><td align="right">Powered by <a href="http:\\www.vsnomad.com">Nomad</a></td></tr></table>
-                    
+                    <table width="100%"><tr><td align="left">1.0.2</td><td align="right">Powered by <a href="http:\\www.vsnomad.com">Nomad</a></td></tr></table>                    
                 </div>
-                <div class="datapanel-bottom" style="text-align:right;padding-left: 8px;padding-right: 8px;">
+                <div class="datapanel-bottom" id="legalstuff" style="text-align:right;padding-left: 8px;padding-right: 8px;">
                     Antenna Aligner &copy; 2012 Chris George
                 </div>
             </div>
         </div>
     </div>
     
-    <div data-role="dialog" id="location">
+    <div data-role="dialog" id="locationError">
         <div data-role="header">
             <h1>GPS Error</h1>
         </div>

@@ -1,34 +1,34 @@
 ﻿#compass {
-  display: block;  
+    display: block;  
 }
 
-  .container {
+.container {
     position: relative;
     margin: 0 auto;
     width: 283px;
     overflow: hidden;
-  }
+}
   
-  .container img {
+.container img {
     width: auto;
     height: auto;
-  }
+}
 
-    div.header
-    {
-        margin: 4px;
-        height: 32px;
-        padding-top: 4px;
-        padding-right: 7px;
-        font-weight: bold;
-        vertical-align: middle;
-    }
+div.header
+{
+    margin: 4px;
+    height: 32px;
+    padding-top: 4px;
+    padding-right: 7px;
+    font-weight: bold;
+    vertical-align: middle;
+}
 
-    .compass {}
+.compass {}
 
-    .needle {
-      position: absolute;
-    }
+.needle {
+    position: absolute;
+}
 
 
 
@@ -61,6 +61,8 @@
     background-image: linear-gradient(#FDFDFD,#EEE);    
    
     border: 1px solid #CCC;
+
+    font-size: 0.9em;
 }
 
 .datapanel-top {
@@ -76,8 +78,11 @@
     vertical-align: middle;
     padding-top: 6px;
     padding-bottom: 6px;
-    padding-left: 0px;
-   
+    padding-left: 0px;   
+}
+
+#legalstuff {
+    font-size: 0.8em;
 }
 
 #compassdatapanel
@@ -101,9 +106,9 @@
     color:#888;
 }
 
-
 .ui-page     
 {
+    -webkit-backface-visibility: hidden;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #A5C8DF), color-stop(100%, #0E4F7B));
     background-image: -webkit-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
     background-image: -moz-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
@@ -119,15 +124,13 @@
 }
 
 .ui-content .ui-listview {
-    margin-top: 0px;
-    
+    margin-top: 0px;    
 }
 
 .ui-li .ui-btn-inner a.ui-link-inherit
 {
     padding: 4px 30px 4px 4px;   
 }
-
 
 .ui-icon-alt, .ui-icon-good, .ui-icon-low, .ui-icon-poor {
     background-image: url(images/statusicons.png);
@@ -144,24 +147,10 @@
     background-position:-100px 50%
 }
 
-
-/* .ui-btn-down-c
-{
-          border:1px solid #808080;
-          background:#fdfdfd;
-          font-weight:bold;
-          color:#eee;
-          background-image:-webkit-gradient(linear,left top,left bottom,from(#aaa),to(#555));
-          background-image:-webkit-linear-gradient(#aaa,#555);
-          background-image:-moz-linear-gradient(#aaa,#555);
-          background-image:-ms-linear-gradient(#aaa,#555);
-          background-image:-o-linear-gradient(#aaa,#555);
-          background-image:linear-gradient(#aaa,#555)
-} */
-
 .ui-mobile .ui-dialog {
     background  : none !important;
-    width       : 75% !important;
-    left        : 50% !important;
-    margin-left : -37.5% !important;
+    width       : 85% !important;
+    left        : 25% !important;
+    margin-left : -17.5% !important;
+    top         : 15% !important;
 }​
