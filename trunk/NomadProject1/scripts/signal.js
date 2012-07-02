@@ -1,4 +1,6 @@
-﻿function log10(val) {
+﻿var c_DistanceLimit = 100;
+
+function log10(val) {
     return Math.log(val) / Math.log(10);
 }
 
@@ -40,4 +42,28 @@ function getListOfTxBySignalStrength(lastPosition) {
     txList.sort(signalSort);
 
     return txList;
+}
+
+function getNearestTx(position) {
+
+    var txList = getListOfTxBySignalStrength(position);
+
+    var txListTop5 = new Array();
+
+    var top5ListCount = 0;
+    // get the top 5 transmitters that have signal strength 66db+
+    for (var i = 0; i < txList.length; i++) {
+        var currentTx = txList[i];
+
+        if (currentTx.distance < c_DistanceLimit) {
+            txListTop5[top5ListCount] = txList[i];
+            txListTop5[top5ListCount].distanceMiles = txListTop5[top5ListCount].distance * 0.62137119;
+            top5ListCount++;
+        }
+
+        if (txListTop5.length == 5)
+            break;
+    }
+
+    return txListTop5;
 }
