@@ -30,18 +30,26 @@
                 return position;
 
       }
-      
+
       $(document).ready(
 
       function () {
-      
-          module("Module A");
+
+          module("Test GetNearestTx");
 
           test("Check first item in list", function () { CheckListItem(0, "Crystal Palace"); });
           test("Check second item in list", function () { CheckListItem(1, "Sandy Heath"); });
           test("Check third item in list", function () { CheckListItem(2, "Oxford"); });
           test("Check fourth item in list", function () { CheckListItem(3, "Hemel Hempstead"); });
           test("Check fifth item in list", function () { CheckListItem(4, "Sudbury"); });
+
+
+          module("CheckFieldStrength");
+
+          test("test1", function () { CheckFieldStrength("200000", "11", "27", "86.2"); });
+          test("test2", function () { CheckFieldStrength("2", "1", "10", "59.6"); });
+          test("test3", function () { CheckFieldStrength("200000", "100", "2", "71.2"); });
+
 
       });
 
@@ -52,6 +60,19 @@
           
           var value = txList[index];
           equal(value.name, name, "We expect value to be " + name);
+      }
+
+      function CheckFieldStrength(power, distance, channel, expectedResult)
+      {
+          var actualResult = getFieldStrength(power, distance, channel);
+
+          equal(actualResult, expectedResult, "Expected " + expectedResult + ", but actual result was " + actualResult);
+      }
+
+      function CheckFieldStrength(power, distance, channel, expectedResult) {
+          var actualResult = getFieldStrength(power, distance, channel);
+
+          equal(actualResult, expectedResult, "Expected " + expectedResult + ", but actual result was " + actualResult);
       }
 
   </script>
