@@ -14,7 +14,6 @@
       function GetTestLocation()
       {
           position = {
-
                     coords: {
                         latitude: 51.634114,
                         longitude: -0.405040,
@@ -51,6 +50,18 @@
           test("test3", function () { CheckFieldStrength("200000", "100", "2", "71.2"); });
 
 
+          module("getDistanceBetween");
+
+          var pos1 = { coords: { latitude: 51.634114, longitude: -0.405040} };
+          var pos2 = { coords: { latitude: 51.67692, longitude: -0.345511} };
+          var pos3 = { coords: { latitude: 51.634114, longitude: -0.345511} };
+          var pos4 = { coords: { latitude: 51.67692, longitude: -0.405040} };
+
+          test("testNoDistance", function () { CheckDistanceBetween(pos1, pos1, 0); });
+          test("testDistance", function () { CheckDistanceBetween(pos1, pos2, 6.29); });
+          test("testDistanceUp", function () { CheckDistanceBetween(pos1, pos3, 4.11); });
+          test("testDistanceAcross", function () { CheckDistanceBetween(pos1, pos4, 4.76); });
+
       });
 
       function CheckListItem(index, name) {
@@ -62,17 +73,19 @@
           equal(value.name, name, "We expect value to be " + name);
       }
 
+
       function CheckFieldStrength(power, distance, channel, expectedResult)
       {
           var actualResult = getFieldStrength(power, distance, channel);
 
           equal(actualResult, expectedResult, "Expected " + expectedResult + ", but actual result was " + actualResult);
       }
+      
 
-      function CheckFieldStrength(power, distance, channel, expectedResult) {
-          var actualResult = getFieldStrength(power, distance, channel);
+      function CheckDistanceBetween(pos1, pos2, expectedResult) {
+          var distance = getDistanceBetween(pos1, pos2).toFixed(2);
 
-          equal(actualResult, expectedResult, "Expected " + expectedResult + ", but actual result was " + actualResult);
+          equal(distance, expectedResult, "Expected " + expectedResult + ", but actual result was " + distance);
       }
 
   </script>
