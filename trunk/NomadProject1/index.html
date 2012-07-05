@@ -33,22 +33,13 @@
 
         function getLocationData() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(onLocationSuccess, onError);
+
+                var geolocationOptions = { enableHighAccuracy: true };
+
+                navigator.geolocation.getCurrentPosition(onLocationSuccess, onError, geolocationOptions);
             }
             else {
-                position = {
-                    coords: {
-                        latitude: 51.7,
-                        longitude: -0.45,
-                        altitude: 40.5,
-                        accuracy: 65,
-                        altitudeAccuracy: 30,
-                        heading: 0,
-                        speed: 0,
-                        timestamp: 0
-                    }
-                };
-                onLocationSuccess(position);
+                onError();
             }           
         }
 
