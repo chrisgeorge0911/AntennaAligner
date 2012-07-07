@@ -20,16 +20,16 @@ namespace TxDataMunger
         {
             int count = 0;
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"txdata.js"))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"..\..\..\NomadProject1\scripts\txdata.js"))
             {
 
                 file.WriteLine("function getListOfTx() {");
-                file.WriteLine("  var txList = new Array();");
+                file.WriteLine("    var txList = new Array();");
 
 
                 foreach (TxDataEntry tx in txData)
                 {
-                    string arrayString = String.Format("txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3}}}, gridref: '{4}'}}, ch1: '{5}', ch1pwr: '{6}', ch2: '{7}', ch2pwr: '{8}', ch3: '{9}', ch3pwr: '{10}', asl: '{11}'}};",
+                    string arrayString = String.Format("    txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3} }}, gridref: '{4}' }}, ch1: '{5}', ch1pwr: '{6}', ch2: '{7}', ch2pwr: '{8}', ch3: '{9}', ch3pwr: '{10}', asl: '{11}' }};",
                         count, tx.Name, tx.Coord.Latitude.ToString(), tx.Coord.Longitude.ToString(), tx.Ngr, tx.Ch1.ChannelNumber, tx.Ch1.PowerInWatts, tx.Ch2.ChannelNumber, tx.Ch2.PowerInWatts, tx.Ch3.ChannelNumber, tx.Ch3.PowerInWatts, tx.Asl);
 
                     count++;
