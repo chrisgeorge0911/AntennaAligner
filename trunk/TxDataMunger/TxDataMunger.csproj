@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="txdata\dttdata.txt" />
-    <Content Include="txdata\txdata.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DotNetCoords\DotNetCoords.csproj">
