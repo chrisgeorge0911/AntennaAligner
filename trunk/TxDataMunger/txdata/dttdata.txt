@@ -1,8 +1,8 @@
 ﻿Transmitter information copyright Arqiva, BBC, Crown Castle UK, ITC, NG Wireless, NTL, Ofcom and SDN 1998-2012,
 with special thanks and respects to Gareth Phillips. Public domain information only.
 
-New:          Beddgelert Link, Bexhill UHF, Biggin Hill Link, Budleigh Salterton, Burnham on Crouch, Clacton,
-              Dundee Menzieshill, Glenridding Link, Great Yarmouth, Lowestoft, Rouncefall, Skelmersdale, Storeton Wales
+New:          Beddgelert Link, Bexhill UHF, Biggin Hill Link, Budleigh Salterton, Burnham on Crouch, Clacton, Dundee Menzieshill,
+              Glenridding Link, Great Yarmouth, Lowestoft, Rouncefall, Skelmersdale, Storeton Wales
 
 U.K. "analogue to digital switch-over" has been planned on a region-by-region basis in the following order
   (main stations listed only; all relays will also be affected):
@@ -32,16 +32,16 @@ Central       Q2:2011 Bromsgrove, Lark Stoke, Nottingham, Ridge Hill, The Wrekin
 Yorkshire     Q3:2011 Belmont, Chesterfield, Emley Moor, Oliver's Mount, Sheffield (completed)
 Carlton/LWT   Q2:2012 Crystal Palace (completed)
 Meridian      Q1:2012 Hannington, Midhurst, Rowridge, Whitehawk Hill (completed)
-              Q2:2012 Bluebell Hill, Dover, Hastings, Heathfield, Margate, Tunbridge Wells
+              Q2:2012 Bluebell Hill, Dover, Hastings, Heathfield North, Margate, Tunbridge Wells (completed)
 Tyne Tees     Q3:2012 Bilsdale, Chatton, Pontop Pike
 Ulster        Q4:2012 Brougher Mountain, Divis, Limavady
 
 Believed to be correct at present, although many details are likely to change and some information is not yet available. Some aerial
   heights are based on the previous analogue installation. High-definition services are included on BBC B as switchover in each
-  region is completeud.
+  region is completed.
 
 Some channel allocations will change and some transmitter powers will be further increased during the switchover period (cf. "Notes"
-  below). In particlar, channels 61 and 62 are to be withdrawn during 2013: multiplexes using them are likely to be moved to 49 and
+  below). In particular, channels 61 and 62 are to be withdrawn during 2013: multiplexes using them are likely to be moved to 49 and
   50 and those on 49 and 50 are likely to be moved to 39 and 40. There are also a few discrepancies in the public domain information
   at present, which we are seeking to resolve.
 
@@ -180,10 +180,9 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 135.03   Penryn-coch                62 14.4 176  59 14.4 176               55 14.4 176                            CD V SN633844 155
 135.21   Trefilan                   57 17.2 278  60 17.2 278               53 17.2 278                            CD V SN562554 245
 135.26   Ynys-Pennal                44    4  26  41    4  26               47    4  26                            B  V SN688983  10
-158.00 + Bluebell Hill              59   3k 244  24   2k 245  27   2k 242  45   3k 245  42   3k 245  39   3k 245  W  H TQ757613 191
-113.00   Dover                      68   2k 328  61   2k 370  60   2k 370  58   2k 370  62   2k 370  55   2k 370  CD H TR274397 135
-113.00   Dover B                    45   2k 356  42   2k 356                            39   1k 356               E  H TR274397 135
-101.04   Tunbridge Wells            55  100 175  61  100 174  42  100 174  45  100 174  39  100 174  59  100 174  E  V TQ607440 122
+158.00 + Bluebell Hill              46  20k 244  43  20k 245  45  20k 245  54  20k 242  39  20k 245  54  20k 245  E  H TQ757613 191
+158.02   Chatham Town               57    5  86  58    5  86               52    5  88                            CD V TQ767675  55
+158.05   Farleigh                   56  3.2  75  50  3.2  75               53  3.2  75                            CD V TQ738530  59
 134.02 - Bressay                    28   2k 301  25   2k 301  22   2k 301  24   2k 301  27   1k 301  21   1k 301  A  V HU503387 226
 134.06   Baltasound                 46   36 145  43   36 145               50   36 145                            B  V HP635109 107
 134.08   Collafirth Hill            45  800 276  42  800 276               49  800 276                            B  V HU335834 227
@@ -402,6 +401,20 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 137.12   Port St Mary (IoM)         46   2k 124  43   2k 124               50   2k 124                            B  V SC206678  66
 137.67   Ramsey (IoM)               49  100 136  45  100 136               42  100 136                            B  H SC453934 127
 137.32   Union Mills (IoM)          46  2.5 159  43  2.5 159               50  2.5 159                            B  V SC343769 134
+113.00 - Dover                      50  80k 370  53  80k 370  55  40k 370  51  80k 370  59  40k 370  62  40k 370  CD H TR273397 135
+113.05   Chartham                   27   50 116  24   50 117               21   50 115                            A  V TR103561  65
+113.03   Dover Town                 26   20 112  30   20 112               23   20 113                            A  V TR311430  74
+113.16   Elham                      26    4 154  30    4 154               23    4 149                            A  V TR188449 134
+113.06   Faversham                  21   20  66  24   20  66               27   20  64                            A  V TR003602  31
+113.15   Folkestone                 26  100  75  30  100  75               23  100  75                            A  V TR220359  44
+113.14   Horn Street                44   10  92  47   10  93               41   10  83                            B  V TR190359  46
+113.04   Hythe                      26   50  24  30   50  24               23   50  24                            A  V TR169344   1
+113.17   Lydden                     46    2 120  45    2 110               43    2 111                            B  V TR263458  85
+113.13   Lyminge                    28    5 154  25    5 155               22    5 152                            A  V TR167428 141
+113.02   Margate                    50  200  86  53  200  88               51  200  86                            B  V TR370701  34
+113.10   Newnham (Kent)             27   10 110  24   10 110               21   10 110                            A  V TQ950571  80
+113.11   Ramsgate                   26   50  81  30   50  66               23   50  65                            A  V TR385651  20
+113.19   Turnpike Hill              44    5  18  47    5  18               41    5  16                            B  V TR153344   1
 112.00 + Durris                     28 100k 639  25 100k 639  23  50k 639  22 100k 639  26  50k 639  29  50k 639  A  H NO764899 325
 112.04   Balgownie                  46    8 106  43    8 106               50    8 106                            B  V NJ927104  70
 112.08   Banff                      45   56 118  42   56 118               49   56 118                            B  V NJ687617  84
@@ -494,8 +507,24 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 126.13   Lambourn                   61    2 170  58    2 170  54    2 170                                         CD V SU333794 154
 126.02   The Bournes                57  6.9 127  60  6.9 133  53  6.9 126                                         CD V SU842451  95
 126.05   Tidworth                   29  2.6 177  26  2.6 177  23  2.6 177                                         A  V SU228488 139
-139.00 + Heathfield North           34  1k6 256  29  1k6 300  48   1k 298  47   1k 300  54   1k 300  51   1k 300  W  H TQ566220 157
-139.02   Hastings                   31  100 126  27  200 123  21  200 121  24  200 126  63  200 123  60  200 123  W  V TQ806100  76
+139.02 - Hastings                   25   1k 126  28   1k 123  23  500 121  22   1k 123  26  500 123  30  500 123  A  V TQ806100  76
+139.17   Hastings Old Town          62   10  78  59   10  78               55   10  78                            CD V TQ826101  61
+139.00 + Heathfield North           52  20k 300  49  20k 300  42  20k 298  47  20k 300  44  20k 300  41  20k 300  B  H TQ566220 157
+         Bexhill UHF                46  400  45  48  400  45               43  400  45                            B  H TQ729075  20
+139.09   East Dean                  59    4 139  62    4 139               50    4 139                            CD V TV563988 119
+139.05   Eastbourne                 26  100  83  30  100  83               23  100  83                            A  V TV606977  28
+139.22   Eastbourne Old Town        46    8  43  50    8  43               43    8  43                            B  V TV599996  19
+139.11   Ham Street                 26    2  33  30    2  33               23    2  31                            A  V TR005332  12
+139.07   Haywards Heath             45    7 110  46    7 110               43    7 110                            B  V TQ333234  73
+139.19   Hollington Park            62    5 103  59    5 103               55    5 103                            CD V TQ795109  50
+139.12   Lamberhurst                60    2  86  54    2  86               62    2  86                            CD V TQ673366  67
+139.21   Lewes HP                   28   24  62  22   24  62               25   24  62                            A  H TQ409099  32
+139.06   Lewes VP                   28   48  62  22   48  62               25   48  62                            A  V TQ409099  32
+139.13   Mountfield                 26    2  86  30    2  86               23    2  86                            A  V TQ740193  68
+139.01   Newhaven                   50  400 132  46  400 132               43  400 132                            B  V TQ435006  80
+113.08   Rye                        56   10  58  48   10  58               54   10  58                            CD V TQ904198  44
+139.14   Sedlescombe                26    2  56  30    2  56               23    2  56                            A  V TQ784182  39
+139.08   Wye (Ashford)              28  6.2 143  22  6.2 143               25  6.2 139                            A  V TR066472  92
 138.00 + Huntshaw Cross             62  20k 359  59  20k 359  48  10k 359  55  20k 359  52  10k 359  56  10k 359  CD H SS527220 201
 138.15   Barnstaple                 46    8 117  43    8 117               50    8 117                            B  V SS575330  81
 131.27   Berrynarbor                28    2 149  25    2 149               22    2 149                            A  V SS562468 101
@@ -822,7 +851,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 154.01   Scoval VP                  62   32 290  59   32 290               55   32 290                            CD V NG181514 236
 154.16   Tarbert Harris             45   19  58  49   19  58               42   19  58                            B  V NB154001  25
 154.12   Uig                        46    2  96  43    2  96               50    2  96                            B  V NG383640  77
-132.00 + Stockland Hill             26  50k 463  23  50k 463  25  10k 463  29  50k 463  22  10k 463  28  10k 463  A  H ST222014 229*
+132.00 + Stockland Hill             26  50k 463  23  50k 463  25  25k 463  29  50k 463  22  25k 463  28  25k 463  A  H ST222014 229
 132.04   Bampton                    49    6 268  45    6 268               42    6 268                            B  V SS966236 218
 132.07   Beaminster                 62  3.8 200  59  3.8 200               55  3.8 200                            CD V ST490024 141
 132.02   Beer                       62    3 123  59    3 123               56    3 123                            CD V SY230896  80
@@ -846,15 +875,15 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 132.15   Stokeinteignhead           44    2  92  41    2  92               47    2  92                            B  V SX909711  47
 132.03   Tiverton                   46   18 190  43   18 190               50   18 190                            B  V SS939126 146
 132.08   Weymouth                   47  400 112  44  400 112               41  400 112                            B  V SY663778  59
-115.00 - Sudbury                    44 100k 229  41 100k 229  49  14k 186  47 100k 229  54  1k5 228  63  2k2 228  E  H TL912376  69*
-         Burnham on Crouch          48  100  41  52  100  41               51  100  41                            B  H TQ940966  18*
-         Clacton                    48  400  47  52  400  47               42  400  47                            B  H TM183163   7*
-115.06   Felixstowe                 52  200  54  51  200  54               53  200  54                            B  V TM305346  18*
+115.00 - Sudbury                    44 100k 229  41 100k 229  58 100k 186  47 100k 229  60 100k 228  56 100k 228  E  H TL912376  69
+         Burnham on Crouch          49  500  41  52  500  41               42  500  41                            B  H TQ940966  18
+         Clacton                    49  400  47  52  400  47               42  400  47                            B  H TM183163   7
+115.06   Felixstowe                 50  200  54  51  200  54               53  200  54                            B  V TM305346  18
 115.02   Ipswich Stoke              26   28  54  25   28  54               29   28  54                            A  V TM159443   4
          Rouncefall                 44   4k  79  41   4k  79               47   4k  79                            B  H TQ856931  51
 115.08   Somersham                  28    2  54  25    2  54               22    2  54                            A  V TM086492  41
-115.03   Wivenhoe Park              57   10  57  64   10  57               48   10  57                            CD V TM027240  19*
-115.01   Woodbridge                 48  100  58  64  100  58               57  100  58                            CD V TM271498  33*
+115.03   Wivenhoe Park              57   10  57  54   10  57               49   10  57                            CD V TM027240  19
+115.01   Woodbridge                 48  100  58  49  100  58               54  100  58                            CD V TM271498  33
 102.00 + Sutton Coldfield           43 200k 433  46 200k 433  42 200k 433  40 200k 433  45 200k 403  39 200k 433  B  H SK113003 169
 102.27   Allesley Park              25    7 152  22    7 152               28    7 152                            A  V SP296796 108
 102.43   Brailes                    24    8 221  21    8 221               27    8 221                            A  V SP319379 189
@@ -932,6 +961,9 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 105.60   Strontian                  49    3 254  45    3 254               42    3 254                            B  V NM830657 239
 105.46   Taynuilt                   46    2  73  43    2  73               50    2  73                            B  V NM993313  44
 105.29   Tayvallich                 46    2  68  43    2  68               50    2  68                            B  V NR740866  43
+101.04 - Tunbridge Wells            52   4k 174  49   4k 174  42   4k 174  47   4k 174  44   4k 174  41   4k 174  B  V TQ607439 122
+101.26   St Marks HP                57  6.4 168  60  6.4 168               53  6.4 168                            CD H TQ582373 143
+101.26   St Marks VP                57 12.8 168  60 12.8 168               53 12.8 168                            CD V TQ582373 143
 111.00 + Waltham                    61  50k 442  54  50k 442  29  25k 442  58  50k 442  56  25k 449  57  25k 449  W  H SK809233 133
 102.35   Ambergate                  25   37 185  28   37 185               22   37 185                            A  V SK351513 140
 102.12   Ashbourne                  25   50 208  28   50 208               22   50 208                            A  V SK181460 163
@@ -1034,7 +1066,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 108.08   Patcham                    46   14 141  43   14 141               50   14 141                            B  H TQ318093 110
 108.19   Portslade                  41   10 100  47   10 100               44   10 100                            B  V TQ245080  75
 108.23   Saltdean                   55   20  64  58   20  64               54   20  64                            CD V TQ388034  49
-103.00 + Winter Hill                62 100k 726  59 100k 726  58 100k 726  54 100k 726  61 100k 726  55 100k  726 CD H SD660144 438
+103.00 + Winter Hill                62 100k 726  59 100k 726  58 100k 726  54 100k 726  61 100k 726  55 100k 726  CD H SD660144 438
 103.76   Austwick                   45  6.3 237  49  6.3 237               42  6.3 237                            B  V SD783672 210
 103.64   Backbarrow                 53    2 126  60    2 126               57    2 126                            CD V SD358841 106
 103.08   Bacup                      46   50 381  43   50 381               50   50 381                            B  V SD878224 332
