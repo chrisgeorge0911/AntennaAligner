@@ -33,22 +33,43 @@
 
         function getLocationData() {
             if (navigator.geolocation) {
-
                 var geolocationOptions = { enableHighAccuracy: true };
-
+            
                 navigator.geolocation.getCurrentPosition(onLocationSuccess, onError, geolocationOptions);
             }
             else {
-                onError();
+                onError("no geolocation");
             }           
         }
 
-        function onLocationSuccess(position)
-        {
+        function onLocationSuccess(position) {
+
+            $.mobile.hidePageLoadingMsg();
+            //$("#locationdata").html('Latitude: ' + latitude.toFixed(1) + ', Longitude: ' + longitude.toFixed(1) + '<br />');
+
             lastPosition = position;
 
             calculateNearestTx(lastPosition);
         }
+
+        // onError Callback receives a PositionError object
+        //
+        function onError(error) {
+
+            $.mobile.hidePageLoadingMsg();
+
+            // Show that the GPS is disabled in the transmitter list.
+            $('ul').empty();
+            $('ul').append($('<li/>', {
+                'data-role': "list-divider",
+                'html': "GPS Disabled"
+            }));
+
+            $('ul').listview('refresh');
+
+            $.mobile.changePage('#locationError', 'none', false, true);
+        }
+
 
         function getCompassData() {
 
@@ -102,21 +123,7 @@
             alert("heading fail");
         }
 
-        // onError Callback receives a PositionError object
-        //
-        function onError(error) 
-        {
-            // Show that the GPS is disabled in the transmitter list.
-            $('ul').empty();
-            $('ul').append($('<li/>', {
-                'data-role': "list-divider",
-                'html': "GPS Disabled"
-            }));
-
-            $('ul').listview('refresh');
-            
-            $.mobile.changePage('#locationError', 'none', false, true);            
-        }
+      
 
         function onDeviceReady() {
             getLocationData();
@@ -124,8 +131,10 @@
 
         function populateTxDataPanel() {
 
-            tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
-            m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
+          //  tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
+            //  m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
+
+            m_SelectedTxBearing = nearest5Tx[m_SelectedTxIndex].bearing;
 
             // reset lastHeading so that the compass is redrawn.
             lastHeading = -1;
@@ -154,12 +163,12 @@
 
             $('ul').empty();
 
+            //var latitude = parseFloat(position.coords.latitude);
+            //var longitude = parseFloat(position.coords.longitude);
+
+            //$("#locationdata").html('Latitude: ' + latitude.toFixed(1) + ', Longitude: ' + longitude.toFixed(1) + '<br />');
+
             nearest5Tx = getNearestTx(position);
-
-            var latitude = parseFloat(position.coords.latitude);
-            var longitude = parseFloat(position.coords.longitude);
-
-            $("#locationdata").html('Latitude: ' + latitude.toFixed(1) + ', Longitude: ' + longitude.toFixed(1) + '<br />');
 
             $('ul').empty();
 
@@ -179,12 +188,21 @@
                         iconClass = 'ui-icon-low';
                     }
 
+                    tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[i].position)); // parse as float
+                    if (tempfloat < 0)
+                        tempfloat = 360 + tempfloat;
+
+                    nearest5Tx[i].bearing = tempfloat.toFixed(2);  // Will return "10.00"
+
+                    var displayBearing = tempfloat.toFixed(0)
+                    
                     var buttonHtml = '<table width="100%"><tr>';
-                    buttonHtml += '<td class="txListName" colspan="3">' + nearest5Tx[i].name + '</td>';
+                    buttonHtml += '<td class="txListName" colspan="2">' + nearest5Tx[i].name + '</td>';
+                    buttonHtml += '<td class="bearingCell">' + displayBearing + '&deg;</td>';
                     buttonHtml += '</tr><tr>';
                     buttonHtml += '<td class="distanceCell" width="30%">' + distance + " miles</td>";
                     buttonHtml += '<td class="distanceCell">' + signalStrength + "dBµV/m</td>";
-                    buttonHtml += '<td width="60px" align="left"><div class="' + iconClass + '"></div></td>';
+                    buttonHtml += '<td width="60px" align="center"><div class="' + iconClass + '"></div></td>';
                     buttonHtml += '</tr></table>';
 
                     $('ul').append($('<li/>', {    //here appendin `<li>`
@@ -208,7 +226,7 @@
                 theme = $this.jqmData("theme") || $.mobile.loadingMessageTheme;
             $.mobile.showPageLoadingMsg(theme, "recalculating", false);
 
-            setTimeout(function () { $.mobile.hidePageLoadingMsg(); }, 2000);
+            //setTimeout(function () { $.mobile.hidePageLoadingMsg(); }, 2000);
 
             getLocationData();
         })
@@ -226,7 +244,8 @@
             
             <a href="#infomain" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             
         </div>
-        <div data-role="content">            
+        <div data-role="content"> 
+            <div id="locationdata"></div>           
             <div id="txoptions" data-role="fieldcontain">
                 <div style="font-weight:bold;padding-bottom:6px">Select a transmitter from the list...</div>                
                 <ul data-role="listview" data-divider-theme="d" data-inset="true">                

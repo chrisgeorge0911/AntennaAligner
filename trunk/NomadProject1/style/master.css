@@ -106,6 +106,13 @@ div.header
     color:#888;
 }
 
+.bearingCell
+{
+    text-align:center;
+    font-size:14px;
+    color:#888;
+}
+
 .ui-page     
 {
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #A5C8DF), color-stop(100%, #0E4F7B));
