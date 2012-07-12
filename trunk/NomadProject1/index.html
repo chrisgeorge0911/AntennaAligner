@@ -67,7 +67,11 @@
 
             $('ul').listview('refresh');
 
-            $.mobile.changePage('#locationError', 'none', false, true);
+            $.mobile.changePage('#locationError', {
+                transition: 'none',
+                reverse: false,
+                changeHash: true
+            });
         }
 
 
@@ -130,9 +134,6 @@
         }
 
         function populateTxDataPanel() {
-
-          //  tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[m_SelectedTxIndex].position)); // parse as float number
-            //  m_SelectedTxBearing = tempfloat.toFixed(2);  // Will return "10.00"
 
             m_SelectedTxBearing = nearest5Tx[m_SelectedTxIndex].bearing;
 
@@ -340,7 +341,7 @@
         </div>
     </div>
     
-    <div data-role="dialog" id="locationError">
+    <div data-role="dialog" id="locationError" data-transition="none">
         <div data-role="header">
             <h1>GPS Error</h1>
         </div>
