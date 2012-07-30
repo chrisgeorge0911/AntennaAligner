@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using DotNetCoords;
 
@@ -12,8 +13,9 @@ namespace TxDataMunger
         {
             IEnumerable<TxDataEntry> txData = ReadTxData();
 
-            GenerateJavascriptArray(txData);
-
+            IEnumerable<TxDataEntry> ireTxData = ReadIreCsvData();
+            
+            GenerateJavascriptArray(txData.Union(ireTxData));
         }
 
         private static void GenerateJavascriptArray(IEnumerable<TxDataEntry> txData)
@@ -29,8 +31,8 @@ namespace TxDataMunger
 
                 foreach (var tx in txData)
                 {
-                    var arrayString = String.Format("    txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3} }}, gridref: '{4}' }}, ch1: '{5}', ch1pwr: '{6}', ch2: '{7}', ch2pwr: '{8}', ch3: '{9}', ch3pwr: '{10}', asl: '{11}' }};",
-                        count, tx.Name, tx.Coord.Latitude, tx.Coord.Longitude, tx.Ngr, tx.Ch1.ChannelNumber, tx.Ch1.PowerInWatts, tx.Ch2.ChannelNumber, tx.Ch2.PowerInWatts, tx.Ch3.ChannelNumber, tx.Ch3.PowerInWatts, tx.Asl);
+                    var arrayString = String.Format("    txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3} }}, gridref: '{4}' }}, ch1: '{5}', ch1pwr: '{6}', ch2: '{7}', ch2pwr: '{8}', ch3: '{9}', ch3pwr: '{10}', asl: '{11}', pol: '{12}' }};",
+                        count, tx.Name, tx.Coord.Latitude, tx.Coord.Longitude, tx.Ngr, tx.Ch1.ChannelNumber, tx.Ch1.PowerInWatts, tx.Ch2.ChannelNumber, tx.Ch2.PowerInWatts, tx.Ch3.ChannelNumber, tx.Ch3.PowerInWatts, tx.Asl, tx.Pol);
 
                     count++;
                     file.WriteLine(arrayString);
@@ -41,22 +43,7 @@ namespace TxDataMunger
             }
         }
 
-        private static Coordinate GetCoord(string ngrGridRef)
-        {
-            LatLng latlng;
-            if ( ngrGridRef.Length==7)
-            {
-                var irishref = new IrishRef(ngrGridRef);
-                latlng = irishref.ToLatLng();
-            }
-            else
-            {
-                var osref = new OSRef(ngrGridRef);
-                latlng = osref.ToLatLng();
-            }
-            
-            return new Coordinate(latlng.Latitude, latlng.Longitude);
-        }
+       
 
 
         //private static string NGRToNE(string ngrGridRef)
@@ -135,6 +122,10 @@ namespace TxDataMunger
         //}
 
       
+        /// <summary>
+        /// Read the UK dtt data
+        /// </summary>
+        /// <returns></returns>
         private static IEnumerable<TxDataEntry> ReadTxData()
         {
             string[] lines = File.ReadAllLines(@"..\..\txdata\dttdata.txt");
@@ -186,6 +177,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 string ch3Pwr = line.Substring(78, 4).Trim();
                 //string ch3aod = line.Substring(83, 3).Trim();
                 string ngr = line.Substring(119, 8).Replace(" ","");
+                string pol = line.Substring(117, 1);
 
                 string asl = "0";
                 if ( line.Length > 130 )
@@ -198,7 +190,8 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                     new TxChannel(ch1, ch1Pwr),
                     new TxChannel(ch2, ch2Pwr),
                     new TxChannel(ch3, ch3Pwr),
-                    asl
+                    asl,
+                    pol
                     ));
 
                 
@@ -224,75 +217,54 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
             return txData;
         }
 
-        private class TxDataEntry
+        private static IEnumerable<TxDataEntry> ReadIreCsvData()
         {
-            public string Name { get; private set; }
-            public string Ngr {get; private set; }
-            public TxChannel Ch1 {get; private set;}
-            public TxChannel Ch2 { get; private set; }
-            public TxChannel Ch3 { get; private set; }
-            public string Asl { get; private set; }
+            string[] lines = File.ReadAllLines(@"..\..\txdata\iredttdata.csv");
 
-            private Coordinate m_coord;
+            IList<TxDataEntry> txData = new List<TxDataEntry>();
 
-            public TxDataEntry(string name, string ngr, TxChannel ch1, TxChannel ch2, TxChannel ch3, string asl)
+            bool inData = false;
+            foreach (string line in lines)
             {
-                Name = name;
-                Ngr = ngr;
-                Ch1 = ch1;
-                Ch2 = ch2;
-                Ch3 = ch3;
-                Asl = asl;
+                string[] dataline = line.Split(',');
+                //  Cairn Hill,Longford,47,41,44,51,H,B,Yes,"53.8069, -7.7161",160
+
+                string name = dataline[0];
+                string ch1 = dataline[2];
+                string ch1Pwr = dataline[10] + "k";
+                //string ch1aod = line.Substring(44, 3).Trim();
+                string ch2 = dataline[3];
+                string ch2Pwr = dataline[10] + "k";
+                //string ch2aod = line.Substring(57, 3).Trim();
+                string ch3 = dataline[4];
+                string ch3Pwr = dataline[10] + "k";
+                //string ch3aod = line.Substring(83, 3).Trim();
+                string ngr = "";
+                double lats = Convert.ToDouble(dataline[8].Replace("\"", ""));
+                double longs = Convert.ToDouble(dataline[9].Replace("\"", ""));
+                string pol = dataline[6];
+
+                string asl = "0";
+
+                txData.Add(new TxDataEntry(
+                    name,
+                    lats,
+                    longs,
+                    new TxChannel(ch1, ch1Pwr),
+                    new TxChannel(ch2, ch2Pwr),
+                    new TxChannel(ch3, ch3Pwr),
+                    asl,
+                    pol
+                    ));
             }
+
+            return txData;
+        }
+
             
-            public Coordinate Coord 
-            { 
-                get { return m_coord ?? (m_coord = GetCoord(Ngr)); }
-            }
-        }
 
-        private class TxChannel
-        {
-            private readonly int m_channelNumber;
-            private readonly float m_powerInWatts; // Watts
+       
 
-            public TxChannel(string channelNumber, string power)
-            {
-                if (channelNumber == "")
-                    m_channelNumber = -1;
-                else
-                {
-                    m_channelNumber = Int32.Parse(channelNumber);
-                    m_powerInWatts = GetPowerInWatts(power);
-                }                
-            }
-
-            public int ChannelNumber
-            {
-                get { return m_channelNumber; }
-            }
-
-            public float PowerInWatts
-            {
-                get { return m_powerInWatts; }
-            }
-
-            private float GetPowerInWatts(string power)
-            {
-                var powerStringRegex = new Regex(@"(?<value>[\d.]*)(?<units>\w*)");
-
-                var data = powerStringRegex.Matches(power);
-
-                var valueString = data[0].Groups["value"].Value;
-                var valueUnit = data[0].Groups["units"].Value;
-
-                var powerValue = float.Parse(valueString);
-
-                if (valueUnit.Contains("k"))
-                    powerValue = powerValue*1000;
-
-                return powerValue;
-            }
-        }
+        
     }
 }

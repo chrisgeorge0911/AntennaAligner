@@ -22,7 +22,8 @@ namespace TxDataMunger
         {
             Latitude = latitude;
             Longitude = longitude;
-        }
-        
+        }        
     }
+
+
 }
