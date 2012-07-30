@@ -6,12 +6,12 @@
     <ProjectGuid>{c11b75d7-a221-4a1b-b666-07ef3e96c543}</ProjectGuid>
     <CompiledOutputPath>distrib\</CompiledOutputPath>
     <OutputPath>bin\$(Configuration)</OutputPath>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Name>AntennaAlignerApp</Name>
     <RootNamespace>NomadProject1</RootNamespace>
     <BundleID>uk.co.kibahsoftware.antennaaligner</BundleID>
-    <CertificatePath>Certificates\2012-05-23 - Chris George</CertificatePath>
-    <ProvisioningProfilePath>ProvisioningProfiles\DevProfile.mobileprovision</ProvisioningProfilePath>
+    <CertificatePath>Certificates\2012-05-30 - Chris George</CertificatePath>
+    <ProvisioningProfilePath>ProvisioningProfiles\DistProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
     <LastBuildVersion>1.0.2</LastBuildVersion>
