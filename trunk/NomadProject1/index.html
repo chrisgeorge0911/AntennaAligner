@@ -15,6 +15,11 @@
 
     <script type="text/javascript" charset="utf-8">
 
+        // This should hopefully lock the orientation...
+        window.shouldRotateToOrientation = function(newOrientation) {
+            return 180 != newOrientation;
+        };
+
         var lastHeading = -1; 
         var lastPosition;
         var nearest5Tx;
@@ -207,13 +212,13 @@
                     buttonHtml += '</tr></table>';
 
                     $('ul').append($('<li/>', {    //here appendin `<li>`
-                            'data-role': "list-divider"
-                        }).append($('<a/>', {    //here appending `<a>` into `<li>`
-                            'href': '#compasspage',
-                            'data-transition': 'none',
-                            'onclick': 'selectTx(' + i + ')',
-                            'html': buttonHtml
-                        })));
+                        'data-role': "list-divider"
+                    }).append($('<a/>', {    //here appending `<a>` into `<li>`
+                        'href': '#compasspage',
+                        'data-transition': 'none',
+                        'onclick': 'selectTx(' + i + ')',
+                        'html': buttonHtml
+                    })));
 
                     $('ul').listview('refresh');
                 }
@@ -231,9 +236,9 @@
 
             getLocationData();
         })
-		.on("click", ".hide-page-loading-msg", function () {
-		    $.mobile.hidePageLoadingMsg();
-		});
+            .on("click", ".hide-page-loading-msg", function () {
+                $.mobile.hidePageLoadingMsg();
+            });
         
         document.addEventListener("deviceready", onDeviceReady, false);
     </script>
@@ -260,14 +265,14 @@
             
     <div data-role="page" id="compasspage" data-add-back-btn="true">
     <script>
-       $("#compasspage").live('pagebeforeshow', function () {
+        $("#compasspage").live('pagebeforeshow', function () {
             populateTxDataPanel();
         });
 
         $("#compasspage").live('pageshow', function () {
            
         });
-        </script>
+    </script>
 
         <div data-role="header">
             <h1>Antenna Aligner</h1>
