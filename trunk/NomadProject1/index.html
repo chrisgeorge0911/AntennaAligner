@@ -35,22 +35,25 @@
             while (new Date().getTime() < start + delayms);
         }
 
-
+        function onDeviceReady() {
+            getLocationData();
+        }
+        
+        // ******************************************************************************]
+        // Location Methods
         function getLocationData() {
             if (navigator.geolocation) {
                 var geolocationOptions = { enableHighAccuracy: true };
             
-                navigator.geolocation.getCurrentPosition(onLocationSuccess, onError, geolocationOptions);
+                navigator.geolocation.getCurrentPosition(onLocationSuccess, onLocationError, geolocationOptions);
             }
             else {
-                onError("no geolocation");
+                onLocationError("no geolocation");
             }           
         }
 
         function onLocationSuccess(position) {
-
             $.mobile.hidePageLoadingMsg();
-            //$("#locationdata").html('Latitude: ' + latitude.toFixed(1) + ', Longitude: ' + longitude.toFixed(1) + '<br />');
 
             lastPosition = position;
 
@@ -59,7 +62,7 @@
 
         // onError Callback receives a PositionError object
         //
-        function onError(error) {
+        function onLocationError() {
 
             $.mobile.hidePageLoadingMsg();
 
@@ -79,7 +82,77 @@
             });
         }
 
+        function selectTx(index) {
 
+            if (index >= nearest5Tx.length) // if we've clicked on a button that has no entry in the nearest array, do nothing.
+                return;
+
+            m_SelectedTxIndex = index;
+        }
+
+
+        function calculateNearestTx(position) {
+
+            $('ul').empty();
+
+            nearest5Tx = getNearestTx(position);
+
+            $('ul').empty();
+
+            for (var i = 0; i < 5; i++) {
+
+                if (i < nearest5Tx.length) {
+
+                    var distance = parseFloat(nearest5Tx[i].distanceMiles);
+                    distance = distance.toFixed(1);
+
+                    var signalStrength = nearest5Tx[i].signalStrength;
+
+                    var iconClass = "ui-icon-good";
+                    if (signalStrength < 66) {
+                        iconClass = 'ui-icon-poor';
+                    } else if (signalStrength < 72) {
+                        iconClass = 'ui-icon-low';
+                    }
+
+                    var tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[i].position)); // parse as float
+                    if (tempfloat < 0)
+                        tempfloat = 360 + tempfloat;
+
+                    nearest5Tx[i].bearing = tempfloat.toFixed(2);  // Will return "10.00"
+
+                    var displayBearing = tempfloat.toFixed(0);
+
+                    var buttonHtml = '<table width="100%"><tr>';
+                    buttonHtml += '<td class="txListName" colspan="2">' + nearest5Tx[i].name + '</td>';
+                    buttonHtml += '<td class="bearingCell">' + displayBearing + '&deg;</td>';
+                    buttonHtml += '</tr><tr>';
+                    buttonHtml += '<td class="distanceCell" width="30%">' + distance + " miles</td>";
+                    buttonHtml += '<td class="distanceCell">' + signalStrength + "dBµV/m</td>";
+                    buttonHtml += '<td width="60px" align="center"><div class="' + iconClass + '"></div></td>';
+                    buttonHtml += '</tr></table>';
+
+                    $('ul').append($('<li/>', {    //here appendin `<li>`
+                        'data-role': "list-divider"
+                    }).append($('<a/>', {    //here appending `<a>` into `<li>`
+                        'href': '#compasspage',
+                        'data-transition': 'none',
+                        'onclick': 'selectTx(' + i + ')',
+                        'html': buttonHtml
+                    })));
+
+                    $('ul').listview('refresh');
+                }
+            }
+
+            $("#txoptions").show();
+        }
+        // End location methods
+        // *******************************************************************************
+
+
+        // *******************************************************************************
+        // COMPASS HANDLER
         function getCompassData() {
 
             if (navigator.compass) {
@@ -89,17 +162,17 @@
                     options = { frequency: 50 };
                 
                 if (eval("typeof navigator.compass.watchHeading == 'function'")) {
-                    watchID = navigator.compass.watchHeading(success, onFail, options);
+                    watchID = navigator.compass.watchHeading(onCompassSuccess, onCompassFail, options);
                 }
             }
             else {
                 alert("compass not working");
-                success(30);
+                onCompassSuccess(30);
             }          
         }
 
 
-        function success(heading) {
+        function onCompassSuccess(heading) {
                    
             if (lastHeading === heading.magneticHeading) return;
             lastHeading = heading.magneticHeading;
@@ -128,17 +201,15 @@
             }
         }
         
-        function onFail() {
-            alert("heading fail");
+        function onCompassFail() {
+            $.mobile.changePage('#compassError', {
+                transition: 'none',
+                reverse: false,
+                changeHash: true
+            });
         }
 
-      
-
-        function onDeviceReady() {
-            getLocationData();
-        }
-
-        function populateTxDataPanel() {
+        function populateCompassTxDataPanel() {
 
             m_SelectedTxBearing = nearest5Tx[m_SelectedTxIndex].bearing;
 
@@ -156,77 +227,11 @@
             channelDiv.innerHTML = "Channels: " + nearest5Tx[m_SelectedTxIndex].ch1 + ", " + nearest5Tx[m_SelectedTxIndex].ch2 + ", " + nearest5Tx[m_SelectedTxIndex].ch3;
         }
 
-        function selectTx(index) {
-
-            if (index >= nearest5Tx.length) // if we've clicked on a button that has no entry in the nearest array, do nothing.
-                return;
-            
-            m_SelectedTxIndex = index;
-        }
+        // END COMPASS HANDLER
+        //*********************************************************************************************
 
 
-        function calculateNearestTx(position) {
-
-            $('ul').empty();
-
-            //var latitude = parseFloat(position.coords.latitude);
-            //var longitude = parseFloat(position.coords.longitude);
-
-            //$("#locationdata").html('Latitude: ' + latitude.toFixed(1) + ', Longitude: ' + longitude.toFixed(1) + '<br />');
-
-            nearest5Tx = getNearestTx(position);
-
-            $('ul').empty();
-
-            for (var i = 0; i < 5; i++) {
-
-                if (i < nearest5Tx.length) {
-
-                    var distance = parseFloat(nearest5Tx[i].distanceMiles);
-                    distance = distance.toFixed(1);
-
-                    var signalStrength = nearest5Tx[i].signalStrength;
-
-                    var iconClass = "ui-icon-good";
-                    if (signalStrength < 66) {
-                        iconClass = 'ui-icon-poor';
-                    } else if (signalStrength < 72) {
-                        iconClass = 'ui-icon-low';
-                    }
-
-                    tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[i].position)); // parse as float
-                    if (tempfloat < 0)
-                        tempfloat = 360 + tempfloat;
-
-                    nearest5Tx[i].bearing = tempfloat.toFixed(2);  // Will return "10.00"
-
-                    var displayBearing = tempfloat.toFixed(0)
-                    
-                    var buttonHtml = '<table width="100%"><tr>';
-                    buttonHtml += '<td class="txListName" colspan="2">' + nearest5Tx[i].name + '</td>';
-                    buttonHtml += '<td class="bearingCell">' + displayBearing + '&deg;</td>';
-                    buttonHtml += '</tr><tr>';
-                    buttonHtml += '<td class="distanceCell" width="30%">' + distance + " miles</td>";
-                    buttonHtml += '<td class="distanceCell">' + signalStrength + "dBµV/m</td>";
-                    buttonHtml += '<td width="60px" align="center"><div class="' + iconClass + '"></div></td>';
-                    buttonHtml += '</tr></table>';
-
-                    $('ul').append($('<li/>', {    //here appendin `<li>`
-                        'data-role': "list-divider"
-                    }).append($('<a/>', {    //here appending `<a>` into `<li>`
-                        'href': '#compasspage',
-                        'data-transition': 'none',
-                        'onclick': 'selectTx(' + i + ')',
-                        'html': buttonHtml
-                    })));
-
-                    $('ul').listview('refresh');
-                }
-            }
-
-            $("#txoptions").show();
-        }
-
+       
         $(document).on("click", ".show-page-loading-msg", function () {
             var $this = $(this),
                 theme = $this.jqmData("theme") || $.mobile.loadingMessageTheme;
@@ -264,15 +269,15 @@
     </div>
             
     <div data-role="page" id="compasspage" data-add-back-btn="true">
-    <script>
-        $("#compasspage").live('pagebeforeshow', function () {
-            populateTxDataPanel();
-        });
+        <script type="text/javascript">
+            $("#compasspage").live('pagebeforeshow', function () {
+                populateCompassTxDataPanel();
+            });
 
-        $("#compasspage").live('pageshow', function () {
+            $("#compasspage").live('pageshow', function () {
            
-        });
-    </script>
+            });
+        </script>
 
         <div data-role="header">
             <h1>Antenna Aligner</h1>
@@ -304,7 +309,7 @@
                         </div>
                         <div style="padding-left:5px;padding-right:5px;font-size: 13px;">
                             Keep away from any metallic objects as they may affect the compass.
-                            </div>
+                        </div>
                     </div>
                 </div>     
             </div>       
@@ -346,6 +351,7 @@
         </div>
     </div>
     
+    <!-- GPS Error dialog -->
     <div data-role="dialog" id="locationError" data-transition="none">
         <div data-role="header">
             <h1>GPS Error</h1>
@@ -353,6 +359,17 @@
         <div data-role="content">
             <p>The GPS system is not enabled.</p>
             <p>To use Antenna Aligner, please enable the GPS in your device's settings.</p>        
+        </div>
+    </div>
+    
+    <!-- Compass Error dialog -->
+    <div data-role="dialog" id="compassError" data-transition="none">
+        <div data-role="header">
+            <h1>Compass Error</h1>
+        </div>
+        <div data-role="content">
+            <p>There was a problem accessing the compass on your device.</p>
+            <p>Your device must have a built-in compass. If it does not (eg iPod Touch) the compass part if this app will not work.</p>        
         </div>
     </div>
 </body>
