@@ -153,6 +153,18 @@ div.header
     background-position:-100px 50%
 }
 
+.ui-pol-horiz {
+    background-image: url(images/polhoriz.png);
+    height: 20px;
+    width: 52px;    
+}
+
+.ui-pol-vert {
+    background-image: url(images/polvert.png);
+    height: 20px;
+    width: 52px; 
+}
+
 .ui-mobile .ui-dialog {
     background  : none !important;
     width       : 85% !important;
@@ -160,3 +172,4 @@ div.header
     margin-left : -17.5% !important;
     top         : 15% !important;
 }​
+

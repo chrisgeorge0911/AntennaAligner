@@ -107,6 +107,7 @@
                     distance = distance.toFixed(1);
 
                     var signalStrength = nearest5Tx[i].signalStrength;
+                    var polarisation = nearest5Tx[i].pol;
 
                     var iconClass = "ui-icon-good";
                     if (signalStrength < 66) {
@@ -114,6 +115,10 @@
                     } else if (signalStrength < 72) {
                         iconClass = 'ui-icon-low';
                     }
+
+                    var polClass = "ui-pol-horiz";
+                    if ( polarisation == 'V')
+                        polClass = "ui-pol-vert";
 
                     var tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[i].position)); // parse as float
                     if (tempfloat < 0)
@@ -127,8 +132,8 @@
                     buttonHtml += '<td class="txListName" colspan="2">' + nearest5Tx[i].name + '</td>';
                     buttonHtml += '<td class="bearingCell">' + displayBearing + '&deg;</td>';
                     buttonHtml += '</tr><tr>';
-                    buttonHtml += '<td class="distanceCell" width="30%">' + distance + " miles</td>";
-                    buttonHtml += '<td class="distanceCell">' + signalStrength + "dBµV/m</td>";
+                    buttonHtml += '<td class="distanceCell" width="30%">' + distance + ' miles</td>';
+                    buttonHtml += '<td class="distanceCell"><div class="' + polClass + '"></div></td>';
                     buttonHtml += '<td width="60px" align="center"><div class="' + iconClass + '"></div></td>';
                     buttonHtml += '</tr></table>';
 
@@ -342,7 +347,7 @@
            
             <div class="datapanel" style="margin-top:15px;">
                 <div class="datapanel-top" style="text-align:right;padding-left: 8px;padding-right: 8px;">
-                    <table width="100%"><tr><td align="left">1.0.3</td><td align="right">Powered by <a href="http:\\www.vsnomad.com">Nomad</a></td></tr></table>                    
+                    <table width="100%"><tr><td align="left">1.1.0</td><td align="right">Powered by <a href="http:\\www.vsnomad.com">Nomad</a></td></tr></table>                    
                 </div>
                 <div class="datapanel-bottom" id="legalstuff" style="text-align:right;padding-left: 8px;padding-right: 8px;">
                     Antenna Aligner &copy; 2012 Chris George
