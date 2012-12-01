@@ -31,8 +31,25 @@ namespace TxDataMunger
 
                 foreach (var tx in txData)
                 {
-                    var arrayString = String.Format("    txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3} }}, gridref: '{4}' }}, ch1: '{5}', ch1pwr: '{6}', ch2: '{7}', ch2pwr: '{8}', ch3: '{9}', ch3pwr: '{10}', asl: '{11}', pol: '{12}' }};",
-                        count, tx.Name, tx.Coord.Latitude, tx.Coord.Longitude, tx.Ngr, tx.Ch1.ChannelNumber, tx.Ch1.PowerInWatts, tx.Ch2.ChannelNumber, tx.Ch2.PowerInWatts, tx.Ch3.ChannelNumber, tx.Ch3.PowerInWatts, tx.Asl, tx.Pol);
+                    string channelInfoString = "";
+                    foreach ( var channel in tx.Channels)
+                    {
+                        if ( channel.ChannelNumber == -1)
+                        {
+                            continue;
+                        }
+
+                        if (channelInfoString != "")
+                            channelInfoString += ", ";
+
+                        channelInfoString += String.Format("{{ch: '{0}',pwr: '{1}'}}", channel.ChannelNumber, channel.PowerInWatts);
+                    }
+                    channelInfoString = String.Format("var ch{0} = [{1}];", count, channelInfoString);
+
+                    file.WriteLine(channelInfoString);
+
+                    var arrayString = String.Format("    txList[{0}] = {{ name: '{1}', position: {{ coords: {{ latitude: {2}, longitude: {3} }}, gridref: '{4}' }}, channel: ch{0}, asl: '{5}', pol: '{6}' }};",
+                        count, tx.Name, tx.Coord.Latitude, tx.Coord.Longitude, tx.Ngr, tx.Asl, tx.Pol);
 
                     count++;
                     file.WriteLine(arrayString);
@@ -175,6 +192,17 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 //string ch2aod = line.Substring(57, 3).Trim();
                 string ch3 = line.Substring(75, 2).Trim();
                 string ch3Pwr = line.Substring(78, 4).Trim();
+
+                string ch4 = line.Substring(62, 2).Trim();
+                string ch4Pwr = line.Substring(65, 4).Trim();
+
+                string ch5 = line.Substring(88, 2).Trim();
+                string ch5Pwr = line.Substring(91, 4).Trim();
+
+                string ch6 = line.Substring(101, 2).Trim();
+                string ch6Pwr = line.Substring(104, 4).Trim();
+
+
                 //string ch3aod = line.Substring(83, 3).Trim();
                 string ngr = line.Substring(119, 8).Replace(" ","");
                 string pol = line.Substring(117, 1);
@@ -183,13 +211,20 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 if ( line.Length > 130 )
                     asl = line.Substring(128, 3).Trim();
 
-
+                var Channels = new List<TxChannel>
+                                   {
+                                       new TxChannel(ch1, ch1Pwr),
+                                       new TxChannel(ch2, ch2Pwr),
+                                       new TxChannel(ch3, ch3Pwr),
+                                       new TxChannel(ch4, ch4Pwr),
+                                       new TxChannel(ch5, ch5Pwr),
+                                       new TxChannel(ch6, ch6Pwr)
+                                   };
+                    
                 txData.Add( new TxDataEntry(
                     name,
                     ngr,
-                    new TxChannel(ch1, ch1Pwr),
-                    new TxChannel(ch2, ch2Pwr),
-                    new TxChannel(ch3, ch3Pwr),
+                    Channels,
                     asl,
                     pol
                     ));
@@ -250,9 +285,10 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                     name,
                     lats,
                     longs,
+                    new List<TxChannel>{ 
                     new TxChannel(ch1, ch1Pwr),
                     new TxChannel(ch2, ch2Pwr),
-                    new TxChannel(ch3, ch3Pwr),
+                    new TxChannel(ch3, ch3Pwr)},
                     asl,
                     pol
                     ));

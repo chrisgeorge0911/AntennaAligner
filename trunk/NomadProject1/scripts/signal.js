@@ -36,7 +36,7 @@ function getListOfTxBySignalStrength(lastPosition) {
 
     for (var i = 0; i < txList.length; i++) {
         txList[i].distance = getDistanceBetween(lastPosition, txList[i].position);
-        txList[i].signalStrength = getFieldStrength(txList[i].ch1pwr, txList[i].distance, txList[i].ch1);
+        txList[i].signalStrength = getFieldStrength(txList[i].channel[0].pwr, txList[i].distance, txList[i].channel[0].ch);
     }
 
     txList.sort(signalSort);

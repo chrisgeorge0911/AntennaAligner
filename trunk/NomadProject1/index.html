@@ -178,16 +178,20 @@
 
 
         function onCompassSuccess(heading) {
-                   
-            if (lastHeading === heading.magneticHeading) return;
-            lastHeading = heading.magneticHeading;
-            
+
+            var magHeading = heading.magneticHeading + window.orientation;
+
+            if (lastHeading === magHeading) return;
+            lastHeading = magHeading;
+
             var compass = x$("#compass .compass");
-                       
+
+            var bezelHeading = lastHeading * -1;
+
             compass.css({
-                "-webkit-transform": "rotate(-" + lastHeading + "deg)",
-                "transform": "rotate(-" + lastHeading + "deg)",
-                "-moz-transform": "rotate(-" + lastHeading + "deg)",
+                "-webkit-transform": "rotate(" + bezelHeading + "deg)",
+                "transform": "rotate(" + bezelHeading + "deg)",
+                "-moz-transform": "rotate(" + bezelHeading + "deg)",
                 "z-index": "0"
             });
 
@@ -229,7 +233,17 @@
             nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
             distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distanceMiles).toFixed(1) + " miles";
 
-            channelDiv.innerHTML = "Channels: " + nearest5Tx[m_SelectedTxIndex].ch1 + ", " + nearest5Tx[m_SelectedTxIndex].ch2 + ", " + nearest5Tx[m_SelectedTxIndex].ch3;
+            var channelArray = nearest5Tx[m_SelectedTxIndex].channel;
+            var channelsString = '';
+
+            for (var channel in channelArray) {
+                if ( channelsString != '')
+                    channelsString += ',';
+
+                channelsString += channelArray[channel].ch;
+            }
+
+            channelDiv.innerHTML = "Channels: " + channelsString;
         }
 
         // END COMPASS HANDLER
