@@ -58,84 +58,6 @@ namespace TxDataMunger
             }
         }
 
-       
-
-
-        //private static string NGRToNE(string ngrGridRef)
-        //{
-
-        //    double e;
-        //    double n;
-
-        //    var c = ngrGridRef[0];
-        //    if (c == 'S')
-        //    {
-        //        e = 0;
-        //        n = 0;
-        //    }
-        //    else if (c == 'T')
-        //    {
-        //        e = 500000;
-        //        n = 0;
-        //    }
-        //    else if (c == 'N')
-        //    {
-        //        n = 500000;
-        //        e = 0;
-        //    }
-        //    else if (c == 'O')
-        //    {
-        //        n = 500000;
-        //        e = 500000;
-        //    }
-        //    else if (c == 'H')
-        //    {
-        //        n = 1000000;
-        //        e = 0;
-        //    }
-        //    else
-        //        return null;
-
-        //    c = ngrGridRef[1];
-        //    if (c == 'I')
-        //        return null;
-
-
-        //    int code = ((int)ngrGridRef[1]) - 65;
-        //    if (code > 8)
-        //        code -= 1;
-        //    e += (code % 5) * 100000;
-
-
-        //    double dCode = code / 5;
-        //    n += (4 - Math.Floor(dCode)) * 100000;
-
-        //    string ngr = ngrGridRef.Substring(2);
-        //    if ((ngr.Length % 2) == 1)
-        //        return null;
-        //    if (ngr.Length > 10)
-        //        return null;
-
-        //    try
-        //    {
-        //        string s = ngr.Substring(0, ngr.Length / 2);
-        //        while (s.Length < 5)
-        //            s += '0';
-        //        e += double.Parse(s);
-
-        //        s = ngr.Substring(ngr.Length / 2);
-        //        while (s.Length < 5)
-        //            s += '0';
-        //        n += double.Parse(s);
-
-        //        return e + "," + n;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return null;
-        //    }
-        //}
-
       
         /// <summary>
         /// Read the UK dtt data
@@ -159,16 +81,6 @@ namespace TxDataMunger
 
                 if ( !inData)
                     continue;
-
-                //if (line.StartsWith("Region:"))
-                //{
-                //    currentRegion = line.Substring(7);
-                //    continue;
-                //}
-
-                //Winshill SK272241 60- 60W 57 60W 53 60W C/DV C/DV 66 48 56 68
-                //Regex regex = new Regex(@"(?<name>.*)\s(?<ngr>[A-Z]{2}\d{6})\s(?<ch1>\d{2})[+-]{0,1}\s(?<ch1pwr>.*)\s(?<ch2>\d{2})[+-]{0,1}\s(?<ch2pwr>.*)\s(?<ch3>\d{2})[+-]{0,1}\s(?<ch3pwr>.*)\s");
-
 
                 /*
                         Multiplex:  1-(PSB1)---- 2-(PSB2)---- A-(COM1)---- B-(PSB3)---- C-(COM2)---- D-(COM3)----
@@ -227,25 +139,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                     asl,
                     pol
                     ));
-
-                
-
-
-                //try
-                //{
-                //    MatchCollection data = regex.Matches(line);
-
-                //    txData.Add(new TxDataEntry(
-                //        data[0].Groups["name"].Value,
-                //        data[0].Groups["ngr"].Value,
-                //        new TxChannel(data[0].Groups["ch1"].Value, data[0].Groups["ch1pwr"].Value),
-                //        new TxChannel(data[0].Groups["ch2"].Value, data[0].Groups["ch2pwr"].Value),
-                //        new TxChannel(data[0].Groups["ch3"].Value, data[0].Groups["ch3pwr"].Value), 
-                //        currentRegion));
-                //}
-                //catch (Exception ex)
-                //{ }
-    
+   
             }
 
             return txData;
@@ -257,7 +151,6 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 
             IList<TxDataEntry> txData = new List<TxDataEntry>();
 
-            bool inData = false;
             foreach (string line in lines)
             {
                 string[] dataline = line.Split(',');
