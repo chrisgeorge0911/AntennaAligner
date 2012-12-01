@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
-using DotNetCoords;
 
 namespace TxDataMunger
 {
@@ -187,12 +185,15 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 string ch1 = line.Substring(36, 2).Trim();
                 string ch1Pwr = line.Substring(39, 4).Trim();
                 //string ch1aod = line.Substring(44, 3).Trim();
+
                 string ch2 = line.Substring(49, 2).Trim();
                 string ch2Pwr = line.Substring(52, 4).Trim();
                 //string ch2aod = line.Substring(57, 3).Trim();
+                
                 string ch3 = line.Substring(75, 2).Trim();
                 string ch3Pwr = line.Substring(78, 4).Trim();
-
+                //string ch3aod = line.Substring(83, 3).Trim();
+                
                 string ch4 = line.Substring(62, 2).Trim();
                 string ch4Pwr = line.Substring(65, 4).Trim();
 
@@ -201,9 +202,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
 
                 string ch6 = line.Substring(101, 2).Trim();
                 string ch6Pwr = line.Substring(104, 4).Trim();
-
-
-                //string ch3aod = line.Substring(83, 3).Trim();
+                
                 string ngr = line.Substring(119, 8).Replace(" ","");
                 string pol = line.Substring(117, 1);
 
@@ -211,7 +210,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 if ( line.Length > 130 )
                     asl = line.Substring(128, 3).Trim();
 
-                var Channels = new List<TxChannel>
+                var channels = new List<TxChannel>
                                    {
                                        new TxChannel(ch1, ch1Pwr),
                                        new TxChannel(ch2, ch2Pwr),
@@ -224,7 +223,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 txData.Add( new TxDataEntry(
                     name,
                     ngr,
-                    Channels,
+                    channels,
                     asl,
                     pol
                     ));
@@ -262,8 +261,7 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
             foreach (string line in lines)
             {
                 string[] dataline = line.Split(',');
-                //  Cairn Hill,Longford,47,41,44,51,H,B,Yes,"53.8069, -7.7161",160
-
+            
                 string name = dataline[0];
                 string ch1 = dataline[2];
                 string ch1Pwr = dataline[10] + "k";
@@ -274,7 +272,6 @@ Tx                                  Ch ERPW mAOD Ch ERPW mAOD Ch ERPW mAOD Ch ER
                 string ch3 = dataline[4];
                 string ch3Pwr = dataline[10] + "k";
                 //string ch3aod = line.Substring(83, 3).Trim();
-                string ngr = "";
                 double lats = Convert.ToDouble(dataline[8].Replace("\"", ""));
                 double longs = Convert.ToDouble(dataline[9].Replace("\"", ""));
                 string pol = dataline[6];
