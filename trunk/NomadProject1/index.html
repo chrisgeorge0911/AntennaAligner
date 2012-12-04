@@ -15,10 +15,24 @@
 
     <script type="text/javascript" charset="utf-8">
 
+        var $j = jQuery;
+        
         // This should hopefully lock the orientation...
-        window.shouldRotateToOrientation = function(newOrientation) {
-            return 180 != newOrientation;
+        window.shouldRotateToOrientation = function (newOrientation) {
+            return false;
         };
+
+        //x$(window).on('orientationchange', function (e) { console.log("rotation is: " + window.orientation); });
+
+        $(window).bind('orientationchange', function (e) {
+            if ($.event.special.orientationchange.orientation() == "portrait") {
+                //Do whatever in portrait mode
+                console.log("portrait");
+            } else {
+                //Do Whatever in landscape mode
+                console.log("landscape");
+            }
+        });
 
         var lastHeading = -1; 
         var lastPosition;
@@ -107,14 +121,15 @@
                     distance = distance.toFixed(1);
 
                     var signalStrength = nearest5Tx[i].signalStrength;
-                    var polarisation = nearest5Tx[i].pol;
-
+                    
                     var iconClass = "ui-icon-good";
                     if (signalStrength < 66) {
                         iconClass = 'ui-icon-poor';
                     } else if (signalStrength < 72) {
                         iconClass = 'ui-icon-low';
                     }
+
+                    var polarisation = nearest5Tx[i].pol;
 
                     var polClass = "ui-pol-horiz";
                     if ( polarisation == 'V')
@@ -229,6 +244,15 @@
             var nameDiv = document.getElementById('txName');
             var distanceDiv = document.getElementById('txDistance');
             var channelDiv = document.getElementById('txChannels');
+            var polDiv = document.getElementById('txPol');
+
+            var polarisation = nearest5Tx[i].pol;
+
+            var polClass = "ui-pol-horiz";
+            if (polarisation == 'V')
+                polClass = "ui-pol-vert";
+
+            $j('#txPol').toggleClass(polClass);
 
             nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
             distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distanceMiles).toFixed(1) + " miles";
@@ -243,14 +267,13 @@
                 channelsString += channelArray[channel].ch;
             }
 
-            channelDiv.innerHTML = "Channels: " + channelsString;
+            channelDiv.innerHTML = "Channels<br /><b>" + channelsString + "</b>";
         }
 
         // END COMPASS HANDLER
         //*********************************************************************************************
 
-
-       
+        
         $(document).on("click", ".show-page-loading-msg", function () {
             var $this = $(this),
                 theme = $this.jqmData("theme") || $.mobile.loadingMessageTheme;
@@ -312,7 +335,8 @@
                         </div>
                         <table width="100%">
                             <tr>
-                                <td width="50%"><span class="data" id="txDistance"></span></td>
+                                <td><span class="data" id="txDistance"></span></td>                                
+                                <td><div class="data" id="txPol"></div> </td>
                                 <td style="text-align:right"><span class="data" id="txChannels"></span> </td>
                             </tr>
                         </table>
