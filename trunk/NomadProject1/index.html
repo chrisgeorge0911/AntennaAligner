@@ -22,24 +22,14 @@
             return false;
         };
 
-        //x$(window).on('orientationchange', function (e) { console.log("rotation is: " + window.orientation); });
-
-        $(window).bind('orientationchange', function (e) {
-            if ($.event.special.orientationchange.orientation() == "portrait") {
-                //Do whatever in portrait mode
-                console.log("portrait");
-            } else {
-                //Do Whatever in landscape mode
-                console.log("landscape");
-            }
-        });
-
+      
         var lastHeading = -1; 
         var lastPosition;
         var nearest5Tx;
         var m_SelectedTxIndex = -1;
         var m_SelectedTxBearing;
         var c_DistanceLimit = 100; // in km
+        var m_OrientationDelta;
 
         /**
         * Delay for a number of milliseconds
@@ -50,9 +40,11 @@
         }
 
         function onDeviceReady() {
+            
             getLocationData();
         }
-        
+
+
         // ******************************************************************************]
         // Location Methods
         function getLocationData() {
@@ -177,7 +169,7 @@
 
             if (navigator.compass) {
 
-                var options = { filter: 0.5 };
+                var options = { filter: 0.2 };
                 if ( device.platform == 'Android')
                     options = { frequency: 50 };
                 
@@ -194,14 +186,14 @@
 
         function onCompassSuccess(heading) {
 
-            var magHeading = heading.magneticHeading + window.orientation;
+            var magHeading = heading.magneticHeading;
 
-            if (lastHeading === magHeading) return;
+            if (lastHeading == magHeading) return;
             lastHeading = magHeading;
 
             var compass = x$("#compass .compass");
 
-            var bezelHeading = lastHeading * -1;
+            var bezelHeading = (lastHeading * -1); 
 
             compass.css({
                 "-webkit-transform": "rotate(" + bezelHeading + "deg)",
@@ -212,7 +204,7 @@
 
             if (m_SelectedTxIndex > -1) {
 
-                var relativeHeading = parseFloat(m_SelectedTxBearing) - parseFloat(lastHeading);
+                var relativeHeading = parseFloat(m_SelectedTxBearing) + parseFloat(bezelHeading);
                 var needle = x$("#compass .needle");
 
                 needle.css({
