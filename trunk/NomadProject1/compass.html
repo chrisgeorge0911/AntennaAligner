@@ -1,14 +1,158 @@
-﻿<!DOCTYPE html>
-<html>
-  <head>
-    <title>Compass Example</title>
+﻿<div data-role="page" id="compasspage" data-add-back-btn="true">
+        <script type="text/javascript">
+            $("#compasspage").live('pagebeforeshow', function () {
+                populateCompassTxDataPanel();
+            });
 
-   
-  </head>
-  <body>
-    <h1>Example</h1>
-    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Madison, WI&amp;zoom=14&amp;size=288x200&amp;markers=Madison, WI&amp;sensor=false" width="288" height="200" />
+            $("#compasspage").live('pageshow', function () {
 
-    <button onclick="onDeviceReady();">Refresh</button>
-  </body>
-</html>
+            });
+            
+
+            // *******************************************************************************
+            // COMPASS HANDLER
+            function getCompassData() {
+
+                if (navigator.compass) {
+
+                    var options = { filter: 1 };
+                    if (device.platform == 'Android')
+                        options = { frequency: 50 };
+
+                    if (eval("typeof navigator.compass.watchHeading == 'function'")) {
+                        watchID = navigator.compass.watchHeading(onCompassSuccess, onCompassFail, options);
+                    }
+                }
+                else {
+                    alert("compass not working");
+                    onCompassSuccess(30);
+                }
+            }
+
+            function setCompassNeedle(needleHeading) {
+                var needle = x$("#compass .needle");
+
+                needle.css({
+                    "-webkit-transform": "rotate(" + needleHeading + "deg)",
+                    "transform": "rotate(" + needleHeading + "deg)",
+                    "-moz-transform": "rotate(" + needleHeading + "deg)",
+                    "position": "absolute",
+                    "z-index": "1"
+                });
+
+            }
+
+
+            function onCompassSuccess(heading) {
+
+                var magHeading = heading.magneticHeading;
+
+                if (lastHeading == magHeading) return;
+                lastHeading = magHeading;
+
+                var compass = x$("#compass .compass");
+
+                var bezelHeading = (lastHeading * -1);
+
+                compass.css({
+                    "-webkit-transform": "rotate(" + bezelHeading + "deg)",
+                    "transform": "rotate(" + bezelHeading + "deg)",
+                    "-moz-transform": "rotate(" + bezelHeading + "deg)",
+                    "z-index": "0"
+                });
+
+                setCompassNeedle(m_SelectedTxBearing * 1 + bezelHeading);
+            }
+
+            function onCompassFail() {
+                $.mobile.changePage('compasserrordialog', {
+                    transition: 'none',
+                    reverse: false,
+                    changeHash: true
+                });
+            }
+
+            var changeClass = function (c1, c2) {
+                $(this).addClass(c2);
+            };  
+
+            function populateCompassTxDataPanel() {
+
+                m_SelectedTxBearing = nearest5Tx[m_SelectedTxIndex].bearing;
+
+                // reset lastHeading so that the compass is redrawn.
+                lastHeading = -1;
+                getCompassData();
+
+                var nameDiv = document.getElementById('txName');
+                var distanceDiv = document.getElementById('txDistance');
+                var channelDiv = document.getElementById('txChannels');
+                
+                var polarisation = nearest5Tx[m_SelectedTxIndex].pol;
+               
+                if (polarisation == 'V') {
+                    jQuery('#txPol').addClass('ui-pol-vert');
+                } else {
+                    jQuery('#txPol').addClass('ui-pol-horiz');
+                }
+                    
+                nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
+                distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distanceMiles).toFixed(1) + " miles";
+
+                var channelArray = nearest5Tx[m_SelectedTxIndex].channel;
+                var channelsString = '';
+
+                for (var channel in channelArray) {
+                    if (channelsString != '')
+                        channelsString += ',';
+
+                    channelsString += channelArray[channel].ch;
+                }
+
+                channelDiv.innerHTML = "Channels<br /><b>" + channelsString + "</b>";
+            }
+
+            // END COMPASS HANDLER
+            //*********************************************************************************************
+
+
+
+        </script>
+
+        <div data-role="header">
+            <h1>Antenna Aligner</h1>
+        </div>
+        <div data-role="content">             
+            <div class="datapanel">
+                <div class="datapanel-top">
+                    <div id="selectedTx">
+                        <div id="txName">
+                            <b>
+                                ?
+                            </b>
+                        </div>
+                        <table width="100%">
+                            <tr>
+                                <td><span class="data" id="txDistance"></span></td>                                
+                                <td><div class="data" id="txPol"></div> </td>
+                                <td style="text-align:right"><span class="data" id="txChannels"></span> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="datapanel-bottom" id="compassdatapanel">     
+                    <div id="compassdata"></div>           
+                    <div id="compass" class="view" width="200px" height="200px">
+                        <div class="container">
+                            <img class="needle" id="needle" src="images/direction-needle.png">
+                            <img class="compass" id="compassback" src="images/direction-indicator.png">
+                        </div>                        
+                    </div>
+                    <div style="padding-left:5px;padding-right:5px;font-size: 13px;">
+                            Keep away from any metallic objects as they may affect the compass.
+                        </div>
+                </div>     
+            </div>       
+        </div>
+    </div>    

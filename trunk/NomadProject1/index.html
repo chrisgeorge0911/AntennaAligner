@@ -15,13 +15,12 @@
 
     <script type="text/javascript" charset="utf-8">
 
-        var $j = jQuery;
+            var $j = jQuery;
         
         // This should hopefully lock the orientation...
         window.shouldRotateToOrientation = function (newOrientation) {
             return false;
         };
-
       
         var lastHeading = -1; 
         var lastPosition;
@@ -29,15 +28,6 @@
         var m_SelectedTxIndex = -1;
         var m_SelectedTxBearing;
         var c_DistanceLimit = 100; // in km
-        var m_OrientationDelta;
-
-        /**
-        * Delay for a number of milliseconds
-        */
-        function sleep(delayms) {
-            var start = new Date().getTime();
-            while (new Date().getTime() < start + delayms);
-        }
 
         function onDeviceReady() {
             
@@ -81,7 +71,7 @@
 
             $('ul').listview('refresh');
 
-            $.mobile.changePage('#locationError', {
+            $.mobile.changePage('gpserrordialog.html', {
                 transition: 'none',
                 reverse: false,
                 changeHash: true
@@ -147,7 +137,7 @@
                     $('ul').append($('<li/>', {    //here appendin `<li>`
                         'data-role': "list-divider"
                     }).append($('<a/>', {    //here appending `<a>` into `<li>`
-                        'href': '#compasspage',
+                        'href': 'compass.html',
                         'data-transition': 'none',
                         'onclick': 'selectTx(' + i + ')',
                         'html': buttonHtml
@@ -161,110 +151,6 @@
         }
         // End location methods
         // *******************************************************************************
-
-
-        // *******************************************************************************
-        // COMPASS HANDLER
-        function getCompassData() {
-
-            if (navigator.compass) {
-
-                var options = { filter: 1 };
-                if ( device.platform == 'Android')
-                    options = { frequency: 50 };
-                
-                if (eval("typeof navigator.compass.watchHeading == 'function'")) {
-                    watchID = navigator.compass.watchHeading(onCompassSuccess, onCompassFail, options);
-                }
-            }
-            else {
-                alert("compass not working");
-                onCompassSuccess(30);
-            }          
-        }
-
-        function setCompassNeedle(needleHeading) {
-            var needle = x$("#compass .needle");
-
-            needle.css({
-                "-webkit-transform": "rotate(" + needleHeading + "deg)",
-                "transform": "rotate(" + needleHeading + "deg)",
-                "-moz-transform": "rotate(" + needleHeading + "deg)",
-                "position": "absolute",
-                "z-index": "1"
-            });
-
-        }
-
-
-        function onCompassSuccess(heading) {
-
-            var magHeading = heading.magneticHeading;
-
-            if (lastHeading == magHeading) return;
-            lastHeading = magHeading;
-
-            var compass = x$("#compass .compass");
-
-            var bezelHeading = (lastHeading * -1); 
-
-            compass.css({
-                "-webkit-transform": "rotate(" + bezelHeading + "deg)",
-                "transform": "rotate(" + bezelHeading + "deg)",
-                "-moz-transform": "rotate(" + bezelHeading + "deg)",
-                "z-index": "0"
-            });
-            
-            setCompassNeedle(m_SelectedTxBearing*1 + bezelHeading);
-        }
-        
-        function onCompassFail() {
-            $.mobile.changePage('#compassError', {
-                transition: 'none',
-                reverse: false,
-                changeHash: true
-            });
-        }
-
-        function populateCompassTxDataPanel() {
-
-            m_SelectedTxBearing = nearest5Tx[m_SelectedTxIndex].bearing;
-
-            // reset lastHeading so that the compass is redrawn.
-            lastHeading = -1;
-            getCompassData();
-
-            var nameDiv = document.getElementById('txName');
-            var distanceDiv = document.getElementById('txDistance');
-            var channelDiv = document.getElementById('txChannels');
-            var polDiv = document.getElementById('txPol');
-
-            var polarisation = nearest5Tx[m_SelectedTxIndex].pol;
-
-            var polClass = "ui-pol-horiz";
-            if (polarisation == 'V')
-                polClass = "ui-pol-vert";
-
-            $j('#txPol').toggleClass(polClass);
-
-            nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
-            distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distanceMiles).toFixed(1) + " miles";
-
-            var channelArray = nearest5Tx[m_SelectedTxIndex].channel;
-            var channelsString = '';
-
-            for (var channel in channelArray) {
-                if ( channelsString != '')
-                    channelsString += ',';
-
-                channelsString += channelArray[channel].ch;
-            }
-
-            channelDiv.innerHTML = "Channels<br /><b>" + channelsString + "</b>";
-        }
-
-        // END COMPASS HANDLER
-        //*********************************************************************************************
 
         
         $(document).on("click", ".show-page-loading-msg", function () {
@@ -286,7 +172,7 @@
         <div data-role="header">
             <h1>Antenna Aligner</h1>         
             
-            <a href="#infomain" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             
+            <a href="about.html" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             
         </div>
         <div data-role="content"> 
             <div id="locationdata"></div>           
@@ -300,111 +186,9 @@
             
         </div>
     </div>
-            
-    <div data-role="page" id="compasspage" data-add-back-btn="true">
-        <script type="text/javascript">
-            $("#compasspage").live('pagebeforeshow', function () {
-                populateCompassTxDataPanel();
-            });
-
-            $("#compasspage").live('pageshow', function () {
-           
-            });
-        </script>
-
-        <div data-role="header">
-            <h1>Antenna Aligner</h1>
-        </div>
-        <div data-role="content">             
-            <div class="datapanel">
-                <div class="datapanel-top">
-                    <div id="selectedTx">
-                        <div id="txName">
-                            <b>
-                                ?
-                            </b>
-                        </div>
-                        <table width="100%">
-                            <tr>
-                                <td><span class="data" id="txDistance"></span></td>                                
-                                <td><div class="data" id="txPol"></div> </td>
-                                <td style="text-align:right"><span class="data" id="txChannels"></span> </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            
-                <div class="datapanel-bottom" id="compassdatapanel">     
-                    <div id="compassdata"></div>           
-                    <div id="compass" class="view" width="200px" height="200px">
-                        <div class="container">
-                            <img class="needle" id="needle" src="images/direction-needle.png">
-                            <img class="compass" id="compassback" src="images/direction-indicator.png">
-                        </div>                        
-                    </div>
-                    <div style="padding-left:5px;padding-right:5px;font-size: 13px;">
-                            Keep away from any metallic objects as they may affect the compass.
-                        </div>
-                </div>     
-            </div>       
-        </div>
-    </div>    
     
 
-    <div data-role="page" id="infomain" data-add-back-btn="true">
-        <div data-role="header">
-            <h1>Antenna Aligner</h1>
-        </div>
-        <div data-role="content">
-           
-            <img src="images/logo.png" />
-           
-            <div class="datapanel">
-                <div class="datapanel-top" style="padding-left: 10px;padding-right: 10px;padding-bottom:10px;">
-                    This app will help you to align your aerial to a Freeview transmitter.<br/><br/>
-                    <b>Instructions</b><br />
-                    Select a transmitter from the list, then use the compass view to point your aerial in the direction indicated by the yellow arrow.<br/><br/>
-                    
-                    <b>Important</b><br />
-                    Please note that the top rated transmitter may not necessarily be the best one for your location. Terrain and local structures are not taken into account and may severely affect which transmitter is best for you.
-                </div>
-                <div class="datapanel-bottom" style="padding-left: 4px;padding-right: 4px;padding-top:10px;padding-bottom:10px;"> 
-                    Problems or Suggestions?<br />
-                    email <a href="mailto:aligner@chrisgeorge.org.uk">aligner@chrisgeorge.org.uk</a>
-                </div>
-            </div>
-           
-            <div class="datapanel" style="margin-top:15px;">
-                <div class="datapanel-top" style="text-align:right;padding-left: 8px;padding-right: 8px;">
-                    <table width="100%"><tr><td align="left">1.1.0</td><td align="right">Powered by <a href="http:\\www.vsnomad.com">Nomad</a></td></tr></table>                    
-                </div>
-                <div class="datapanel-bottom" id="legalstuff" style="text-align:right;padding-left: 8px;padding-right: 8px;">
-                    Antenna Aligner &copy; 2012 Chris George
-                </div>
-            </div>
-        </div>
-    </div>
     
-    <!-- GPS Error dialog -->
-    <div data-role="dialog" id="locationError" data-transition="none">
-        <div data-role="header">
-            <h1>GPS Error</h1>
-        </div>
-        <div data-role="content">
-            <p>The GPS system is not enabled.</p>
-            <p>To use Antenna Aligner, please enable the GPS in your device's settings.</p>        
-        </div>
-    </div>
-    
-    <!-- Compass Error dialog -->
-    <div data-role="dialog" id="compassError" data-transition="none">
-        <div data-role="header">
-            <h1>Compass Error</h1>
-        </div>
-        <div data-role="content">
-            <p>There was a problem accessing the compass on your device.</p>
-            <p>Your device must have a built-in compass. If it does not (eg iPod Touch) the compass part if this app will not work.</p>        
-        </div>
-    </div>
+   
 </body>
 </html>

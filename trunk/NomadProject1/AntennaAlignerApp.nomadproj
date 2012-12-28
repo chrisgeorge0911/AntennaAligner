@@ -14,7 +14,7 @@
     <ProvisioningProfilePath>ProvisioningProfiles\AAProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
-    <LastBuildVersion>1.1.0.60</LastBuildVersion>
+    <LastBuildVersion>1.1.0.61</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,7 +23,16 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="about.html">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="compass.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="compasserrordialog.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="gpserrordialog.html">
       <SubType>Content</SubType>
     </Content>
     <Content Include="icons\android\icon-hdpi.png">
