@@ -1,13 +1,13 @@
 Cairn Hill,Longford,47,41,44,51,H,B,53.8069,-7.7161,160
-Clermont Carn,Louth,53,57,60,?,V,C/D,54.0784,-6.3237,160
+Clermont Carn,Louth,52,57,60,?,V,C/D,54.0784,-6.3237,160
 Dungarvan,Waterford,55,59,?,?,H,C/D,52.0712,-7.7345,10
 Holywell Hill,Donegal,30,25,32,35,H,A,54.9989,-7.4014,20
 Kippure,Wicklow,54,58,?,?,H,C/D,53.178,-6.332,63
 Maghera,Clare,48,55,?,?,H,C/D,52.9684,-8.7184,160
-Mount Leinster,Carlow,45,39,42,49,H,B,52.6166,-6.7833,160
+Mount Leinster,Carlow,23,39,42,49,H,B,52.6166,-6.7833,160
 Mullaghanish,Cork,21,24,28,25,H,A,51.9912,-9.1444,200
 Spur Hill,Cork,45,49,?,?,H,B,51.856,-8.5159,50
-Three Rock,Dublin,54,58,?,?,H,C/D,53.2445,-6.2377,63
+Three Rock,Dublin,30,58,?,?,H,C/D,53.2445,-6.2377,63
 Truskmore,Sligo,53,57,52,56,H,C/D,54.3736,-8.3831,160
 Woodcock Hill,Clare (Limerick),47,44,41,51,H,B,52.7199,-8.692,10
 Achill,Mayo,47,?,?,?,V,B/C,53.5726,-10.0135,2
@@ -19,13 +19,13 @@ Cahir,Tipperary S.,28,?,?,?,V,A,52.2312,-7.57,0.06
 Casla,Galway,45,?,?,?,V,B/C,53.1722,-9.3335,2.5
 Castlebar,Mayo,22,25,28,32,H,A,53.9252,-9.3732,2
 Castletownbere,Kerry,55,?,?,?,V,C/D,51.3823,-9.2224,4
-Clifden,Galway,23,?,?,?,V,A,53.3024,-9.5619,5
+Clifden,Galway,26,?,?,?,V,A,53.3024,-9.5619,5
 Clonakilty,Cork,48,?,?,?,V,B/C,51.3645,-8.5553,0.05
 Clonmel,Waterford,55,?,?,?,H,B/C,52.324,7.6767,0.5
 Cnoc an Óir,Kerry,47,?,?,?,V,B/C,52.5235,-9.605,1.5
 Collins Barracks,Cork,50,?,?,?,V,C/D,52.15,-7.4,0.08
 Crosshaven,Cork,46,?,?,?,V,C/D,51.7921,-8.295,0.5
-Dooncarton,Mayo,22,?,?,?,H&V,A,54.2727,-9.8272,0.5
+Dooncarton,Mayo,27,?,?,?,H&V,A,54.2727,-9.8272,0.5
 Fanad,Donegal,55,?,?,?,V,C/D,55.1338,-7.3949,1.5
 Fermoy,Cork,52,?,?,?,V,C/D,52.0837,-8.165,0.05
 Ferrypoint,Waterford,47,?,?,?,V,B,51.5708,-7.4937,0.05
@@ -35,7 +35,7 @@ Glanmire,Cork,47,?,?,?,H,B,51.5447,-8.2312,0.2
 Glencolumcille,Donegal,45,?,?,?,H,B,54.4334,-8.425,0.2
 Gorey,Wexford,55,?,?,?,H,C/D,53.6694,-5.5789,0.01
 Greystones,Wicklow,52,56,?,?,V,C/D,53.1444,-6.0614,0.5
-Kilduff,Tipperary N.,50,?,?,?,H,C/D,53.9332,-6.966,25
+Kilduff,Tipperary N.,52,?,?,?,H,C/D,53.9332,-6.966,25
 Kilkeaveragh,Kerry,47,?,?,?,V,B,51.5202,-10.2,8
 Kinsale,Cork,30,?,?,?,V,A,51.4143,-8.2849,0.03
 Knockmoyle,Kerry,52,56,60,?,V,C/D,52.2125,-9.7116,1
@@ -48,7 +48,7 @@ Mitchelstown,Cork,40,?,?,?,V,B,52.3074,-8.2903,0.5
 Monaghan,Monaghan,55,?,?,?,H,C/D,54.1107,-7.0143,2
 Moville,Donegal,45,?,?,?,H,B,55.1316,-7.0104,2
 Suir Valley,Waterford,52,56,60,?,V,C/D,52.3738,-7.2628,2
-Tonabrocky,Galway,23,26,29,33,V,A,53.3051,-9.1289,0.25
+Tonabrocky,Galway,26,26,29,33,V,A,53.3051,-9.1289,0.25
 Clonmany,Donegal,49,,,,V,,55.26031,-7.42399,0.02
 Dingle,Kerry,30,,,,V,,52.12258669,-10.31019596,0.5
 Drimoleague,Cork,42,,,,V,,51.632666,-9.259557,0.05
