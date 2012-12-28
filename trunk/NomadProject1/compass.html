@@ -46,13 +46,10 @@
             function onCompassSuccess(heading) {
 
                 var magHeading = heading.magneticHeading;
-
-                if (lastHeading == magHeading) return;
-                lastHeading = magHeading;
-
+                
                 var compass = x$("#compass .compass");
 
-                var bezelHeading = (lastHeading * -1);
+                var bezelHeading = (magHeading * -1);
 
                 compass.css({
                     "-webkit-transform": "rotate(" + bezelHeading + "deg)",
@@ -79,9 +76,7 @@
             function populateCompassTxDataPanel() {
 
                 m_SelectedTxBearing = nearest5Tx[m_SelectedTxIndex].bearing;
-
-                // reset lastHeading so that the compass is redrawn.
-                lastHeading = -1;
+               
                 getCompassData();
 
                 var nameDiv = document.getElementById('txName');
