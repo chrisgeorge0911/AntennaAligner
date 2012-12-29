@@ -1,0 +1,688 @@
+[33mcommit 6c75536c706e085b82274eb5407b6371305a50e9[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Tue Dec 18 23:36:34 2012 +0000
+
+    Updated channel assignments
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@79 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 28876c4145122e501f8303aa35796b9b86752526[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Tue Dec 18 23:19:14 2012 +0000
+
+    Another attempt at fixing the ipad orientation bug
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@78 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 863ef6446425725b91fa637726b203c603c45711[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed Dec 12 08:39:26 2012 +0000
+
+    use m_SelectedIndex not i when getting the polarisation data
+    
+    git-svn-id: svn://localhost/antennaaligner@77 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 8e4ea4772bc518a2b67e0fd2a2bb08869d6da882[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Tue Dec 4 21:12:23 2012 +0000
+
+    Added polarisation info to Compass page
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@76 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 4681bfae3d2503ea88a017f18d9993f3f1706618[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 21:58:40 2012 +0000
+
+    New direction needle
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@75 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 6ecc81bce066a0679c82cbba6fdb77471d748757[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 20:02:08 2012 +0000
+
+    New direction needle image
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@74 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 85bbab81a1027c10623b68bdff9fe15bd5d99e5c[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 19:16:04 2012 +0000
+
+    UK Freeview Data Update
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@73 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 345539c26adedb63233f16a97ff6d960f5ff3edb[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 16:03:40 2012 +0000
+
+    More R# fixups
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@72 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 74850cf8cd21e9cccd0aa394d67f7d349ed26fd3[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 16:02:53 2012 +0000
+
+    More R# fixups
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@71 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 1e44dfc107e7d3887cba3d4bc69e91c3f65bfb9d[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 16:01:00 2012 +0000
+
+    R# fixups
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@70 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 00885dea50a256a02008b0191f356e863e7851c9[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 15:56:07 2012 +0000
+
+    Display all channels.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@69 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 7010808631cad4ca7ad0a75a8d30fb010770d925[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Dec 1 15:34:07 2012 +0000
+
+    polarization images
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@68 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 59259c754bcc8c8e04691e8a1592b4a90e7f2fe5[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri Nov 30 22:54:20 2012 +0000
+
+    Added polarization
+    
+    git-svn-id: svn://localhost/antennaaligner@67 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit abfecc2399fbbe44fb8f3e70d9944b3b94abd02f[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Oct 29 19:41:16 2012 +0000
+
+    Updated uk and roi dtt data
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@66 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit adc835ffa2c7a804fcc755efe6625d48b9167bbe[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Oct 29 19:40:09 2012 +0000
+
+    Updated uk and roi dtt data
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@65 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 4bf082f3dee3921abaafd3eaf786a4a1fbec8003[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Sep 29 18:22:51 2012 +0000
+
+    Compass onError callback now loads an error dialog similar to the gps one. Also did some renaming and reorging of the code.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@64 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit c21f529109612dd1394989e28b46689337ee73cc[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Sep 29 17:56:47 2012 +0000
+
+    Possible (untested) fix to the ipad orientation bug.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@63 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit cecdb4d190eba4f8f0353302f2b135466c08c86b[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu Aug 30 19:51:10 2012 +0000
+
+    Incremented version number to 1.0.3
+    
+    git-svn-id: svn://localhost/antennaaligner@62 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 5f8776cfd91a151cddcd1af152a1ca453ec81e52[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 30 21:28:10 2012 +0000
+
+    Incremented revision to 1.0.3
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@61 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 0b4140cb35a529f72104b885d381129918b4ebbc[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 30 21:26:03 2012 +0000
+
+    Added data for ireland
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@60 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 035f4f92569d1dc79514587f805cf5934f33c816[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 30 21:25:51 2012 +0000
+
+    Added Ireland data + data parser.
+    
+    Refactored a load of code too.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@59 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 96d6052f3b7142d083d3b8d337b945d688e339a7[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu Jul 12 20:43:55 2012 +0000
+
+    Use up to date signature for ChangePage, and set the dialog transition to none.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@58 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 59ea944b81ab2d6226bec8d6ba68f2ef613ed22b[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed Jul 11 22:38:12 2012 +0000
+
+    Improved error handling a bit, and now show the bearing to North in the tx list.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@57 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 656a9f4778f90f1161cb4da02271ddce0a17fa3c[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Jul 7 23:05:10 2012 +0000
+
+    Updated help info
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@56 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 3be53dfa651146916d29c0c4d34fb7be4949cc8a[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Jul 7 22:38:19 2012 +0000
+
+    R# fixups
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@55 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 3f428d512f8d32940ce73fb74a516f2cb4dd0539[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Jul 7 21:59:18 2012 +0000
+
+    Updated transmitter information in app
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@54 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit d64399fc08109727a193c390dfc1808a0897fc51[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Jul 7 21:55:49 2012 +0000
+
+    fixed up formatting of javascript output routine
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@53 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit fbfaa20193c7c680c6f4767d8e0642e102d7e890[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Jul 7 21:54:16 2012 +0000
+
+    removed unnecessary file
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@52 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit eb0c20d19ba29e0ee612d727607164e61d182242[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat Jul 7 21:53:46 2012 +0000
+
+    Updated transmitter data
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@51 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 10d399bb65e38e102fd1194c4f1246036dab99cf[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu Jul 5 22:07:39 2012 +0000
+
+    Set the high-accuracy geolocation option. This might fix the android no-wifi problem.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@50 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 784a7a0b751eb706aee504f44f93a0e8e0510953[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed Jul 4 20:56:58 2012 +0000
+
+    Tests for getDistanceBetween
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@49 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 2c4f23d851feba1aaacdefbe2720cbd5a90bfd33[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed Jul 4 20:56:39 2012 +0000
+
+    Some code tidy
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@48 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 24332b784b996a54b54e2758d0362ae4374dc965[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Tue Jul 3 22:01:21 2012 +0000
+
+    Added some more tests
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@47 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 005c3b8c7f72c7c2e1409bf3908985063610f7d9[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 2 22:27:13 2012 +0000
+
+    layout fix
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@46 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 5a36044b37d309bd21e00c68ebe77974c32acc82[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 2 22:19:02 2012 +0000
+
+    Added tests
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@45 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 04348ed77296009a845dea850bff1a64e29f27c2[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 2 22:18:36 2012 +0000
+
+    Refactored and moved some js code into the signal.js library
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@44 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 00f2f4f9a76f945f399f1e092daaf2fad35fc474[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 2 22:15:32 2012 +0000
+
+    removed webkit backface "fix"
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@43 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit e9d167efc6f05dc5d6d1922e8afb984c325f4e30[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 2 19:15:35 2012 +0000
+
+    Added android icons, and a unit test file
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@42 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 1ba2921e2a8f3d06a70ce19a429d11fcbbaffb05[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Jul 2 19:13:57 2012 +0000
+
+    Tidying up
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@41 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit ce2efe4353dbeef7e20e8d9b70b5cde55c7a4efd[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri Jun 29 23:04:59 2012 +0000
+
+    Added splash screen images and icons for Android platform
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@40 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit e8f10013a043e766400a4d114a184ca1584be42e[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri Jun 29 22:19:50 2012 +0000
+
+    Decreased the commpass poll time from 100ms to 50ms
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@39 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 4d90a7814c5407fcb77a8960ad2b9d4c6089e811[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri Jun 29 22:19:19 2012 +0000
+
+    Added extra gradient line for older android browsers
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@38 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 342b6b5d7424bdce337b69d1b04c7bf3353dae5c[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri Jun 29 21:55:32 2012 +0000
+
+    Fixed up getCompassData to work with Android
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@37 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit c6e1dc01cffc29883db833520a01dce387ad62f7[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu Jun 28 22:06:52 2012 +0000
+
+    Reduced list of transmitters to those <100km away. Also display distance in miles.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@36 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit ecf5c97a37353a1b4d7b15135629a63d80db29bc[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu Jun 28 22:04:08 2012 +0000
+
+    Created custom dialog for the GPS error condition.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@35 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit f5141b31155aeb097c9e2c98ba1918c6ff5a4fc1[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Jun 10 21:35:59 2012 +0000
+
+    Created getListOfTxBySignalStrength in signal.js and moved code out of index.html. Also added rudimentary location services error message.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@34 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 10e0583a87e0421a69d2bd8fc3df1e0e8b1b0ae4[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Jun 10 21:29:04 2012 +0000
+
+    Updated data with ASL data
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@33 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 56b43b5ea4c8ff1e83a59b1273dc34dd4fe46d4b[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Jun 10 21:26:12 2012 +0000
+
+    Parse and add the transmitter height (asl) to the data file
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@32 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 49854e855ce58f7ff44294c9ae4d3e8a3df7a503[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Tue Jun 5 19:20:20 2012 +0000
+
+    Changed to distribution certificate, and added missing ipad icons and splash screens.
+    
+    
+    git-svn-id: svn://localhost/antennaaligner@31 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit ed912c5d8a2826ba65051f2a0653f8683e6f27ca[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat May 26 21:01:17 2012 +0000
+
+    updated version on the project to 1.0.1
+    
+    git-svn-id: svn://localhost/antennaaligner@30 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit eb124c7bbf073051e89f80b46fa8cba37f49875e[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sat May 26 21:00:47 2012 +0000
+
+    New std iphone splash with nomad icon.
+    Slight re-wording of info page.
+    
+    git-svn-id: svn://localhost/antennaaligner@29 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 0a3de508e055a482800d4f716c9a27e6656b1dff[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 23 22:18:47 2012 +0000
+
+    Using the new certificate and provisioning profile
+    Did some minor layout changes
+    
+    git-svn-id: svn://localhost/antennaaligner@28 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 1e9e13bd96c7ac5a115a22ef5542f14f6dc33bba[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 23 18:23:24 2012 +0000
+
+    Hopefully reduced the compass heading delta trigger to 0.5 degrees
+    
+    git-svn-id: svn://localhost/antennaaligner@27 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 07082fb2b57275e1fc12a602b644344ebc4eb3ac[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 23 18:22:31 2012 +0000
+
+    Added text above list
+    
+    git-svn-id: svn://localhost/antennaaligner@26 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit abb94886f7c6eb377c756a2229357ededb96a7f2[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 23 18:16:51 2012 +0000
+
+    Reverted ondeviceready listener
+    
+    git-svn-id: svn://localhost/antennaaligner@25 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit eed4bd991dc79d7acb11d408b6a8909a33143dc5[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri May 18 22:00:14 2012 +0000
+
+    Fixed OnDeviceReady.
+    Also added a Please Wait <li> in the tx list.
+    
+    git-svn-id: svn://localhost/antennaaligner@24 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 6d5afb43b8ccaa24757d07a7d37fd940aacd88d3[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri May 18 20:59:54 2012 +0000
+
+    Added second part to android product id
+    
+    git-svn-id: svn://localhost/antennaaligner@23 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 80a6e3f4c2548d2ea86bc3dbfbcafd57a8988bd9[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri May 18 20:59:32 2012 +0000
+
+    Changed page title to product name
+    
+    git-svn-id: svn://localhost/antennaaligner@22 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 748e767126ba71b68026113efafe3e42bc495396[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 16 21:55:46 2012 +0000
+
+    move some stuff around and fixed the recalculate spinny.
+    
+    git-svn-id: svn://localhost/antennaaligner@21 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit db5bc43af624af6306c0277f0d4d0899a22ff84b[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Tue May 15 19:53:51 2012 +0000
+
+    Removed old libraries
+    Upgraded project to cordova (phonegap 1.7)
+    Added icons & splash screen (iphone & retina)
+    Some general tidying
+    
+    git-svn-id: svn://localhost/antennaaligner@20 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 8df70e72d7508b976aa535819df88ec3f59a137e[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 9 22:32:01 2012 +0000
+
+    testflight debug edit
+    
+    git-svn-id: svn://localhost/antennaaligner@19 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 73170189f487ad67541f2dd47f729cc8f753022e[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 9 08:14:21 2012 +0000
+
+    Use jquery mobile css 1.1.0 not 1.0.1 :-)
+    Some other minor changes for the spinny
+    
+    git-svn-id: svn://localhost/antennaaligner@18 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 417ab1e3047819917d9249097bb54b20c936bed4[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Tue May 8 23:04:40 2012 +0000
+
+    Some usability changes
+    
+    git-svn-id: svn://localhost/antennaaligner@17 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 1c0eae3cd9951e42158353e311cd3be6ae365601[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri May 4 22:33:19 2012 +0000
+
+    Added status icons
+    
+    git-svn-id: svn://localhost/antennaaligner@16 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit ed456c7c4e9c9c0adbf83191130c3e5a1e5ea580[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Fri May 4 15:37:17 2012 +0000
+
+    More layout changes, this time on the main list.
+    
+    git-svn-id: svn://localhost/antennaaligner@15 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit d81b765b78d2b96a89addc929dcfb841f6eeca78[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu May 3 23:02:14 2012 +0000
+
+    lots of layout stuff
+    
+    git-svn-id: svn://localhost/antennaaligner@14 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 1c897bb4c51b91168a1a730bd53b53ea05d4e330[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu May 3 14:54:54 2012 +0000
+
+    updated styles for datapanel
+    
+    git-svn-id: svn://localhost/antennaaligner@13 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 013a91cbc0897183d19262e64d104411a2507015[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu May 3 14:54:29 2012 +0000
+
+    getCompassData now handles the case when watchHeadingFilter does not exist (ie in Ripple)
+    
+    git-svn-id: svn://localhost/antennaaligner@12 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 8e3d92cab3c9b22214e00d4fb0dcde20c5555489[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Thu May 3 07:38:58 2012 +0000
+
+    Fixed Headers
+    
+    git-svn-id: svn://localhost/antennaaligner@11 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 5a94a84e9d74906bb56da777a321fe473d63a02c[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 2 22:16:59 2012 +0000
+
+    Added background colour.
+    Trying to put background on compass data div (not yet working)
+    
+    git-svn-id: svn://localhost/antennaaligner@10 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit e59bd67206c9cf365bd9d3e23fa9f034e2365326[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 2 12:48:16 2012 +0000
+
+    Added jquery 1.7.1 and mobile 1.1.0.
+    Also added good versions of the images. (original pngs were corrupted)
+    
+    git-svn-id: svn://localhost/antennaaligner@9 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 7ec246f117e48cd90a3f82e072c79e00ecb06bf9[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 2 07:17:20 2012 +0000
+
+    moved pageinit to compasspage div, and changed it to pagebeforeshow
+    
+    git-svn-id: svn://localhost/antennaaligner@8 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 49dd8fb70f995ccd68dd4d09990be10ec32de636[m
+Author: chris.george <chris.george@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Wed May 2 06:45:13 2012 +0000
+
+    Tidying up
+    
+    git-svn-id: svn://localhost/antennaaligner@7 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit be55a9cb67ead9c680664a7029d06c401779302d[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Mon Apr 30 21:58:47 2012 +0000
+
+    Move populateTxDataPanel to the pageinit event
+    
+    git-svn-id: svn://localhost/antennaaligner@6 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 9eea6da04fc63f51f34e0473af8243604b33ba56[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Apr 29 22:54:59 2012 +0000
+
+    partial rewrite to separate list and compass page into 'page' data-role.
+    
+    git-svn-id: svn://localhost/antennaaligner@5 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 01995e3fc8c9ea5ac5619eb897ae210b67215a9b[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Apr 29 21:41:42 2012 +0000
+
+    Committing TxDataMunger
+    
+    git-svn-id: svn://localhost/antennaaligner@4 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 94fd2409af061a3584cfcef7e01eb19ad06dc517[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Apr 29 21:41:12 2012 +0000
+
+    Committed AntennaAlignerApp
+    
+    git-svn-id: svn://localhost/antennaaligner@3 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit 359e5c6a11200aff07c909a131abb667efd1694d[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Apr 29 21:40:42 2012 +0000
+
+    Committed DotNetCoords
+    
+    git-svn-id: svn://localhost/antennaaligner@2 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
+
+[33mcommit ff89a886b8ded53ffe97c33f52eb778a7091d6ef[m
+Author: Chris <Chris@34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45>
+Date:   Sun Apr 29 21:38:46 2012 +0000
+
+    Default project structure created.
+    
+    git-svn-id: svn://localhost/antennaaligner@1 34b55c8c-a26e-5a4a-9a6d-ceb4c9c93e45
