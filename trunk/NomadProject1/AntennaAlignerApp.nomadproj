@@ -14,7 +14,7 @@
     <ProvisioningProfilePath>ProvisioningProfiles\AAProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
-    <LastBuildVersion>1.1.0.63</LastBuildVersion>
+    <LastBuildVersion>1.1.0.64</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
