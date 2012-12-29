@@ -1,0 +1,27 @@
+﻿
+
+.ui-body-c, .ui-overlay-c {
+color: #333;
+text-shadow: none;
+}
+
+
+.ui-corner-top
+{
+    -moz-border-radius-topleft: .3em;
+    -webkit-border-top-left-radius: .3em;
+    border-top-left-radius: .3em;
+    -moz-border-radius-topright: .3em;
+    -webkit-border-top-right-radius: .3em;
+    border-top-right-radius: .3em;
+}
+
+.ui-corner-bottom
+{
+    -moz-border-radius-bottomleft: .3em;
+    -webkit-border-bottom-left-radius: .3em;
+    border-bottom-left-radius: .3em;
+    -moz-border-radius-bottomright: .3em;
+    -webkit-border-bottom-right-radius: .3em;
+    border-bottom-right-radius: .3em;
+}

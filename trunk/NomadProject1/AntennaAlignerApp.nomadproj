@@ -14,7 +14,7 @@
     <ProvisioningProfilePath>ProvisioningProfiles\AAProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
-    <LastBuildVersion>1.1.0.62</LastBuildVersion>
+    <LastBuildVersion>1.1.0.63</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -178,6 +178,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\images\statusicons.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\jquery-overrides.css">
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\jquery.mobile-1.1.0.min.css">
