@@ -169,7 +169,7 @@
 
             if (navigator.compass) {
 
-                var options = { filter: 0.2 };
+                var options = { filter: 1 };
                 if ( device.platform == 'Android')
                     options = { frequency: 50 };
                 
@@ -181,6 +181,19 @@
                 alert("compass not working");
                 onCompassSuccess(30);
             }          
+        }
+
+        function setCompassNeedle(needleHeading) {
+            var needle = x$("#compass .needle");
+
+            needle.css({
+                "-webkit-transform": "rotate(" + needleHeading + "deg)",
+                "transform": "rotate(" + needleHeading + "deg)",
+                "-moz-transform": "rotate(" + needleHeading + "deg)",
+                "position": "absolute",
+                "z-index": "1"
+            });
+
         }
 
 
@@ -201,20 +214,8 @@
                 "-moz-transform": "rotate(" + bezelHeading + "deg)",
                 "z-index": "0"
             });
-
-            if (m_SelectedTxIndex > -1) {
-
-                var relativeHeading = parseFloat(m_SelectedTxBearing) + parseFloat(bezelHeading);
-                var needle = x$("#compass .needle");
-
-                needle.css({
-                    "-webkit-transform": "rotate(" + relativeHeading + "deg)",
-                    "transform": "rotate(" + relativeHeading + "deg)",
-                    "-moz-transform": "rotate(" + relativeHeading + "deg)",
-                    "position": "absolute",
-                    "z-index": "1"
-                });
-            }
+            
+            setCompassNeedle(m_SelectedTxBearing*1 + bezelHeading);
         }
         
         function onCompassFail() {
@@ -270,9 +271,7 @@
             var $this = $(this),
                 theme = $this.jqmData("theme") || $.mobile.loadingMessageTheme;
             $.mobile.showPageLoadingMsg(theme, "recalculating", false);
-
-            //setTimeout(function () { $.mobile.hidePageLoadingMsg(); }, 2000);
-
+            
             getLocationData();
         })
             .on("click", ".hide-page-loading-msg", function () {
@@ -337,15 +336,15 @@
             
                 <div class="datapanel-bottom" id="compassdatapanel">     
                     <div id="compassdata"></div>           
-                    <div id="compass" class="view">
+                    <div id="compass" class="view" width="200px" height="200px">
                         <div class="container">
                             <img class="needle" id="needle" src="images/direction-needle.png">
                             <img class="compass" id="compassback" src="images/direction-indicator.png">
-                        </div>
-                        <div style="padding-left:5px;padding-right:5px;font-size: 13px;">
+                        </div>                        
+                    </div>
+                    <div style="padding-left:5px;padding-right:5px;font-size: 13px;">
                             Keep away from any metallic objects as they may affect the compass.
                         </div>
-                    </div>
                 </div>     
             </div>       
         </div>
