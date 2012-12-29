@@ -6,7 +6,7 @@
     <ProjectGuid>{c11b75d7-a221-4a1b-b666-07ef3e96c543}</ProjectGuid>
     <CompiledOutputPath>distrib\</CompiledOutputPath>
     <OutputPath>bin\$(Configuration)</OutputPath>
-    <Version>1.1.0.*</Version>
+    <Version>2.0.0.*</Version>
     <Name>AntennaAlignerApp</Name>
     <RootNamespace>NomadProject1</RootNamespace>
     <BundleID>uk.co.kibahsoftware.antennaaligner</BundleID>
