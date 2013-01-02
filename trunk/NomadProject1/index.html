@@ -16,13 +16,13 @@
 
     <script type="text/javascript" charset="utf-8">
 
-            var $j = jQuery;
-        
+        var $j = jQuery;
+
         // This should hopefully lock the orientation...
         window.shouldRotateToOrientation = function (newOrientation) {
             return false;
         };
-      
+
         var lastPosition;
         var nearest5Tx;
         var m_SelectedTxIndex = -1;
@@ -30,7 +30,7 @@
         var c_DistanceLimit = 100; // in km
 
         function onDeviceReady() {
-            
+
             getLocationData();
         }
 
@@ -40,12 +40,12 @@
         function getLocationData() {
             if (navigator.geolocation) {
                 var geolocationOptions = { enableHighAccuracy: true };
-            
+
                 navigator.geolocation.getCurrentPosition(onLocationSuccess, onLocationError, geolocationOptions);
             }
             else {
                 onLocationError("no geolocation");
-            }           
+            }
         }
 
         function onLocationSuccess(position) {
@@ -63,13 +63,15 @@
             $.mobile.hidePageLoadingMsg();
 
             // Show that the GPS is disabled in the transmitter list.
-            $('ul').empty();
-            $('ul').append($('<li/>', {
+            $('.txlist').empty();
+            $('.txlist').append($('<li/>', {
                 'data-role': "list-divider",
                 'html': "GPS Disabled"
             }));
 
-            $('ul').listview('refresh');
+            showRecalculateButton();
+
+            $('.txlist').listview('refresh');
 
             $.mobile.changePage('gpserrordialog.html', {
                 transition: 'none',
@@ -89,11 +91,11 @@
 
         function calculateNearestTx(position) {
 
-            $('ul').empty();
+            $('.txlist').empty();
 
             nearest5Tx = getNearestTx(position);
 
-            $('ul').empty();
+            $('.txlist').empty();
 
             for (var i = 0; i < 5; i++) {
 
@@ -103,7 +105,7 @@
                     distance = distance.toFixed(1);
 
                     var signalStrength = nearest5Tx[i].signalStrength;
-                    
+
                     var iconClass = "ui-icon-good";
                     if (signalStrength < 66) {
                         iconClass = 'ui-icon-poor';
@@ -114,7 +116,7 @@
                     var polarisation = nearest5Tx[i].pol;
 
                     var polClass = "ui-pol-horiz";
-                    if ( polarisation == 'V')
+                    if (polarisation == 'V')
                         polClass = "ui-pol-vert";
 
                     var tempfloat = parseFloat(getBearing(lastPosition, nearest5Tx[i].position)); // parse as float
@@ -134,7 +136,7 @@
                     buttonHtml += '<td width="60px" align="center"><div class="' + iconClass + '"></div></td>';
                     buttonHtml += '</tr></table>';
 
-                    $('ul').append($('<li/>', {    //here appendin `<li>`
+                    $('.txlist').append($('<li/>', {    //here appendin `<li>`
                         'data-role': "list-divider"
                     }).append($('<a/>', {    //here appending `<a>` into `<li>`
                         'href': 'compass.html',
@@ -143,52 +145,111 @@
                         'html': buttonHtml
                     })));
 
-                    $('ul').listview('refresh');
+                    $('.txlist').listview('refresh');
                 }
             }
 
+            showRecalculateButton();
+
             $("#txoptions").show();
         }
+
+        function showRecalculateButton() {
+
+            var recalcHtml = '<table width="100%"><tr>';
+            recalcHtml += '<td class="txListName" align="center" >Recalculate</td>';
+            recalcHtml += '</tr></table>';
+
+            $('.txlist').append($('<li/>', {    //here appendin `<li>`
+                'data-role': 'list-divider'
+            }).append($('<a/>', {    //here appending `<a>` into `<li>`
+                'data-transition': 'none',
+                'html': recalcHtml,
+                'onclick': 'getLocationData()'
+            })));
+            $('.txlist').listview('refresh');
+
+        }
+
         // End location methods
         // *******************************************************************************
 
-        
+        var windowWidth = $(window).width();
+        var menuWidth = 200;
+
+        $(function () {
+
+            $('#menu').css({ 'left': windowWidth - menuWidth + 'px' });
+
+            $('#menubutton').toggle(
+                function () { openMenu(); },
+                function () { closeMenu(); }
+            );
+        });
+
+        function openMenu() {
+            $('#page1').animate({ left: -1 * menuWidth }, 'fast', function () {
+                $('#menubutton').html('Close');
+            });
+        }
+
+        function closeMenu() {
+            $('#page1').animate({ left: 0 }, 'fast', function () {
+                $('#menubutton').html('Menu');
+            });
+        }
+
+
         $(document).on("click", ".show-page-loading-msg", function () {
             var $this = $(this),
                 theme = $this.jqmData("theme") || $.mobile.loadingMessageTheme;
             $.mobile.showPageLoadingMsg(theme, "recalculating", false);
-            
+
             getLocationData();
         })
             .on("click", ".hide-page-loading-msg", function () {
                 $.mobile.hidePageLoadingMsg();
             });
-        
+
+        $('[data-role=page]').live('pageshow', function (event) {
+            if (event.target.id.indexOf('page1') == 0) {
+                closeMenu();
+            }
+        });
+
         document.addEventListener("deviceready", onDeviceReady, false);
     </script>
 </head>
 <body>
     <div data-role="page" id="page1">         
         <div data-role="header">
+
             <h1>Antenna Aligner</h1>         
             
-            <a href="about.html" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             
+            <!-- <a href="about.html" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             -->
+            
+            <div id="menubutton" data-icon="info" class="ui-btn-right" data-iconpos="notext">
+                Menu
+            </div>
         </div>
-        <div data-role="content"> 
+        <div data-role="content" id="mainpage">
+            
             <div id="locationdata"></div>           
             <div id="txoptions" data-role="fieldcontain">
                 <div style="font-weight:bold;padding-bottom:6px">Select a transmitter from the list...</div>                
-                <ul data-role="listview" data-divider-theme="d" data-inset="true">                
+                <ul data-role="listview" data-divider-theme="d" data-inset="true" class="txlist">                
                     <li>Please wait...</li>
-                </ul>             
-                <a data-role="button" class="show-page-loading-msg">Recalculate</a>
-            </div>
-            
+                </ul>
+            </div>            
         </div>
+        
     </div>
+    <div id="menu">
+            <ul>
+                <li><a href="about.html">Help</a></li>
+                <li><a href="#">Menu Item 2</a></li>
+            </ul>
+        </div>
     
-
-    
-   
 </body>
 </html>

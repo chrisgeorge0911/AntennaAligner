@@ -174,3 +174,45 @@ div.header
     top         : 15% !important;
 }​
 
+
+.txlist li{
+    border: none;
+}
+
+.txlist li:last-of-type{
+     border: none;
+}
+
+
+
+
+#menubutton {
+    cursor:pointer;
+}
+
+#menu, #right {
+    display:inline;
+}
+
+#menu li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+
+#menu {
+    float:right;
+    width: 350px;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    
+    background-color: #444;
+}
+
+#menu li {
+    background-color:#444;
+    border-bottom: 1px solid #888;
+}​

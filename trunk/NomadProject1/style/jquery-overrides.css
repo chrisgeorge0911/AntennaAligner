@@ -1,27 +1,62 @@
-﻿
+﻿.ui-mobile, .ui-mobile .ui-page {
+    z-index: 5;
+    
+    position: fixed;
+    width: 100%;
 
-.ui-body-c, .ui-overlay-c {
-color: #333;
-text-shadow: none;
+    -webkit-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+        moz-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+          o-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+            box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
+.ui-body-c, .ui-overlay-c
+{
+    color: #333;
+    text-shadow: none;
+}
+
+.ui-content
+{
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+    padding: 0;
+    z-index: 5;
+    display: inline;
+    left: 0px;
+}
 
 .ui-corner-top
 {
-    -moz-border-radius-topleft: .3em;
-    -webkit-border-top-left-radius: .3em;
-    border-top-left-radius: .3em;
-    -moz-border-radius-topright: .3em;
-    -webkit-border-top-right-radius: .3em;
-    border-top-right-radius: .3em;
+    -moz-border-radius-topleft: 0em;
+    -webkit-border-top-left-radius: 0em;
+    border-top-left-radius: 0em;
+    -moz-border-radius-topright: 0em;
+    -webkit-border-top-right-radius: 0em;
+    border-top-right-radius: 0em;
 }
 
 .ui-corner-bottom
 {
-    -moz-border-radius-bottomleft: .3em;
-    -webkit-border-bottom-left-radius: .3em;
-    border-bottom-left-radius: .3em;
-    -moz-border-radius-bottomright: .3em;
-    -webkit-border-bottom-right-radius: .3em;
-    border-bottom-right-radius: .3em;
+    -moz-border-radius-bottomleft: 0em;
+    -webkit-border-bottom-left-radius: 0em;
+    border-bottom-left-radius: 0em;
+    -moz-border-radius-bottomright: 0em;
+    -webkit-border-bottom-right-radius: 0em;
+    border-bottom-right-radius: 0em;
+}
+
+.ui-bar-d
+{
+    border: none;
+    background: #eee /*{d-bar-background-color}*/;
+    color: #333 /*{d-bar-color}*/;
+    text-shadow: none;
+    background-image: none;
+    border-bottom: 1px #ddd solid;
+}
+
+.ui-li-divider {
+    
 }
