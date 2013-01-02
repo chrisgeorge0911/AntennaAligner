@@ -129,7 +129,7 @@
     <Content Include="scripts\jquery-1.7.1.js">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="scripts\jquery.mobile-1.1.0.min.js">
+    <Content Include="scripts\jquery.mobile-1.2.0.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\positionUtils.js">
@@ -183,7 +183,7 @@
     <Content Include="style\jquery-overrides.css">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="style\jquery.mobile-1.1.0.min.css">
+    <Content Include="style\jquery.mobile-1.2.0.css">
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\master.css">
