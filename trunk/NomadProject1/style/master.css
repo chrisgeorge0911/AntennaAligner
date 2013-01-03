@@ -188,6 +188,11 @@ div.header
 
 #menubutton {
     cursor:pointer;
+    position: absolute;
+    right: 5px; 
+    top: 3px; 
+    height: 30px;
+    padding-top: 5px;
 }
 
 #menu, #right {

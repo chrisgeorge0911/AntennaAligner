@@ -31,7 +31,7 @@
 
         function onDeviceReady() {
 
-            getLocationData();
+            injectTxlist();
         }
 
 
@@ -139,9 +139,9 @@
                     $('.txlist').append($('<li/>', {    //here appendin `<li>`
                         'data-role': "list-divider"
                     }).append($('<a/>', {    //here appending `<a>` into `<li>`
-                        'href': 'compass.html',
+                        'href': '#',
                         'data-transition': 'none',
-                        'onclick': 'selectTx(' + i + ')',
+                        'onclick': 'selectTx(' + i + ');injectCompass(); closeMenu()',
                         'html': buttonHtml
                     })));
 
@@ -198,7 +198,32 @@
                 $('#menubutton').html('Menu');
             });
         }
+        
+        function injectAbout() {
+            $.get('aboutinjecttest.html', function (data) {
+                $('#mainpage').html(data);
+                getLocationData();
+                $("div[data-role=page]").page("destroy").page();
+            });
+        }
+        
+        function injectTxlist() {
 
+            $.get('txlist.html', function(data) {
+                $('#mainpage').html(data);
+                getLocationData();
+                $("div[data-role=page]").page("destroy").page();
+            });
+        }
+        
+        function injectCompass() {
+
+            $.get('compass.html', function (data) {
+                $('#mainpage').html(data);
+                populateCompassTxDataPanel();
+                $("div[data-role=page]").page("destroy").page();
+            });
+        }
 
         $(document).on("click", ".show-page-loading-msg", function () {
             var $this = $(this),
@@ -212,8 +237,8 @@
             });
 
         $('[data-role=page]').live('pageshow', function (event) {
-            if (event.target.id.indexOf('page1') == 0) {
-                closeMenu();
+            if (event.target.id.indexOf('infomain') == 0) {
+                $('#infomain').css('left', '-200');
             }
         });
 
@@ -223,33 +248,29 @@
 <body>
     <div data-role="page" id="page1">         
         <div data-role="header">
+            <div id="leftbutton" class=".ui-btn-left"></div>
 
             <h1>Antenna Aligner</h1>         
             
             <!-- <a href="about.html" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             -->
             
-            <div id="menubutton" data-icon="info" class="ui-btn-right" data-iconpos="notext">
+            <div id="menubutton" data-icon="info" class="menubutton" data-iconpos="notext">
                 Menu
             </div>
         </div>
         <div data-role="content" id="mainpage">
             
-            <div id="locationdata"></div>           
-            <div id="txoptions" data-role="fieldcontain">
-                <div style="font-weight:bold;padding-bottom:6px">Select a transmitter from the list...</div>                
-                <ul data-role="listview" data-divider-theme="d" data-inset="true" class="txlist">                
-                    <li>Please wait...</li>
-                </ul>
-            </div>            
+              
         </div>
         
     </div>
+    
     <div id="menu">
             <ul>
-                <li><a href="about.html">Help</a></li>
-                <li><a href="#">Menu Item 2</a></li>
+                <li><a href="#" onclick="injectAbout(); closeMenu()">Help</a></li>
+                <li><a href="#" onclick="injectTxlist(); closeMenu()">Your Transmitters</a></li>
             </ul>
-        </div>
+    </div>
     
 </body>
 </html>

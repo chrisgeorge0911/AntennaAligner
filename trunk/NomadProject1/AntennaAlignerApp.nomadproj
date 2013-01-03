@@ -14,7 +14,7 @@
     <ProvisioningProfilePath>ProvisioningProfiles\AAProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
-    <LastBuildVersion>1.1.0.64</LastBuildVersion>
+    <LastBuildVersion>2.0.0.2</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,6 +24,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="about.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="aboutinjecttest.html">
       <SubType>Content</SubType>
     </Content>
     <Content Include="compass.html">
@@ -193,6 +196,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="test.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="txlist.html">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
