@@ -199,6 +199,11 @@
             });
         }
         
+        // click the menu button to close using the toggle.
+        function closeClickMenu() {
+            $('#menubutton').click();
+        }
+        
         function injectAbout() {
             $.get('aboutinjecttest.html', function (data) {
                 $('#mainpage').html(data);
@@ -260,16 +265,17 @@
         </div>
         <div data-role="content" id="mainpage">
             
+            <!-- page content to be injected here -->
               
         </div>
         
     </div>
     
-    <div id="menu">
-            <ul>
-                <li><a href="#" onclick="injectAbout(); closeMenu()">Help</a></li>
-                <li><a href="#" onclick="injectTxlist(); closeMenu()">Your Transmitters</a></li>
-            </ul>
+    <div id="menu" class="slidingmenu">
+        <ul>
+            <li onclick="injectAbout(); closeClickMenu();"><div class="menuitem">Help</div></li>
+            <li onclick="injectTxlist(); closeClickMenu();"><div class="menuitem">Your Transmitters</div></li>
+        </ul>
     </div>
     
 </body>

@@ -4,10 +4,10 @@
     position: fixed;
     width: 100%;
 
-    -webkit-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
-        moz-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
-          o-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
-            box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow:   8px 0px 15px 0px rgba(0, 0, 0, 0.2);
+        moz-box-shadow:   8px 0px 15px 0px rgba(0, 0, 0, 0.2);
+          o-box-shadow:   8px 0px 15px 0px rgba(0, 0, 0, 0.2);
+            box-shadow:   8px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .ui-body-c, .ui-overlay-c
