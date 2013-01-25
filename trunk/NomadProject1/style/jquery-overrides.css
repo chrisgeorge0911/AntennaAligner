@@ -57,6 +57,23 @@
     border-bottom: 1px #ddd solid;
 }
 
+
+.ui-bar-a
+{
+
+    border: 1px solid #d0d0d0;
+    background: #111 /*{a-bar-background-color}*/;
+    color: #222 /*{a-bar-color}*/;
+    font-weight: bold;
+    text-shadow: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #eeeeee /*{a-bar-background-start}*/ ), to( #d0d0d0 /*{a-bar-background-end}*/ ));
+    background-image: -webkit-linear-gradient( #eeeeee /*{a-bar-background-start}*/, #d0d0d0 /*{a-bar-background-end}*/ );
+    background-image: -moz-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/);
+    background-image: -ms-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/);
+    background-image: -o-linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/);
+    background-image: linear-gradient( #3c3c3c /*{a-bar-background-start}*/, #111 /*{a-bar-background-end}*/);
+}
+
 .ui-li-divider {
     
 }

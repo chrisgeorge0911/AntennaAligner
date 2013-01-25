@@ -187,13 +187,13 @@
         });
 
         function openMenu() {
-            $('#page1').animate({ left: -1 * menuWidth }, 'fast', function () {
+            $('#page1').animate({ left: -1 * menuWidth }, 100, function () {
                 $('#menubutton').html('Close');
             });
         }
 
         function closeMenu() {
-            $('#page1').animate({ left: 0 }, 'fast', function () {
+            $('#page1').animate({ left: 0 }, 100, function () {
                 $('#menubutton').html('Menu');
             });
         }
