@@ -14,7 +14,7 @@
     <ProvisioningProfilePath>ProvisioningProfiles\AAProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
-    <LastBuildVersion>2.0.0.44</LastBuildVersion>
+    <LastBuildVersion>2.0.0.45</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -172,6 +172,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\images\icons-36-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\leftbutton.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\images\polhoriz.png">

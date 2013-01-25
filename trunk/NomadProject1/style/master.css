@@ -173,14 +173,39 @@ div.header
     border-bottom: 1px #CDCDCD solid;    
 }
 
+#backbutton {
+    cursor:pointer;
+    position: absolute;
+    left: 5px; 
+    top: 7px; 
+    height: 30px;
+    padding-top: 6px;
+    padding-left: 13px;
+    padding-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: right;
+    display: none;
+    width: 38px;
+    background-image:url(images/leftbutton.png);
+    background-repeat: no-repeat;
+}
 
 #menubutton {
     cursor:pointer;
     position: absolute;
     right: 5px; 
-    top: 3px; 
+    top: 7px; 
     height: 30px;
-    padding-top: 5px;
+    padding-top: 6px;
+    width: 61px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    background-image:url(images/leftbutton.png);
+    background-repeat: no-repeat;
+
+  
 }
 
 #menu, #right {

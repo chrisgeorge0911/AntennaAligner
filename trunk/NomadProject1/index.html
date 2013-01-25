@@ -215,6 +215,7 @@
                 $('#mainpage').html(data).trigger('create');
                 
                 getLocationData();
+                
                 $("div[data-role=page]").page("destroy").page();
             });
 
@@ -227,6 +228,7 @@
             $.get('compass.html', function (data) {
                 $('#mainpage').html(data);
                 populateCompassTxDataPanel();
+                
                 $("div[data-role=page]").page("destroy").page();
             });
         }
@@ -237,9 +239,9 @@
     </script>
 </head>
 <body>
-    <div data-role="page" id="page1">         
+    <div data-role="page" id="page1" >         
         <div data-role="header">
-            <div id="leftbutton" class=".ui-btn-left"></div>
+            <div id="backbutton" class="backbutton" onclick="injectTxlist()" data-icon="delete">Back</div>
 
             <h1>Antenna Aligner</h1>         
             
