@@ -24,8 +24,6 @@ div.header
     vertical-align: middle;
 }
 
-.compass {}
-
 .needle {
     position: absolute;
 }
@@ -37,22 +35,8 @@ div.header
 	width:200px;
 }
 
-.txListName
-{
-    color: black;
-}
-
-#txName
-{
-    font-size:1.2em;
-    font-weight:bold;
-}
-
 .datapanel
-{
-    -webkit-border-radius: 0.3em;
-    border-radius: 0.3em;
-    
+{   
     background-image: -webkit-gradient(linear,left top,left bottom,from(#FDFDFD),to(#EEE));
     background-image: -webkit-linear-gradient(#FDFDFD,#EEE);
     background-image: -moz-linear-gradient(#FDFDFD,#EEE);
@@ -60,17 +44,14 @@ div.header
     background-image: -o-linear-gradient(#FDFDFD,#EEE);
     background-image: linear-gradient(#FDFDFD,#EEE);    
    
-    border: 1px solid #CCC;
-
     font-size: 0.9em;
 }
 
-.datapanel-top
+.datapanel-top, .txlistitem
 {
-    padding-left: 5px;
-    padding-bottom: 6px;
-    padding-top: 6px;
-    background-color: #DEE3E4;
+    padding: 8px 6px;
+    list-style: none;
+    background-color: #EEE;
 }
 .datapanel-bottom {
     text-align: center;
@@ -85,14 +66,12 @@ div.header
     font-size: 0.8em;
 }
 
-#compassdatapanel
+.data, .distanceCell, .bearingCell
 {
-    
-}
-
-.datapanel-top .data {
-
     font-size: 12px;
+    font-weight: normal;
+    color: #888;
+    text-shadow: none;
 }
 
 
@@ -100,18 +79,23 @@ div.header
     padding: .6em 15px;
 }
 
+
+.txListName {
+    color: #222;
+    font-size: 18px;
+    font-weight: normal;
+    text-shadow: none;
+    text-wrap: none;
+}
+
 .distanceCell
 {
-    text-align:left;
-    font-size:12px;
-    color:#888;
+    text-align:left;   
 }
 
 .bearingCell
 {
     text-align:center;
-    font-size:14px;
-    color:#888;
 }
 
 .ui-page     
@@ -177,13 +161,17 @@ div.header
 
 .txlist li{
     border: none;
+    list-style: none;
 }
 
 .txlist li:last-of-type{
-     border: none;
+    border: none;     
+    list-style: none;
 }
 
-
+.txlistitem {
+    border-bottom: 1px #CDCDCD solid;    
+}
 
 
 #menubutton {
