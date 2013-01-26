@@ -179,7 +179,7 @@
         $(function () {
 
             $('#menu').css({ 'left': windowWidth - menuWidth + 'px' });
-
+            
             $('#menubutton').toggle(
                 function () { openMenu(); },
                 function () { closeMenu(); }
@@ -188,13 +188,13 @@
 
         function openMenu() {
             $('#page1').animate({ left: -1 * menuWidth }, 100, function () {
-                $('#menubutton').html('Close');
+                //$('#menubutton').html('Close');
             });
         }
 
         function closeMenu() {
             $('#page1').animate({ left: 0 }, 100, function () {
-                $('#menubutton').html('Menu');
+                //$('#menubutton').html('Menu');
             });
         }
         
@@ -218,9 +218,6 @@
                 
                 $("div[data-role=page]").page("destroy").page();
             });
-
-            
-
         }
         
         function injectCompass() {
@@ -248,7 +245,6 @@
             <!-- <a href="about.html" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             -->
             
             <div id="menubutton" data-icon="info" class="menubutton" data-iconpos="notext">
-                Menu
             </div>
         </div>
         <div data-role="content" id="mainpage">

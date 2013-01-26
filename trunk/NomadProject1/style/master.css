@@ -198,14 +198,12 @@ div.header
     top: 7px; 
     height: 30px;
     padding-top: 6px;
-    width: 61px;
+    width: 28px;
     text-align: center;
     font-weight: normal;
     font-size: 14px;
-    background-image:url(images/leftbutton.png);
+    background-image:url(images/menubutton.png);
     background-repeat: no-repeat;
-
-  
 }
 
 #menu, #right {
