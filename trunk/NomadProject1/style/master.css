@@ -180,13 +180,13 @@ div.header
     top: 7px; 
     height: 30px;
     padding-top: 6px;
-    padding-left: 13px;
+    padding-left: 11px;
     padding-right: 10px;
-    font-weight: normal;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 13px;
     text-align: right;
     display: none;
-    width: 38px;
+    width: 40px;
     background-image:url(images/leftbutton.png);
     background-repeat: no-repeat;
 }
@@ -198,10 +198,10 @@ div.header
     top: 7px; 
     height: 30px;
     padding-top: 6px;
-    width: 28px;
+    width: 37px;
     text-align: center;
-    font-weight: normal;
-    font-size: 14px;
+    font-weight: bold;
+    font-size: 12px;
     background-image:url(images/menubutton.png);
     background-repeat: no-repeat;
 }
