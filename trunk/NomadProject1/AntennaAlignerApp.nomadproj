@@ -14,7 +14,7 @@
     <ProvisioningProfilePath>ProvisioningProfiles\AAProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
-    <LastBuildVersion>2.0.0.46</LastBuildVersion>
+    <LastBuildVersion>2.0.0.57</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -126,6 +126,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="index.html" />
+    <Content Include="scripts\compass.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="scripts\cordova.js">
       <SubType>Content</SubType>
     </Content>
@@ -184,6 +187,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\images\polvert.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\refreshbutton.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\images\statusicons.png">

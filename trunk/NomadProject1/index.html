@@ -9,6 +9,7 @@
     <script src="scripts/positionUtils.js" type="text/javascript"></script>
     <script src="scripts/txdata.js" type="text/javascript"></script>
     <script src="scripts/signal.js" type="text/javascript"></script>
+    <script src="scripts/compass.js" type="text/javascript"></script>
     <link rel="Stylesheet" href="style/jquery.mobile-1.2.0.css" />   
     <link rel="Stylesheet" href="style/jquery-overrides.css" />   
     <link rel="Stylesheet" href="style/master.css" />
@@ -238,13 +239,14 @@
 <body>
     <div data-role="page" id="page1" >         
         <div data-role="header">
-            <div id="backbutton" class="backbutton" onclick="injectTxlist()" data-icon="delete">Back</div>
+            <div id="backbutton" class="backbutton" onclick="injectTxlist()">Back</div>
+            <div id="refreshbutton" class="refreshbutton" onclick="injectTxlist()" data-iconpos="notext"></div>
 
             <h1>Antenna Aligner</h1>         
             
             <!-- <a href="about.html" data-icon="info" class="ui-btn-right" data-iconpos="notext" data-theme="a" data-shadow="false" data-icon-shadow="false">Button Right</a>             -->
             
-            <div id="menubutton" data-icon="info" class="menubutton" data-iconpos="notext">
+            <div id="menubutton" data-icon="info" class="menubutton" >
             </div>
         </div>
         <div data-role="content" id="mainpage">

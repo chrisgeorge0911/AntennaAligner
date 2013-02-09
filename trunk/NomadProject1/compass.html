@@ -14,12 +14,17 @@
         
     });
 
+    $('#refreshbutton').hide();
     $('#backbutton').show();
-            
+    
+    var m_lastBezelHeading = 0;
+    var m_lastMagHeading = 0;
 
     // *******************************************************************************
     // COMPASS HANDLER
     function getCompassData() {
+
+        m_lastBezelHeading = 0;
 
         if (navigator.compass) {
 
@@ -41,6 +46,8 @@
         var needle = x$("#compass .needle");
 
         needle.css({
+            "-webkit-transition-property":"-webkit-transform",
+            "-webkit-transition-duration":"0.5s",
             "-webkit-transform": "rotate(" + needleHeading + "deg)",
             "transform": "rotate(" + needleHeading + "deg)",
             "-moz-transform": "rotate(" + needleHeading + "deg)",
@@ -50,24 +57,38 @@
 
     }
 
+    //TODO NEED TO DO RELATIVE COMPASS MOVEMENTS
 
     function onCompassSuccess(heading) {
-
-        var magHeading = heading.magneticHeading;
                 
+        var magHeading = heading.magneticHeading;
+                     
         var compass = x$("#compass .compass");
+        
+        m_lastBezelHeading = CalculateBezelHeading(magHeading, m_lastMagHeading, m_lastBezelHeading);
 
-        var bezelHeading = (magHeading * -1);
+        m_lastMagHeading = magHeading;
+        
+        var internalBezelHeading = (m_lastBezelHeading * -1);
+
+        //alert(magHeading + ", " + m_lastMagHeading + ", " + m_lastBezelHeading + ", " + internalBezelHeading);
+        var headingDiv = document.getElementById('heading');
+        headingDiv.innerText = internalBezelHeading;
+
 
         compass.css({
-            "-webkit-transform": "rotate(" + bezelHeading + "deg)",
-            "transform": "rotate(" + bezelHeading + "deg)",
-            "-moz-transform": "rotate(" + bezelHeading + "deg)",
+            "-webkit-transition-property": "-webkit-transform",
+            "-webkit-transition-duration": "0.5s",
+            "-webkit-transform": "rotate(" + internalBezelHeading + "deg)",
+            "transform": "rotate(" + internalBezelHeading + "deg)",
+            "-moz-transform": "rotate(" + internalBezelHeading + "deg)",
             "z-index": "0"
         });
 
-        setCompassNeedle(m_SelectedTxBearing * 1 + bezelHeading);
+        setCompassNeedle(m_SelectedTxBearing * 1 + internalBezelHeading);
     }
+
+    
 
     function onCompassFail() {
         $.mobile.changePage('compasserrordialog', {
@@ -146,6 +167,7 @@
                 <img class="compass" id="compassback" src="images/direction-indicator.png">
             </div>                        
         </div>
+        <div id="heading"></div>
         <div style="padding-left:5px;padding-right:5px;font-size: 13px;">
             Keep away from any metallic objects as they may affect the compass.
         </div>
