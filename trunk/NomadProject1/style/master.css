@@ -125,6 +125,7 @@ div.header
 
 .ui-icon-alt, .ui-icon-good, .ui-icon-low, .ui-icon-poor {
     background-image: url(images/statusicons.png);
+    background-size: 150px 20px;
     height: 20px;
     width: 50px;    
 }
@@ -181,14 +182,15 @@ div.header
     height: 30px;
     padding-top: 6px;
     padding-left: 11px;
-    padding-right: 10px;
+    padding-right: 13px;
     font-weight: bold;
     font-size: 13px;
     text-align: right;
     display: none;
-    width: 40px;
+    width: 41px;
     background-image:url(images/leftbutton.png);
     background-repeat: no-repeat;
+    background-size:65px 30px;
 }
 
 #refreshbutton {
@@ -207,6 +209,7 @@ div.header
     width: 40px;
     background-image:url(images/refreshbutton.png);
     background-repeat: no-repeat;
+    background-size: 40px 30px;
 }
 
 #menubutton {
@@ -216,12 +219,13 @@ div.header
     top: 7px; 
     height: 30px;
     padding-top: 6px;
-    width: 37px;
+    width: 40px;
     text-align: center;
     font-weight: bold;
     font-size: 12px;
     background-image:url(images/menubutton.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;    
+    background-size: 40px 30px;
 }
 
 #menu, #right {

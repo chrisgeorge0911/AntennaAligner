@@ -192,6 +192,21 @@
     <Content Include="style\images\refreshbutton.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="style\images\refreshbutton2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\retina\leftbutton.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\retina\menubutton.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\retina\refreshbutton.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\images\retina\statusicons.png">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="style\images\statusicons.png">
       <SubType>Content</SubType>
     </Content>
@@ -202,6 +217,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\master.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="style\retina.css">
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\styles.css">
@@ -222,6 +240,7 @@
     <Folder Include="style" />
     <Folder Include="scripts" />
     <Folder Include="style\images" />
+    <Folder Include="style\images\retina" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Target Name="ResolveReferences" />

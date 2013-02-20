@@ -1,0 +1,18 @@
+﻿#refreshbutton {   
+    background-image:url(images/retina/refreshbutton.png);
+}
+
+#menubutton
+{
+    background-image:url(images/retina/menubutton.png);
+}
+
+.ui-icon-alt, .ui-icon-good, .ui-icon-low, .ui-icon-poor
+{
+    background-image: url(images/retina/statusicons.png);
+}
+
+#backbutton
+{
+    background-image: url(images/retina/leftbutton.png);
+}
