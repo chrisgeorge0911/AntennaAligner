@@ -1,5 +1,7 @@
 ﻿<script>
-    $('#backbutton').hide();
+    if (!IsTablet()) {
+        $('#backbutton').hide();
+    }
     $('#refreshbutton').show();
 </script>
 

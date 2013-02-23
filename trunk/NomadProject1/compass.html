@@ -14,8 +14,10 @@
         
     });
 
-    $('#refreshbutton').hide();
-    $('#backbutton').show();
+    if (!IsTablet()) {
+        $('#refreshbutton').hide();
+        $('#backbutton').show();
+    }
     
     var m_lastBezelHeading = 0;
     var m_lastMagHeading = 0;

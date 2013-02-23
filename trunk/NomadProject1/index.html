@@ -31,7 +31,42 @@
         var m_SelectedTxBearing;
         var c_DistanceLimit = 100; // in km
 
+
         function onDeviceReady() {
+
+            if (IsTablet())
+                renderForIpad();
+            else
+                injectTxlist();
+
+        }
+
+        function getTxListTargetDiv() {
+
+            if (IsTablet()) {
+                return "#leftcolumn";
+            }
+            else {
+                return "#mainpage";
+            }            
+        }
+
+        function getCompassTargetDiv() {
+
+            if (IsTablet()) {
+                return "#rightcolumn";
+            }
+            else {
+                return "#mainpage";
+            }
+        }
+
+        function renderForIpad() {
+
+            // adjust page structure for ipad devices to have two columns
+            $('#mainpage').empty();
+            $('#mainpage').append('<div class="ui-block-a" style="width:30%" id="leftcolumn"></div><div class="ui-block-a" style="width:70%" id="rightcolumn"></div>');           
+
             injectTxlist();
         }
 
@@ -90,6 +125,25 @@
             m_SelectedTxIndex = index;
         }
 
+        function IsTablet() {
+
+            var deviceAgent = navigator.userAgent.toLowerCase();
+            var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
+            if (agentID.indexOf("iphone") >= 0) {
+                return false;
+            }
+            if (agentID.indexOf("ipod") >= 0) {
+                return false;
+            }
+            if (agentID.indexOf("ipad") >= 0) {
+                return true;
+            }
+            if (agentID.indexOf("android") >= 0) {
+                return false;
+            }
+            return false;
+        }
+
 
         function calculateNearestTx(position) {
             $('.txlist').empty();
@@ -135,6 +189,8 @@
                     buttonHtml += '<td class="distanceCell"><div class="' + polClass + '"></div></td>';
                     buttonHtml += '<td width="60px" align="center"><div class="' + iconClass + '"></div></td>';
                     buttonHtml += '</tr></table>';
+
+                    var targetCompassDiv = '#rightcolumn';
 
                     $('.txlist').append($('<li/>', {    //here appendin `<li>`
                         'data-role': "list-divider",
@@ -213,8 +269,10 @@
         }
         
         function injectTxlist() {
+            var targetDiv = getTxListTargetDiv();
+
             $.get('txlist.html', function (data) {
-                $('#mainpage').html(data).trigger('create');
+                $(targetDiv).html(data).trigger('create');
                 
                 getLocationData();
                 
@@ -223,16 +281,16 @@
         }
         
         function injectCompass() {
+            var targetDiv = getCompassTargetDiv();
 
             $.get('compass.html', function (data) {
-                $('#mainpage').html(data);
+                $(targetDiv).html(data);
                 populateCompassTxDataPanel();
                 
                 $("div[data-role=page]").page("destroy").page();
             });
         }
-
- 
+        
 
         document.addEventListener("deviceready", onDeviceReady, false);
     </script>

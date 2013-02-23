@@ -207,6 +207,9 @@
     <Content Include="style\images\statusicons.png">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="style\ipadlayout.css">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="style\jquery-overrides.css">
       <SubType>Content</SubType>
     </Content>
