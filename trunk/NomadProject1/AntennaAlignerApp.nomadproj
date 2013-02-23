@@ -14,7 +14,7 @@
     <ProvisioningProfilePath>ProvisioningProfiles\AAProfile.mobileprovision</ProvisioningProfilePath>
     <ProjectName>Ant.Aligner</ProjectName>
     <Description />
-    <LastBuildVersion>2.0.0.58</LastBuildVersion>
+    <LastBuildVersion>2.0.0.59</LastBuildVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -190,9 +190,6 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\images\refreshbutton.png">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="style\images\refreshbutton2.png">
       <SubType>Content</SubType>
     </Content>
     <Content Include="style\images\retina\leftbutton.png">
