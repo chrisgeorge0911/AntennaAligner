@@ -1,8 +1,20 @@
-﻿#leftcolumn
+﻿#header
 {
+    height: 42px;
+}
+
+#leftcolumn
+{
+    border-right:1px #000 solid;
 }
 
 
 #rightcolumn
 {
+    height:100%;
+}
+
+.datapanel
+{
+    height:100%;
 }

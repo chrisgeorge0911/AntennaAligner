@@ -61,7 +61,7 @@ function getNearestTx(position) {
             top5ListCount++;
         }
 
-        if (txListTop5.length == 5)
+        if (txListTop5.length == 20)
             break;
     }
 

@@ -14,6 +14,7 @@
     <link rel="Stylesheet" href="style/jquery-overrides.css" />   
     <link rel="Stylesheet" href="style/master.css" />
     <link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="style/retina.css" />
+    <link rel="stylesheet" type="text/css" href="style/ipadlayout.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script type="text/javascript" charset="utf-8">
@@ -63,9 +64,11 @@
 
         function renderForIpad() {
 
+            var contentHeight = $(this).height() - $('#header').height();
+
             // adjust page structure for ipad devices to have two columns
             $('#mainpage').empty();
-            $('#mainpage').append('<div class="ui-block-a" style="width:30%" id="leftcolumn"></div><div class="ui-block-a" style="width:70%" id="rightcolumn"></div>');           
+            $('#mainpage').append('<div class="ui-block-a" style="width:30%" id="leftcolumn"></div><div class="ui-block-a" style="width:70%;height:' + contentHeight + 'px" id="rightcolumn"></div>');           
 
             injectTxlist();
         }
@@ -152,7 +155,10 @@
 
             $('.txlist').empty();
 
-            for (var i = 0; i < 5; i++) {
+            var listHeight = $(this).height() - 50;
+            var numberOfRows = Math.floor(listHeight / 70);
+
+            for (var i = 0; i < numberOfRows; i++) {
                 if (i < nearest5Tx.length) {
                     
                     var distance = parseFloat(nearest5Tx[i].distanceMiles);
@@ -297,7 +303,7 @@
 </head>
 <body>
     <div data-role="page" id="page1" >         
-        <div data-role="header">
+        <div data-role="header" id="header">
             <div id="backbutton" class="backbutton" onclick="injectTxlist()">Back</div>
             <div id="refreshbutton" class="refreshbutton" onclick="injectTxlist()" data-iconpos="notext"></div>
 
