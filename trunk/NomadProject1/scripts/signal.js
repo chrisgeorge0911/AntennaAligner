@@ -37,10 +37,6 @@ function getListOfTxBySignalStrength(lastPosition) {
     for (var i = 0; i < txList.length; i++) {
         txList[i].distance = getDistanceBetween(lastPosition, txList[i].position);
         txList[i].signalStrength = getFieldStrength(txList[i].channel[0].pwr, txList[i].distance, txList[i].channel[0].ch);
-
-        // give some weighting to small, close (<10 miles), low powered (<500W) relay stations
-        if (txList[i].distance < 10 && txList[i].channel[0].pwr < 500)
-            txList[i].signalStrength = txList[i].signalStrength * 1.2;
     }
 
     txList.sort(signalSort);
@@ -50,26 +46,24 @@ function getListOfTxBySignalStrength(lastPosition) {
 
 function getNearestTx(position) {
 
-    var numTx = 20;
-
     var txList = getListOfTxBySignalStrength(position);
 
-    var txListTopN = new Array();
+    var txListTop5 = new Array();
 
-    var topNListCount = 0;
+    var top5ListCount = 0;
     // get the top 5 transmitters that have signal strength 66db+
     for (var i = 0; i < txList.length; i++) {
         var currentTx = txList[i];
 
         if (currentTx.distance < c_DistanceLimit) {
-            txListTopN[topNListCount] = txList[i];
-            txListTopN[topNListCount].distanceMiles = txListTopN[topNListCount].distance * 0.62137119;
-            topNListCount++;
+            txListTop5[top5ListCount] = txList[i];
+            txListTop5[top5ListCount].distanceMiles = txListTop5[top5ListCount].distance * 0.62137119;
+            top5ListCount++;
         }
 
-        if (txListTopN.length == numTx)
+        if (txListTop5.length == 20)
             break;
     }
 
-    return txListTopN;
+    return txListTop5;
 }
