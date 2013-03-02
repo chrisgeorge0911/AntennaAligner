@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{4B160523-D178-4405-B438-79FB67C8D499}") = "AntennaAlignerApp", "NomadProject1\AntennaAlignerApp.nomadproj", "{C11B75D7-A221-4A1B-B666-07EF3E96C543}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxDataMunger", "TxDataMunger\TxDataMunger.csproj", "{D97AB0BE-CEF0-49B0-8567-C664095AE39B}"
