@@ -100,12 +100,7 @@ div.header
 
 .ui-page     
 {
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #A5C8DF), color-stop(100%, #0E4F7B));
-    background-image: -webkit-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
-    background-image: -moz-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
-    background-image: -ms-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
-    background-image: -o-linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/);
-    background-image: linear-gradient( #A5C8DF /*{a-body-background-start}*/, #0E4F7B /*{a-body-background-end}*/); 
+    background-color: #d0d0d0;
 }
 
 .ui-field-contain,fieldset.ui-field-contain
