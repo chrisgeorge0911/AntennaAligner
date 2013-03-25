@@ -240,12 +240,14 @@
             var distanceDiv = document.getElementById('txDistance');
             var channelDiv = document.getElementById('txChannels');
             var polDiv = document.getElementById('txPol');
-
-            var polarisation = selectedTx.pol;
-
+            
+            // Name
             nameDiv.innerHTML = selectedTx.name;
+
+            // Distance
             distanceDiv.innerHTML = parseFloat(selectedTx.distanceMiles).toFixed(1) + " miles";
 
+            // Channels
             var channelArray = selectedTx.channel;
             var channelsString = '';
 
@@ -258,7 +260,9 @@
 
             channelDiv.innerHTML = "Channels<br /><b>" + channelsString + "</b>";
 
+            // Polarisation
             var polClass = "";
+            var polarisation = selectedTx.pol;
 
             if (polarisation == 'H')
                 polClass = "ui-pol-horiz";
