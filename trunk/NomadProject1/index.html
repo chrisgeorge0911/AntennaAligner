@@ -228,7 +228,9 @@
 
         function populateCompassTxDataPanel() {
 
-            m_SelectedTxBearing = nearest5Tx[m_SelectedTxIndex].bearing;
+            var selectedTx = nearest5Tx[m_SelectedTxIndex];
+
+            m_SelectedTxBearing = selectedTx.bearing;
 
             // reset lastHeading so that the compass is redrawn.
             lastHeading = -1;
@@ -239,18 +241,12 @@
             var channelDiv = document.getElementById('txChannels');
             var polDiv = document.getElementById('txPol');
 
-            var polarisation = nearest5Tx[m_SelectedTxIndex].pol;
+            var polarisation = selectedTx.pol;
 
-            var polClass = "ui-pol-horiz";
-            if (polarisation == 'V')
-                polClass = "ui-pol-vert";
+            nameDiv.innerHTML = selectedTx.name;
+            distanceDiv.innerHTML = parseFloat(selectedTx.distanceMiles).toFixed(1) + " miles";
 
-            $j('#txPol').toggleClass(polClass);
-
-            nameDiv.innerHTML = nearest5Tx[m_SelectedTxIndex].name;
-            distanceDiv.innerHTML = parseFloat(nearest5Tx[m_SelectedTxIndex].distanceMiles).toFixed(1) + " miles";
-
-            var channelArray = nearest5Tx[m_SelectedTxIndex].channel;
+            var channelArray = selectedTx.channel;
             var channelsString = '';
 
             for (var channel in channelArray) {
@@ -261,6 +257,15 @@
             }
 
             channelDiv.innerHTML = "Channels<br /><b>" + channelsString + "</b>";
+
+            var polClass = "";
+
+            if (polarisation == 'H')
+                polClass = "ui-pol-horiz";
+            else if (polarisation == 'V')
+                polClass = "ui-pol-vert";
+
+            polDiv.innerHTML = "<div class=\"" + polClass + "\"></div>";
         }
 
         // END COMPASS HANDLER
